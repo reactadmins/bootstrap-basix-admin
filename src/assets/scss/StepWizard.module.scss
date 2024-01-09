@@ -1,0 +1,24 @@
+.wizard_wrapper {
+    .step_content {
+        padding: 30px 20px 10px 20px;
+    }
+    .step_btn_wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .step_block {
+        .step_wrapper {
+            .wizard_icon {
+                width: 70px;
+                height: 70px;
+                border: 3px solid #f3f2ee;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 22px;
+                font-weight: 600;
+            }
+        }
+    }
+}

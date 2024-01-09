@@ -1,0 +1,53 @@
+@import "../scss/variable.scss";
+
+.message_menu {
+    width: max-content;
+    padding: 8px 0;
+    background-color: $white;
+    .message_counter {
+        font-size: 15px;
+        font-family: Open Sans, sans-serif;
+        font-weight: 400;
+        line-height: 24px;
+        color: $gunsmoke;
+        padding: 5px 15px;
+    }
+    .message_body {
+        padding: 10px 15px 3px;
+        .user_img {
+            width: 25px;
+            display: block;
+            img {
+                width: 100%;
+            }
+        }
+        .message {
+            width: 100%;
+            span {
+                color: $light;
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 20px;
+            }
+            p {
+                color: $light;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 24px;
+            }
+        }
+    }
+
+    .bg_1 {
+        background-color: $periwinkle;
+    }
+    .bg_2 {
+        background-color: $valentine-red;
+    }
+    .bg_3 {
+        background-color: $mint;
+    }
+    .bg_4 {
+        background-color: $warning;
+    }
+}

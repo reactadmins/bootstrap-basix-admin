@@ -1,0 +1,42 @@
+@import "./assets/scss/variable.scss";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background: $body_bg;
+    font-size: $body_font_size;
+    font-family: $body_font_family;
+
+    ul {
+        margin: 0px;
+        padding: 0px;
+        li {
+            list-style: none;
+        }
+    }
+    a {
+        text-decoration: none;
+    }
+    p {
+        margin: 0px;
+    }
+    button {
+        border: 0;
+        outline: none;
+        background-color: transparent;
+    }
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+    &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 3px rgb(177, 177, 177);
+        background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #a8a9ac;
+        border-radius: 20px;
+    }
+}

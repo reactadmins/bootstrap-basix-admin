@@ -1,0 +1,39 @@
+@import "./variable.scss";
+
+.user_menu {
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: -38px;
+    width: max-content;
+    padding: 5px 10px;
+    background-color: white;
+    .navbar_nav {
+        .nav_link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: $dark;
+            padding: 5px 0;
+
+            .count {
+                display: block;
+                width: 20px;
+                height: 20px;
+                font-size: 9px;
+                font-weight: 700;
+                color: $white;
+                float: right;
+                line-height: 20px;
+                text-align: center;
+                margin-left: 15px;
+                border-radius: 50%;
+            }
+        }
+    }
+    &[data="true"] {
+        left: -38px !important;
+        right: auto !important;
+    }
+}

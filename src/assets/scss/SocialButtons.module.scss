@@ -1,0 +1,313 @@
+@import "../scss/variable.scss";
+
+// display style mixin
+@mixin displayStyle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// social media bg color mixin
+@mixin socialButtonBg {
+    .facebook {
+        background-color: $facebookbg;
+    }
+    .twitter {
+        background-color: $twitterbg;
+    }
+    .google {
+        background-color: $googlebg;
+    }
+    .dribbble {
+        background-color: $dribbblebg;
+    }
+    .vimeo {
+        background-color: $vimeobg;
+    }
+    .pinterest {
+        background-color: $pinterestbg;
+    }
+    .instagram {
+        background-color: $instagrambg;
+    }
+    .linkedin {
+        background-color: $linkedinbg;
+    }
+}
+
+// start social button rounded style
+.rounded_button {
+    .social_rounded_button {
+        position: relative;
+        @include displayStyle;
+        width: 75px;
+        height: 75px;
+        border-radius: 100%;
+        text-decoration: none;
+        background-color: $white;
+        i {
+            font-size: 33px;
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            top: -1px;
+            left: 38px;
+            width: 1px;
+            height: 1px;
+            font-size: 37.5px;
+            transition: 0.3s;
+            border-radius: 100%;
+        }
+        &:hover {
+            i {
+                color: $white !important;
+                z-index: 5555;
+            }
+            &::after {
+                width: 75px;
+                height: 75px;
+                border-radius: 100%;
+                top: 0;
+                left: 0;
+                transition: all 0.3s;
+                z-index: 2;
+            }
+        }
+    }
+    .mail {
+        i {
+            color: $mailbg;
+        }
+        &::after {
+            background-color: $mailbg;
+        }
+        &:hover::after {
+            background-color: $mailbg;
+        }
+    }
+    .facebook {
+        i {
+            color: $facebookbg;
+        }
+        &::after {
+            background-color: $facebookbg;
+        }
+        &:hover::after {
+            background-color: $facebookbg;
+        }
+    }
+    .linkedin {
+        i {
+            color: $linkedinbg;
+        }
+        &::after {
+            background-color: $linkedinbg;
+        }
+        &:hover::after {
+            background-color: $linkedinbg;
+        }
+    }
+    .github {
+        i {
+            color: $github;
+        }
+        &::after {
+            background-color: $github;
+        }
+        &:hover::after {
+            background-color: $github;
+        }
+    }
+    .codepen {
+        i {
+            color: $codepen;
+        }
+        &::after {
+            background-color: $codepen;
+        }
+        &:hover::after {
+            background-color: $codepen;
+        }
+    }
+}
+// end social button rounded style
+
+// start social button square style
+.social_square_button {
+    .social_button {
+        @include displayStyle;
+        width: 50px;
+        height: 50px;
+        border: 1px solid #212121;
+        transition: all 1ms;
+        overflow: hidden;
+        a {
+            color: #212121;
+        }
+        &:hover {
+            border: 1px solid #212121 !important;
+            a {
+                color: #212121 !important;
+            }
+        }
+    }
+    &:hover {
+        .social_button {
+            transition: all 1ms;
+            border: 1px solid #837e78;
+            a {
+                color: #837e78;
+            }
+        }
+    }
+}
+// end social button square style
+
+// start aeneas effect button style
+.aeneas_effect_button {
+    @include socialButtonBg;
+    .aeneas {
+        @include displayStyle;
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.4s linear 0s,
+            border-top-left-radius 0.1s linear 0s,
+            border-top-right-radius 0.1s linear 0.1s,
+            border-bottom-right-radius 0.1s linear 0.2s,
+            border-bottom-left-radius 0.1s linear 0.3s;
+        i {
+            transition: transform 0.4s linear 0s;
+        }
+        &:hover {
+            width: 60px;
+            height: 60px;
+            transform: rotate(1turn);
+            transition: transform 0.4s linear 0s,
+                border-top-left-radius 0.1s linear 0s,
+                border-top-right-radius 0.1s linear 0.1s,
+                border-bottom-right-radius 0.1s linear 0.2s,
+                border-bottom-left-radius 0.1s linear 0.3s;
+            border-radius: 50%;
+            i {
+                transform: rotate(-1turn);
+            }
+        }
+    }
+}
+// end aeneas effect button style
+
+// start jaques effect button style
+.jaques_effect_buttons {
+    @include socialButtonBg;
+    .jaques {
+        @include displayStyle;
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.4s linear 0s,
+            border-top-left-radius 0.1s linear 0s,
+            border-top-right-radius 0.1s linear 0.1s,
+            border-bottom-right-radius 0.1s linear 0.2s,
+            border-bottom-left-radius 0.1s linear 0.3s;
+        &:hover {
+            border-radius: 50%;
+            transition: border-top-left-radius 0.1s linear 0s,
+                border-top-right-radius 0.1s linear 0.1s,
+                border-bottom-right-radius 0.1s linear 0.2s,
+                border-bottom-left-radius 0.1s linear 0.3s;
+        }
+    }
+}
+// end jaques effect button style
+
+// start egeon effect button style
+.egeon_effect_buttons {
+    @include socialButtonBg;
+    .egeon {
+        @include displayStyle;
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.2s linear 0s, border-radius 0.2s linear 0.2s;
+        i {
+            position: relative;
+            z-index: 3;
+            transition: transform 0.2s linear 0s;
+        }
+        &:hover {
+            transform: rotate(-90deg);
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50%;
+            border-bottom-left-radius: 50%;
+            i {
+                transform: rotate(90deg);
+            }
+        }
+    }
+}
+// end egeon effect button style
+
+// start claudio effect button style
+.claudio_effect_buttons {
+    @include socialButtonBg;
+    .claudio {
+        @include displayStyle;
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.2s linear 0s, border-radius 0.2s linear 0s;
+        &:hover {
+            transform: scale(1.2);
+            border-bottom-left-radius: 50%;
+            border-top-right-radius: 50%;
+        }
+    }
+}
+// end claudio effect button style
+
+// start laertes effect button style
+.laertes_effect_buttons {
+    @include socialButtonBg;
+    .laertes {
+        @include displayStyle;
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: all 0.2s linear 0s;
+        &:hover {
+            border-radius: 50%/20%;
+            i {
+                transform: scale(1.1);
+                text-shadow: 0 0 12px hsl(0deg 0% 87% / 60%);
+            }
+        }
+    }
+}
+// end laertes effect button style
+
+// start jinae effect button style
+.jinae_effect_buttons {
+    @include socialButtonBg;
+    .jinae {
+        @include displayStyle;
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.2s linear 0s, border-radius 0.2s linear 0s;
+        &:hover {
+            transform: scale(1.2);
+            border-bottom-right-radius: 50%;
+            border-top-left-radius: 50%;
+        }
+    }
+}
+// end jinae effect button style

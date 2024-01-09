@@ -1,0 +1,307 @@
+@import "../../assets/scss/variable.scss";
+
+@mixin btnStyle {
+    display: block;
+    width: 100%;
+    padding: 10px 16px;
+    outline: none;
+    border-radius: 4px;
+    color: $white;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: center;
+}
+
+.switch_wrapper {
+    .switch_btn {
+        position: fixed;
+        content: "";
+        top: 25%;
+        right: 0;
+        width: 64px;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999999;
+        border-radius: 8px 0 0 8px;
+        text-align: center;
+        padding: 10px;
+        border: 0px;
+        i {
+            color: #fff;
+            font-size: 1.5em;
+        }
+    }
+    .switch_menu {
+        position: absolute;
+        content: "";
+        top: 0;
+        right: 0;
+        width: 350px;
+        height: 100vh;
+        z-index: 99999999;
+        border: 0px;
+        padding: 24px 0;
+        border-left: 1px solid #e8ebf2;
+        background-color: $white;
+        border-radius: 4px 0px 0px 4px;
+        overflow: auto;
+
+        .bownload_btn {
+            @include btnStyle();
+            border: 1px solid #15b79e;
+            background-color: #15b79e;
+        }
+        .purchase_btn {
+            @include btnStyle();
+            border: 1px solid #7a5af8;
+            background-color: #7a5af8;
+        }
+        .documentatione_btn {
+            @include btnStyle();
+            border: 1px solid #d5d9eb;
+            color: #4e5ba6;
+            background-color: #d5d9eb;
+        }
+        .social_btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            a {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                padding: 6px 10px;
+                border-radius: 4px;
+                color: $white;
+                i {
+                    font-size: 18px;
+                }
+                span {
+                    font-size: 12px;
+                    line-height: 16px;
+                    font-weight: 700;
+                }
+            }
+            .facebook_btn {
+                border: 1px solid #1570ef;
+                background-color: #1570ef;
+            }
+            .twitter_btn {
+                border: 1px solid #36bffa;
+                background-color: #36bffa;
+            }
+        }
+        &::-webkit-scrollbar {
+            width: 6px;
+        }
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #a8a9ac;
+            border-radius: 20px;
+        }
+    }
+    .color_control_wrapper {
+        padding: 16px 0;
+        border-bottom: 1px solid #ddd;
+        .title {
+            font-size: 14px;
+            color: #4a4a68;
+            font-weight: 700;
+            line-height: 20px;
+            margin: 0;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        .bg_wrapper {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 12px;
+            button {
+                display: inline-block;
+                width: 28px;
+                height: 28px;
+                border-radius: 50%;
+                cursor: pointer;
+                border: 1px solid #f8f9fc;
+            }
+            .active {
+                position: relative;
+                span {
+                    &::after {
+                        position: absolute;
+                        content: "✓";
+                        top: 2px;
+                        left: 6px;
+                        font-family: Fontawesome;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+    .switcher_wrapper {
+        padding: 16px 0;
+        .title {
+            font-size: 14px;
+            color: #4a4a68;
+            font-weight: 700;
+            line-height: 20px;
+            margin: 0;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        .bg_container {
+            display: flex;
+            gap: 4px;
+            margin-top: 12px;
+            img {
+                width: 46px;
+                height: 96px;
+                border: 2px solid #f8f9fc;
+                border-radius: 6px;
+            }
+            .active {
+                span {
+                    &::after {
+                        position: absolute;
+                        content: "✓";
+                        top: 36%;
+                        left: 0;
+                        font-family: Fontawesome;
+                        font-size: 20px;
+                        text-align: center;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .switch_contorl {
+        border-bottom: 1px solid #f8f9fc;
+        .toggle_button {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+            span {
+                font-size: 14px;
+                color: #4a4a68;
+                font-weight: 700;
+                line-height: 20px;
+                user-select: none;
+            }
+            .switch {
+                position: relative;
+                display: block;
+                width: 36px;
+                height: 18px;
+                border: 0;
+                border-radius: 10px;
+                padding: 2px;
+                background-color: #eaecf0;
+                outline: none;
+                input {
+                    opacity: 0;
+                    width: 0;
+                    height: 0;
+                }
+                .slider {
+                    position: relative;
+                    content: "";
+                    cursor: pointer;
+                    display: block;
+                    top: -24px;
+                    left: 1px;
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 34px;
+                    background-color: $white;
+                    transition: 0.2s;
+                }
+            }
+            .active {
+                background-color: #7a5af8;
+                .slider {
+                    top: -24px;
+                    left: 18px;
+                }
+            }
+            .group_swatch {
+                border-radius: 4px;
+                background-color: #f8f9fc;
+                button {
+                    font-size: 13px;
+                    font-weight: 700;
+                    line-height: 18px;
+                    color: #475467;
+                    border: 1px solid transparent;
+                    transition: all 0.2s;
+                    padding: 6px 8px;
+                }
+                & button:first-child {
+                    border-radius: 20px 0 0 20px;
+                }
+                & button:last-child {
+                    border-radius: 0 20px 20px 0;
+                }
+            }
+        }
+    }
+    .overlay_bg {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        opacity: 0.5;
+        z-index: 999999;
+        background-color: #242222;
+    }
+    &[data="true"] {
+        .switch_btn {
+            left: 0;
+            right: auto;
+            border-radius: 0 8px 8px 0;
+        }
+        .switch_menu {
+            left: 0;
+            right: auto;
+        }
+        .switch_contorl {
+            .toggle_button {
+                .group_swatch {
+                    & button:first-child {
+                        border-radius: 20px 0 0 20px !important;
+                    }
+                    & button:last-child {
+                        border-radius: 0 20px 20px 0 !important;
+                    }
+                }
+                .active {
+                    background-color: #7a5af8;
+                    .slider {
+                        top: -24px;
+                        left: 18px;
+                    }
+                }
+            }
+            .group_swatch {
+                border-radius: 20px;
+                & button:first-child {
+                    padding-left: 16px;
+                    border-radius: 0 20px 20px 0 !important;
+                }
+                & button:last-child {
+                    padding-right: 16px;
+                    border-radius: 20px 0 0 20px !important;
+                }
+            }
+        }
+    }
+}

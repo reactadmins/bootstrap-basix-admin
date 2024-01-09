@@ -1,0 +1,30 @@
+@import "../scss/variable.scss";
+
+.notification_menu {
+    width: max-content;
+    background-color: $white;
+    .notification {
+        color: $white;
+        padding: 5px 15px;
+        i {
+            font-size: 14px;
+            margin: 5px 5px 0 0;
+            width: 20px;
+        }
+        p {
+            font-size: 15px;
+        }
+    }
+    .bg_1 {
+        background-color: $blue;
+    }
+    .bg_2 {
+        background-color: $periwinkle;
+    }
+    .bg_3 {
+        background-color: $valentine-red;
+    }
+    .bg_4 {
+        background-color: $mint;
+    }
+}

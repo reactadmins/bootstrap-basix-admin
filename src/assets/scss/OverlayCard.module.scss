@@ -1,0 +1,34 @@
+.media_container {
+    .twt_mark {
+        min-height: 163px;
+        position: relative;
+        .twt_overlay {
+            &::before {
+                position: absolute;
+                content: "\f099";
+                font: normal normal normal 130px/1 FontAwesome;
+                top: 0;
+                left: 25px;
+                right: 0;
+                color: hsla(0, 0%, 100%, 0.15);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .weather_category {
+        position: relative;
+        &::after {
+            position: absolute;
+            content: " ";
+            top: -3px;
+            left: -25px;
+            width: 1.2px;
+            height: 40px;
+            background-color: #e6e6e6;
+        }
+    }
+}

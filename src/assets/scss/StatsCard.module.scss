@@ -1,0 +1,88 @@
+@import "../scss/variable.scss";
+
+.card {
+    .card_body {
+        .revenue_card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .counter {
+                gap: 4px;
+                font-size: 1.75rem;
+                font-weight: 400;
+                color: $white;
+            }
+            .title {
+                font-size: 16px;
+                font-family: Open Sans, sans-serif;
+                font-weight: 400;
+                line-height: 24px;
+                color: $white;
+            }
+            .counter_icon {
+                i {
+                    color: $white;
+                    font-size: 3.68em;
+                }
+            }
+            .progress_bar_title {
+                font-size: 80%;
+                font-weight: 400;
+                color: $white;
+            }
+        }
+        .user_info {
+            display: flex;
+            align-items: center;
+            gap: 1.875rem;
+            .counter_icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                i {
+                    color: $secondary;
+                    font-size: 1.875rem;
+                }
+            }
+            .title {
+                font-size: 1.25rem;
+                font-weight: 400;
+                line-height: 1.5;
+                color: $dark;
+            }
+            .counter {
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.5;
+                color: $dark;
+            }
+        }
+        .earning_card {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            .counter_icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                i {
+                    font-size: 1.125rem;
+                    font-weight: 900;
+                    color: $white;
+                }
+            }
+            .counter {
+                font-size: 1.25rem;
+                color: $grey-700;
+                font-weight: 500;
+                line-height: 1.2;
+            }
+            .title {
+                font-size: 14px;
+                font-weight: 700;
+                color: $grey-700;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

@@ -1,2 +1,2 @@
-# bootstrap-basix-admin
-Bootstrap Basix Admin
+# basix-admin-bootstrap
+React.js Basix Admin Bootstrap version

@@ -1,0 +1,23 @@
+.container {
+    .icon_wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 1rem 0;
+        margin: 0 0 2rem;
+        &:hover {
+            background-color: #20a8d8;
+            svg {
+                color: #fff;
+            }
+            i {
+                color: #fff;
+            }
+            span {
+                color: #fff;
+            }
+        }
+    }
+}
