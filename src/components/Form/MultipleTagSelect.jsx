@@ -1,5 +1,6 @@
 import Select from "react-select";
 import CardContent from "../Card/CardContent";
+import "../../assets/scss/MultipleTagSelect.scss";
 
 const options = [
     { value: "Afghanistan", label: "Afghanistan" },
@@ -36,33 +37,24 @@ const options = [
 
 const MultipleTagSelect = () => {
     return (
-        <>
-            <CardContent
-                title="React-Select"
-                CardBody={
-                    <>
-                        <div>
-                            <h5
-                                className="pb-2"
-                                style={{ fontSize: "1em", fontWeight: "400" }}
-                            >
-                                Select Countries
-                            </h5>
-                            <Select
-                                className="select"
-                                isMulti
-                                options={options}
-                                isClearable={true}
-                                isSearchable={true}
-                                isDisabled={false}
-                                isLoading={false}
-                                isRtl={false}
-                            />
-                        </div>
-                    </>
-                }
-            />
-        </>
+        <CardContent
+            title="React-Select"
+            CardBody={
+                <div className="tag_select">
+                    <h5 className="pb-2">Select Countries</h5>
+                    <Select
+                        className="select"
+                        isMulti
+                        options={options}
+                        isClearable={true}
+                        isSearchable={true}
+                        isDisabled={false}
+                        isLoading={false}
+                        isRtl={false}
+                    />
+                </div>
+            }
+        />
     );
 };
 

@@ -1,0 +1,13 @@
+.grids_contener {
+    h4,
+    h5 {
+        color: var(--hedging-text-color);
+    }
+    .card {
+        box-shadow: 0 0 0 1px var(--border-color);
+        background-color: var(--bg-content);
+        .card_body {
+            color: var(--hedging-text-color);
+        }
+    }
+}

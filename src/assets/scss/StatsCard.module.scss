@@ -1,6 +1,6 @@
 @import "../scss/variable.scss";
 
-.card {
+.stats_card {
     .card_body {
         .revenue_card {
             display: flex;
@@ -17,7 +17,7 @@
                 font-family: Open Sans, sans-serif;
                 font-weight: 400;
                 line-height: 24px;
-                color: $white;
+                color: var(--stats-card-text);
             }
             .counter_icon {
                 i {
@@ -40,7 +40,7 @@
                 justify-content: center;
                 align-items: center;
                 i {
-                    color: $secondary;
+                    color: var(--content-text-color);
                     font-size: 1.875rem;
                 }
             }
@@ -48,13 +48,13 @@
                 font-size: 1.25rem;
                 font-weight: 400;
                 line-height: 1.5;
-                color: $dark;
+                color: var(--hedging-text-color);
             }
             .counter {
                 font-size: 1rem;
                 font-weight: 400;
                 line-height: 1.5;
-                color: $dark;
+                color: var(--hedging-text-color);
             }
         }
         .earning_card {
@@ -73,14 +73,14 @@
             }
             .counter {
                 font-size: 1.25rem;
-                color: $grey-700;
+                color: var(--hedging-text-color);
                 font-weight: 500;
                 line-height: 1.2;
             }
             .title {
                 font-size: 14px;
                 font-weight: 700;
-                color: $grey-700;
+                color: var(--content-text-color);
                 text-transform: uppercase;
             }
         }

@@ -1,12 +1,20 @@
 @import "../scss/variable.scss";
 
 .table_wrapper {
+    input[placeholder="Search"] {
+        color: var(--hedging-text-color);
+        border-color: var(--border-color);
+        background-color: var(--bg-content);
+        &::placeholder {
+            color: var(--hedging-text-color);
+        }
+    }
     .show_entries {
         select {
             option {
-                color: #000;
-                border-bottom: 1px solid #c1c1c1;
-                background-color: $white;
+                color: var(--hedging-text-color);
+                border-bottom: 1px solid var(--border-color);
+                background-color: var(--bg-content);
             }
         }
     }
@@ -15,7 +23,6 @@
             tr {
                 td {
                     padding: 0.75rem;
-                    border-top: 1px solid #dee2e6;
                     border-bottom: 0px;
                 }
             }
@@ -33,6 +40,27 @@
                 }
                 &:nth-child(odd) {
                     background-color: #f2f2f2;
+                }
+            }
+        }
+    }
+    &[data="true"] {
+        .table {
+            .thead {
+                tr {
+                    td {
+                        color: var(--content-text-color);
+                        background-color: var(--bg-content);
+                    }
+                }
+            }
+            .tbody {
+                tr {
+                    td {
+                        border-color: var(--border-color) !important;
+                        color: var(--hedging-text-color);
+                        background-color: var(--bg-content) !important;
+                    }
                 }
             }
         }

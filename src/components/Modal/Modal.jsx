@@ -19,20 +19,50 @@ const Modal = ({ label, modalId, title, modalBody, modalSize }) => {
                 aria-hidden="true"
             >
                 <div className={`modal-dialog ${modalSize}`}>
-                    <div className="modal-content">
-                        <div className="modal-header">
-                            <h5 className="modal-title" id="exampleModalLabel">
+                    <div
+                        className="modal-content"
+                        style={{
+                            backgroundColor: "var(--bg-content)",
+                            border: "1px solid var(--border-color)",
+                        }}
+                    >
+                        <div
+                            className="modal-header"
+                            style={{ borderColor: "var(--border-color)" }}
+                        >
+                            <h5
+                                className="modal-title"
+                                id="exampleModalLabel"
+                                style={{ color: "var(--hedging-text-color)" }}
+                            >
                                 {title}
                             </h5>
                             <button
                                 type="button"
-                                className="btn-close"
                                 data-bs-dismiss="modal"
                                 aria-label="Close"
-                            ></button>
+                            >
+                                <i
+                                    className="fa-solid fa-xmark"
+                                    style={{
+                                        fontSize: "20px",
+                                        color: "var(--hedging-text-color)",
+                                    }}
+                                ></i>
+                            </button>
                         </div>
-                        <div className="modal-body">{modalBody}</div>
-                        <div className="modal-footer">
+                        <div
+                            className="modal-body"
+                            style={{
+                                color: "var(--hedging-text-color)",
+                            }}
+                        >
+                            {modalBody}
+                        </div>
+                        <div
+                            className="modal-footer"
+                            style={{ borderColor: "var(--border-color)" }}
+                        >
                             <button
                                 type="button"
                                 className="btn btn-primary"

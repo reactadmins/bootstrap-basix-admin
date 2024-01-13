@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import CardContent from "../components/Card/CardContent";
 import { Col, Row } from "react-bootstrap";
-import SocialButtonsStyle from "../assets/scss/SocialButtons.module.scss";
+import socialButtonsStyle from "../assets/scss/SocialButtons.module.scss";
 
 const SocialButtons = () => {
     return (
@@ -15,35 +15,35 @@ const SocialButtons = () => {
                         bodyBg="#ddd"
                         CardBody={
                             <div
-                                className={`d-flex justify-content-center gap-3 ${SocialButtonsStyle.rounded_button}`}
+                                className={`d-flex justify-content-center gap-3 ${socialButtonsStyle.rounded_button}`}
                             >
                                 <a
                                     href="#"
-                                    className={`${SocialButtonsStyle.social_rounded_button} ${SocialButtonsStyle.mail}`}
+                                    className={`${socialButtonsStyle.social_rounded_button} ${socialButtonsStyle.mail}`}
                                 >
                                     <i className="fa fa-envelope"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`${SocialButtonsStyle.social_rounded_button} ${SocialButtonsStyle.facebook}`}
+                                    className={`${socialButtonsStyle.social_rounded_button} ${socialButtonsStyle.facebook}`}
                                 >
                                     <i className="fa-brands fa-facebook-f"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`${SocialButtonsStyle.social_rounded_button} ${SocialButtonsStyle.linkedin}`}
+                                    className={`${socialButtonsStyle.social_rounded_button} ${socialButtonsStyle.linkedin}`}
                                 >
                                     <i className="fa-brands fa-linkedin-in"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`${SocialButtonsStyle.social_rounded_button} ${SocialButtonsStyle.github}`}
+                                    className={`${socialButtonsStyle.social_rounded_button} ${socialButtonsStyle.github}`}
                                 >
                                     <i className="fa-brands fa-github"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`${SocialButtonsStyle.social_rounded_button} ${SocialButtonsStyle.codepen}`}
+                                    className={`${socialButtonsStyle.social_rounded_button} ${socialButtonsStyle.codepen}`}
                                 >
                                     <i className="fa-brands fa-codepen"></i>
                                 </a>
@@ -62,11 +62,11 @@ const SocialButtons = () => {
                         CardBody={
                             <div className="py-2">
                                 <ul
-                                    className={`d-flex justify-content-center gap-3 ${SocialButtonsStyle.social_square_button}`}
+                                    className={`d-flex justify-content-center gap-3 ${socialButtonsStyle.social_square_button}`}
                                 >
                                     <li
                                         className={
-                                            SocialButtonsStyle.social_button
+                                            socialButtonsStyle.social_button
                                         }
                                     >
                                         <a
@@ -78,7 +78,7 @@ const SocialButtons = () => {
                                     </li>
                                     <li
                                         className={
-                                            SocialButtonsStyle.social_button
+                                            socialButtonsStyle.social_button
                                         }
                                     >
                                         <a
@@ -90,7 +90,7 @@ const SocialButtons = () => {
                                     </li>
                                     <li
                                         className={
-                                            SocialButtonsStyle.social_button
+                                            socialButtonsStyle.social_button
                                         }
                                     >
                                         <a
@@ -102,7 +102,7 @@ const SocialButtons = () => {
                                     </li>
                                     <li
                                         className={
-                                            SocialButtonsStyle.social_button
+                                            socialButtonsStyle.social_button
                                         }
                                     >
                                         <a
@@ -114,7 +114,7 @@ const SocialButtons = () => {
                                     </li>
                                     <li
                                         className={
-                                            SocialButtonsStyle.social_button
+                                            socialButtonsStyle.social_button
                                         }
                                     >
                                         <a
@@ -126,7 +126,7 @@ const SocialButtons = () => {
                                     </li>
                                     <li
                                         className={
-                                            SocialButtonsStyle.social_button
+                                            socialButtonsStyle.social_button
                                         }
                                     >
                                         <a
@@ -138,7 +138,7 @@ const SocialButtons = () => {
                                     </li>
                                     <li
                                         className={
-                                            SocialButtonsStyle.social_button
+                                            socialButtonsStyle.social_button
                                         }
                                     >
                                         <a
@@ -150,7 +150,7 @@ const SocialButtons = () => {
                                     </li>
                                     <li
                                         className={
-                                            SocialButtonsStyle.social_button
+                                            socialButtonsStyle.social_button
                                         }
                                     >
                                         <a
@@ -175,53 +175,53 @@ const SocialButtons = () => {
                         bodyBg="#ddd"
                         CardBody={
                             <div
-                                className={`d-flex justify-content-center gap-3 py-2 ${SocialButtonsStyle.aeneas_effect_button}`}
+                                className={`d-flex justify-content-center gap-3 py-2 ${socialButtonsStyle.aeneas_effect_button}`}
                             >
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.aeneas} ${SocialButtonsStyle.facebook}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.aeneas} ${socialButtonsStyle.facebook}`}
                                 >
                                     <i className="fa-brands fa-facebook-f fs-4 text-light"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.aeneas} ${SocialButtonsStyle.twitter}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.aeneas} ${socialButtonsStyle.twitter}`}
                                 >
                                     <i className="fa-brands fa-twitter fs-4 text-light"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.aeneas} ${SocialButtonsStyle.google}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.aeneas} ${socialButtonsStyle.google}`}
                                 >
                                     <i className="fa-brands fa-google-plus-g fs-4 text-light"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.aeneas} ${SocialButtonsStyle.dribbble}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.aeneas} ${socialButtonsStyle.dribbble}`}
                                 >
                                     <i className="fa-brands fa-dribbble fs-4 text-light"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.aeneas} ${SocialButtonsStyle.vimeo}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.aeneas} ${socialButtonsStyle.vimeo}`}
                                 >
                                     <i className="fa-brands fa-vimeo-v fs-4 text-light"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.aeneas} ${SocialButtonsStyle.pinterest}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.aeneas} ${socialButtonsStyle.pinterest}`}
                                 >
                                     <i className="fa-brands fa-pinterest-p fs-4 text-light"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.aeneas} ${SocialButtonsStyle.instagram}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.aeneas} ${socialButtonsStyle.instagram}`}
                                 >
                                     <i className="fa-brands fa-instagram fs-4 text-light"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.aeneas} ${SocialButtonsStyle.linkedin}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.aeneas} ${socialButtonsStyle.linkedin}`}
                                 >
                                     <i className="fa-brands fa-linkedin-in fs-4 text-light"></i>
                                 </a>
@@ -239,53 +239,53 @@ const SocialButtons = () => {
                         bodyBg="#ddd"
                         CardBody={
                             <div
-                                className={`d-flex justify-content-center gap-3 w-100 py-2 ${SocialButtonsStyle.jaques_effect_buttons}`}
+                                className={`d-flex justify-content-center gap-3 w-100 py-2 ${socialButtonsStyle.jaques_effect_buttons}`}
                             >
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.jaques} ${SocialButtonsStyle.facebook}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.jaques} ${socialButtonsStyle.facebook}`}
                                 >
                                     <i className="fa-brands fa-facebook-f fs-4 text-light"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.jaques} ${SocialButtonsStyle.twitter}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.jaques} ${socialButtonsStyle.twitter}`}
                                 >
                                     <i className="fa-brands fa-twitter fs-4 text-light"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.jaques} ${SocialButtonsStyle.google}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.jaques} ${socialButtonsStyle.google}`}
                                 >
                                     <i className="fa-brands fa-google-plus-g fs-4 text-light"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.jaques} ${SocialButtonsStyle.dribbble}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.jaques} ${socialButtonsStyle.dribbble}`}
                                 >
                                     <i className="fa-brands fa-dribbble fs-4 text-light"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.jaques} ${SocialButtonsStyle.vimeo}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.jaques} ${socialButtonsStyle.vimeo}`}
                                 >
                                     <i className="fa-brands fa-vimeo-v fs-4 text-light"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.jaques} ${SocialButtonsStyle.pinterest}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.jaques} ${socialButtonsStyle.pinterest}`}
                                 >
                                     <i className="fa-brands fa-pinterest-p fs-4 text-light"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.jaques} ${SocialButtonsStyle.instagram}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.jaques} ${socialButtonsStyle.instagram}`}
                                 >
                                     <i className="fa-brands fa-instagram fs-4 text-light"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.jaques} ${SocialButtonsStyle.linkedin}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.jaques} ${socialButtonsStyle.linkedin}`}
                                 >
                                     <i className="fa-brands fa-linkedin-in fs-4 text-light"></i>
                                 </a>
@@ -303,53 +303,53 @@ const SocialButtons = () => {
                         bodyBg="#ddd"
                         CardBody={
                             <div
-                                className={`d-flex justify-content-center gap-3 w-100 py-2  ${SocialButtonsStyle.egeon_effect_buttons}`}
+                                className={`d-flex justify-content-center gap-3 w-100 py-2  ${socialButtonsStyle.egeon_effect_buttons}`}
                             >
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.egeon} ${SocialButtonsStyle.facebook}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.egeon} ${socialButtonsStyle.facebook}`}
                                 >
                                     <i className="fa-brands fa-facebook-f fs-4 text-light"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.egeon} ${SocialButtonsStyle.twitter}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.egeon} ${socialButtonsStyle.twitter}`}
                                 >
                                     <i className="fa-brands fa-twitter fs-4 text-light"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.egeon} ${SocialButtonsStyle.google}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.egeon} ${socialButtonsStyle.google}`}
                                 >
                                     <i className="fa-brands fa-google-plus-g fs-4 text-light"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.egeon} ${SocialButtonsStyle.dribbble}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.egeon} ${socialButtonsStyle.dribbble}`}
                                 >
                                     <i className="fa-brands fa-dribbble fs-4 text-light"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.egeon} ${SocialButtonsStyle.vimeo}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.egeon} ${socialButtonsStyle.vimeo}`}
                                 >
                                     <i className="fa-brands fa-vimeo-v fs-4 text-light"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.egeon} ${SocialButtonsStyle.pinterest}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.egeon} ${socialButtonsStyle.pinterest}`}
                                 >
                                     <i className="fa-brands fa-pinterest-p fs-4 text-light"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.egeon} ${SocialButtonsStyle.instagram}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.egeon} ${socialButtonsStyle.instagram}`}
                                 >
                                     <i className="fa-brands fa-instagram fs-4 text-light"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.egeon} ${SocialButtonsStyle.linkedin}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.egeon} ${socialButtonsStyle.linkedin}`}
                                 >
                                     <i className="fa-brands fa-linkedin-in fs-4 text-light"></i>
                                 </a>
@@ -367,53 +367,53 @@ const SocialButtons = () => {
                         bodyBg="#ddd"
                         CardBody={
                             <div
-                                className={`d-flex justify-content-center gap-3 py-2  ${SocialButtonsStyle.claudio_effect_buttons}`}
+                                className={`d-flex justify-content-center gap-3 py-2  ${socialButtonsStyle.claudio_effect_buttons}`}
                             >
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.claudio} ${SocialButtonsStyle.facebook}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.claudio} ${socialButtonsStyle.facebook}`}
                                 >
                                     <i className="fa-brands fa-facebook-f fs-4 text-light"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.claudio} ${SocialButtonsStyle.twitter}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.claudio} ${socialButtonsStyle.twitter}`}
                                 >
                                     <i className="fa-brands fa-twitter fs-4 text-light"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.claudio} ${SocialButtonsStyle.google}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.claudio} ${socialButtonsStyle.google}`}
                                 >
                                     <i className="fa-brands fa-google-plus-g fs-4 text-light"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.claudio} ${SocialButtonsStyle.dribbble}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.claudio} ${socialButtonsStyle.dribbble}`}
                                 >
                                     <i className="fa-brands fa-dribbble fs-4 text-light"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.claudio} ${SocialButtonsStyle.vimeo}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.claudio} ${socialButtonsStyle.vimeo}`}
                                 >
                                     <i className="fa-brands fa-vimeo-v fs-4 text-light"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.claudio} ${SocialButtonsStyle.pinterest}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.claudio} ${socialButtonsStyle.pinterest}`}
                                 >
                                     <i className="fa-brands fa-pinterest-p fs-4 text-light"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.claudio} ${SocialButtonsStyle.instagram}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.claudio} ${socialButtonsStyle.instagram}`}
                                 >
                                     <i className="fa-brands fa-instagram fs-4 text-light"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.claudio} ${SocialButtonsStyle.linkedin}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.claudio} ${socialButtonsStyle.linkedin}`}
                                 >
                                     <i className="fa-brands fa-linkedin-in fs-4 text-light"></i>
                                 </a>
@@ -431,53 +431,53 @@ const SocialButtons = () => {
                         bodyBg="#ddd"
                         CardBody={
                             <div
-                                className={`d-flex justify-content-center gap-3 py-2  ${SocialButtonsStyle.laertes_effect_buttons}`}
+                                className={`d-flex justify-content-center gap-3 py-2  ${socialButtonsStyle.laertes_effect_buttons}`}
                             >
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.laertes} ${SocialButtonsStyle.facebook}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.laertes} ${socialButtonsStyle.facebook}`}
                                 >
                                     <i className="fa-brands fa-facebook-f fs-4 text-light"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.laertes} ${SocialButtonsStyle.twitter}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.laertes} ${socialButtonsStyle.twitter}`}
                                 >
                                     <i className="fa-brands fa-twitter fs-4 text-light"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.laertes} ${SocialButtonsStyle.google}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.laertes} ${socialButtonsStyle.google}`}
                                 >
                                     <i className="fa-brands fa-google-plus-g fs-4 text-light"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.laertes} ${SocialButtonsStyle.dribbble}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.laertes} ${socialButtonsStyle.dribbble}`}
                                 >
                                     <i className="fa-brands fa-dribbble fs-4 text-light"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.laertes} ${SocialButtonsStyle.vimeo}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.laertes} ${socialButtonsStyle.vimeo}`}
                                 >
                                     <i className="fa-brands fa-vimeo-v fs-4 text-light"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.laertes} ${SocialButtonsStyle.pinterest}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.laertes} ${socialButtonsStyle.pinterest}`}
                                 >
                                     <i className="fa-brands fa-pinterest-p fs-4 text-light"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.laertes} ${SocialButtonsStyle.instagram}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.laertes} ${socialButtonsStyle.instagram}`}
                                 >
                                     <i className="fa-brands fa-instagram fs-4 text-light"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.laertes} ${SocialButtonsStyle.linkedin}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.laertes} ${socialButtonsStyle.linkedin}`}
                                 >
                                     <i className="fa-brands fa-linkedin-in fs-4 text-light"></i>
                                 </a>
@@ -495,53 +495,53 @@ const SocialButtons = () => {
                         bodyBg="#ddd"
                         CardBody={
                             <div
-                                className={`d-flex justify-content-center gap-3 py-2 ${SocialButtonsStyle.jinae_effect_buttons}`}
+                                className={`d-flex justify-content-center gap-3 py-2 ${socialButtonsStyle.jinae_effect_buttons}`}
                             >
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.jinae} ${SocialButtonsStyle.facebook}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.jinae} ${socialButtonsStyle.facebook}`}
                                 >
                                     <i className="fa-brands fa-facebook-f fs-4 text-light"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.jinae} ${SocialButtonsStyle.twitter}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.jinae} ${socialButtonsStyle.twitter}`}
                                 >
                                     <i className="fa-brands fa-twitter fs-4 text-light"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.jinae} ${SocialButtonsStyle.google}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.jinae} ${socialButtonsStyle.google}`}
                                 >
                                     <i className="fa-brands fa-google-plus-g fs-4 text-light"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.jinae} ${SocialButtonsStyle.dribbble}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.jinae} ${socialButtonsStyle.dribbble}`}
                                 >
                                     <i className="fa-brands fa-dribbble fs-4 text-light"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.jinae} ${SocialButtonsStyle.vimeo}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.jinae} ${socialButtonsStyle.vimeo}`}
                                 >
                                     <i className="fa-brands fa-vimeo-v fs-4 text-light"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.jinae} ${SocialButtonsStyle.pinterest}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.jinae} ${socialButtonsStyle.pinterest}`}
                                 >
                                     <i className="fa-brands fa-pinterest-p fs-4 text-light"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.jinae} ${SocialButtonsStyle.instagram}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.jinae} ${socialButtonsStyle.instagram}`}
                                 >
                                     <i className="fa-brands fa-instagram fs-4 text-light"></i>
                                 </a>
                                 <a
                                     href="#"
-                                    className={`text-decoration-none ${SocialButtonsStyle.jinae} ${SocialButtonsStyle.linkedin}`}
+                                    className={`text-decoration-none ${socialButtonsStyle.jinae} ${socialButtonsStyle.linkedin}`}
                                 >
                                     <i className="fa-brands fa-linkedin-in fs-4 text-light"></i>
                                 </a>

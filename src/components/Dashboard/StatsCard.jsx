@@ -1,7 +1,8 @@
 import { Card } from "react-bootstrap";
 import CountUp from "react-countup";
 import ProgressBar from "../ProgressBar/ProgressBar";
-import StatsCardStyle from "../../assets/scss/StatsCard.module.scss";
+import statsCardStyle from "../../assets/scss/StatsCard.module.scss";
+import { useDashboardDataContext } from "../../context/dashboardDataContext";
 
 const StatsCard = ({
     type = "",
@@ -41,7 +42,7 @@ const StatsCard = ({
             <>
                 {icon && (
                     <div
-                        className={StatsCardStyle.counter_icon}
+                        className={statsCardStyle.counter_icon}
                         style={{
                             width: `${iconCorverWidth}`,
                             height: `${iconCorverHeight}`,
@@ -70,28 +71,31 @@ const StatsCard = ({
         );
     };
 
+    const { isDark } = useDashboardDataContext();
+
     return (
         <Card
-            className={`${StatsCardStyle.card} rounded-0 h-100 ${
+            className={`${statsCardStyle.stats_card} rounded-0 h-100 ${
                 type == "revenue-card" ? "h-100" : ""
             }`}
             style={{
-                backgroundColor: `${cardBg}`,
+                backgroundColor: `${isDark ? "var(--bg-content)" : cardBg}`,
                 border: `${
                     type == "revenue-card" || type == "progressbar"
                         ? "0px"
                         : "1px solid #d2d2d2"
                 }`,
+                borderColor: `${isDark ? "var(--border-color)" : "#d2d2d2"}`,
             }}
         >
             <Card.Body
-                className={`${StatsCardStyle.card_body} d-flex flex-column justify-content-center`}
+                className={`${statsCardStyle.card_body} d-flex flex-column justify-content-center`}
                 style={{
                     padding: `${type == "revenue-card" ? "20px" : padding}`,
                 }}
             >
                 <div
-                    className={`${StatsCardStyle[type]}`}
+                    className={`${statsCardStyle[type]}`}
                     style={{
                         flexDirection: `${isProgress == true && "column"}`,
                         alignItems: `${isProgress == true && "flex-start"}`,
@@ -101,7 +105,7 @@ const StatsCard = ({
                     <div style={{ width: `${isProgress == true && "100%"}` }}>
                         {type == "user-info" && (
                             <p
-                                className={StatsCardStyle.title}
+                                className={statsCardStyle.title}
                                 style={{
                                     fontSize: `${isBorder == true && "15px"}`,
                                     color: `${isBorder == true && "#868e96"}`,
@@ -111,11 +115,7 @@ const StatsCard = ({
                             </p>
                         )}
                         <div
-                            className={`d-flex align-items-center ${StatsCardStyle.counter}`}
-                            style={{
-                                fontSize: `${isBorder == true && "24px"}`,
-                                color: `${isBorder == true && "#373757"}`,
-                            }}
+                            className={`d-flex align-items-center ${statsCardStyle.counter}`}
                         >
                             {type == "user-info" && isBorder == false ? (
                                 <span>Total: </span>
@@ -141,7 +141,9 @@ const StatsCard = ({
                                               return (
                                                   <>
                                                       {count(counter)}
-                                                      <span>{symbol}</span>
+                                                      <span style={{}}>
+                                                          {symbol}
+                                                      </span>
                                                   </>
                                               );
                                           default:
@@ -151,7 +153,7 @@ const StatsCard = ({
                                 : null}
                         </div>
                         {type == "user-info" ? null : (
-                            <p className={StatsCardStyle.title}>{title}</p>
+                            <p className={statsCardStyle.title}>{title}</p>
                         )}
                         {isProgress == true && (
                             <div className="mt-2">
@@ -162,7 +164,7 @@ const StatsCard = ({
                                     strokeColor="white"
                                 />
                                 <span
-                                    className={`${StatsCardStyle.progress_bar_title} mt-1`}
+                                    className={`${statsCardStyle.progress_bar_title} mt-1`}
                                 >
                                     {progressBarTitle}
                                 </span>

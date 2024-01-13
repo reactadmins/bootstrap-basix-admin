@@ -1,10 +1,10 @@
 import { BarChart, Bar } from "recharts";
-import user1 from "../../../assets/img/avatar/user-1.jpg";
-import user2 from "../../../assets/img/avatar/user-2.jpg";
-import user3 from "../../../assets/img/avatar/user-3.jpg";
-import user4 from "../../../assets/img/avatar/user-4.jpg";
-import user5 from "../../../assets/img/avatar/user-5.jpg";
-import StatsStyle from "../../../assets/scss/UserTable.module.scss";
+import user1 from "../../../assets/image/avatar/user-1.jpg";
+import user2 from "../../../assets/image/avatar/user-2.jpg";
+import user3 from "../../../assets/image/avatar/user-3.jpg";
+import user4 from "../../../assets/image/avatar/user-4.jpg";
+import user5 from "../../../assets/image/avatar/user-5.jpg";
+import statsStyle from "../../../assets/scss/Stats.module.scss";
 
 const Month = () => {
     const data = [
@@ -52,7 +52,7 @@ const Month = () => {
         },
     ];
     return (
-        <div className={`${StatsStyle.table_stats} p-3`}>
+        <div className={`${statsStyle.table_stats} p-3`}>
             <table className="table">
                 <thead>
                     <tr>
@@ -65,7 +65,7 @@ const Month = () => {
                 <tbody>
                     <tr>
                         <td className="align-middle">
-                            <div className={StatsStyle.user_img}>
+                            <div className={statsStyle.user_img}>
                                 <a href="#">
                                     <img
                                         src={user2}
@@ -77,7 +77,7 @@ const Month = () => {
                             </div>
                         </td>
                         <td className="align-middle">
-                            <span className={StatsStyle.user_count}>
+                            <span className={statsStyle.user_count}>
                                 3765879
                             </span>
                         </td>
@@ -94,7 +94,6 @@ const Month = () => {
                             <span
                                 className="mx-1"
                                 style={{
-                                    color: "#343a40",
                                     fontSize: "14px",
                                     fontWeight: "600",
                                 }}
@@ -105,7 +104,7 @@ const Month = () => {
                     </tr>
                     <tr>
                         <td className="align-middle">
-                            <div className={StatsStyle.user_img}>
+                            <div className={statsStyle.user_img}>
                                 <a href="#">
                                     <img
                                         src={user1}
@@ -117,7 +116,7 @@ const Month = () => {
                             </div>
                         </td>
                         <td className="align-middle">
-                            <span className={StatsStyle.user_count}>
+                            <span className={statsStyle.user_count}>
                                 3765879
                             </span>
                         </td>
@@ -134,7 +133,6 @@ const Month = () => {
                             <span
                                 className="mx-1"
                                 style={{
-                                    color: "#343a40",
                                     fontSize: "14px",
                                     fontWeight: "600",
                                 }}
@@ -146,7 +144,7 @@ const Month = () => {
 
                     <tr>
                         <td className="align-middle">
-                            <div className={StatsStyle.user_img}>
+                            <div className={statsStyle.user_img}>
                                 <a href="#">
                                     <img
                                         src={user3}
@@ -158,7 +156,7 @@ const Month = () => {
                             </div>
                         </td>
                         <td className="align-middle">
-                            <span className={StatsStyle.user_count}>
+                            <span className={statsStyle.user_count}>
                                 3765879
                             </span>
                         </td>
@@ -175,7 +173,6 @@ const Month = () => {
                             <span
                                 className="mx-1"
                                 style={{
-                                    color: "#343a40",
                                     fontSize: "14px",
                                     fontWeight: "600",
                                 }}
@@ -186,7 +183,7 @@ const Month = () => {
                     </tr>
                     <tr>
                         <td className="align-middle">
-                            <div className={StatsStyle.user_img}>
+                            <div className={statsStyle.user_img}>
                                 <a href="#">
                                     <img
                                         src={user4}
@@ -198,7 +195,7 @@ const Month = () => {
                             </div>
                         </td>
                         <td className="align-middle">
-                            <span className={StatsStyle.user_count}>
+                            <span className={statsStyle.user_count}>
                                 3765879
                             </span>
                         </td>
@@ -215,7 +212,6 @@ const Month = () => {
                             <span
                                 className="mx-1"
                                 style={{
-                                    color: "#343a40",
                                     fontSize: "14px",
                                     fontWeight: "600",
                                 }}
@@ -226,7 +222,7 @@ const Month = () => {
                     </tr>
                     <tr>
                         <td className="align-middle">
-                            <div className={StatsStyle.user_img}>
+                            <div className={statsStyle.user_img}>
                                 <a href="#">
                                     <img
                                         src={user5}
@@ -238,7 +234,7 @@ const Month = () => {
                             </div>
                         </td>
                         <td className="align-middle">
-                            <span className={StatsStyle.user_count}>
+                            <span className={statsStyle.user_count}>
                                 3765879
                             </span>
                         </td>
@@ -255,7 +251,6 @@ const Month = () => {
                             <span
                                 className="mx-1"
                                 style={{
-                                    color: "#343a40",
                                     fontSize: "14px",
                                     fontWeight: "600",
                                 }}

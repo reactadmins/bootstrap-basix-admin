@@ -4,7 +4,7 @@ import ProfileCard from "../components/Card/ProfileCard";
 import NotificationStatsCart from "../components/Card/NotificationStatsCart";
 import OverlayCard from "../components/Card/OverlayCard";
 import WidgetsCard from "../components/Card/WidgetsCard";
-import placeholder from "../assets/img/placeholder.png";
+import placeholder from "../assets/image/placeholder.png";
 
 const Cards = () => {
     return (
@@ -44,18 +44,16 @@ const Cards = () => {
                         type="info"
                         title="Kanye West"
                         userInfo={
-                            <p className="text-secondary text-center fs-6 px-3">
-                                Just got a pretty neat project via
+                            <p
+                                className="text-center fs-6 px-3"
+                                style={{ color: "var(--content-text-color)" }}
+                            >
+                                Just got a pretty neat project via @ooomf - Give
+                                it a try
                                 <a
                                     href="#"
-                                    className="text-decoration-none text-secondary mx-1"
-                                >
-                                    @ooomf
-                                </a>
-                                - Give it a try
-                                <a
-                                    href="#"
-                                    className="text-decoration-none text-secondary mx-1"
+                                    className="text-decoration-none mx-1"
+                                    style={{ color: "var(--link-color)" }}
                                 >
                                     http://t.co/e02DwGEeOJ
                                 </a>

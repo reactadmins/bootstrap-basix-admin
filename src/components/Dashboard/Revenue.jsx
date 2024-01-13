@@ -1,8 +1,6 @@
 import { Fragment, useState } from "react";
-
 import ReactApexChart from "react-apexcharts";
 import CardContent from "../Card/CardContent";
-
 const Revenue = () => {
     const [state, setState] = useState({
         series: [67],

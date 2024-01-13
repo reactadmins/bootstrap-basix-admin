@@ -1,0 +1,26 @@
+@import "./variable.scss";
+
+.visitor_wrapper {
+    .title {
+        display: block;
+        font-size: 14px;
+        color: var(--content-text-color);
+    }
+    .counter {
+        font-size: 1.1rem;
+        font-family: inherit;
+        font-weight: 500;
+        line-height: 1.2;
+        color: var(--hedging-text-color);
+    }
+    .progress {
+        width: 100%;
+        height: 5px;
+        background-color: $pink;
+        .progress_bar {
+            width: 40%;
+            height: 100%;
+            background-color: $success;
+        }
+    }
+}

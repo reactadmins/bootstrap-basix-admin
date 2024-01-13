@@ -1,4 +1,20 @@
-.container {
+.icon_viewer_wrapper {
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-content);
+    padding: 30px;
+    svg {
+        color: var(--hedging-text-color);
+    }
+}
+
+.icon_container {
+    .icon_search {
+        border: 1px solid var(--border-color);
+        background-color: var(--bg-content);
+        h2 {
+            color: var(--hedging-text-color) !important;
+        }
+    }
     .icon_wrapper {
         display: flex;
         flex-direction: column;
@@ -7,6 +23,11 @@
         text-align: center;
         padding: 1rem 0;
         margin: 0 0 2rem;
+        svg,
+        i,
+        span {
+            color: var(--hedging-text-color);
+        }
         &:hover {
             background-color: #20a8d8;
             svg {

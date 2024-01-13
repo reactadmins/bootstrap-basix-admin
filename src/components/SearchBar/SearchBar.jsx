@@ -1,4 +1,4 @@
-import SearchBarStyle from "../../assets/scss/SearchBar.module.scss";
+import searchBarStyle from "../../assets/scss/SearchBar.module.scss";
 
 const SearchBar = ({ isOpenSearch, setIsOpenSearch }) => {
     document.onkeydown = function (evt) {
@@ -8,9 +8,9 @@ const SearchBar = ({ isOpenSearch, setIsOpenSearch }) => {
         }
     };
     return (
-        <div className={SearchBarStyle.search_wrapper}>
+        <div className={searchBarStyle.search_wrapper}>
             <div
-                className={`${SearchBarStyle.search_container} d-flex justify-content-between align-item-center py-2`}
+                className={`${searchBarStyle.search_container} d-flex justify-content-between align-item-center py-2`}
             >
                 <input placeholder="Search ..." className="border-0" />
                 <button

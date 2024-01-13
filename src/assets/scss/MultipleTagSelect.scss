@@ -1,0 +1,24 @@
+.tag_select {
+    h5 {
+        font-size: 1em;
+        font-weight: 400;
+        color: var(--content-text-color);
+    }
+    .select {
+        .css-13cymwt-control,
+        .css-t3ipsp-control {
+            background-color: var(--bg-content) !important;
+            border-color: var(--border-color) !important;
+            .css-art2ul-ValueContainer2 {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+        }
+    }
+    .css-1nmdiq5-menu {
+        color: var(--content-text-color);
+        border: 1px solid var(--border-color);
+        background-color: var(--bg-content);
+    }
+}

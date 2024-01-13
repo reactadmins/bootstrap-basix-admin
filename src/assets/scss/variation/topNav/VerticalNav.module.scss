@@ -1,0 +1,176 @@
+@import "../../variable.scss";
+
+.top_navbar {
+    .navbar {
+        .container_fluid {
+            height: 80px;
+            border-bottom: 1px solid $green-white;
+            padding: 0px 30px;
+            background-color: $white;
+            .navbar_collapse {
+                position: relative;
+                .navbar_nav {
+                    .header_left {
+                        display: flex;
+                        .sidebar_menu {
+                            display: none;
+                        }
+                        .active {
+                            display: block;
+                        }
+                        li {
+                            padding: 0 18px;
+                            button {
+                                position: relative;
+                                border: none;
+                                background-color: transparent;
+                                i {
+                                    font-size: 16px;
+                                }
+                                .count {
+                                    display: block;
+                                    width: 15px;
+                                    height: 15px;
+                                    font-size: 11px;
+                                    color: $white;
+                                    line-height: 15px;
+                                    border-radius: 50%;
+                                }
+                                .sidebar_menu_icon {
+                                    &::before {
+                                        position: absolute;
+                                        content: "\f0a4";
+                                        font-family: Fontawesome;
+                                        top: -23px;
+                                        right: -15px;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        width: 35px;
+                                        height: 35px;
+                                        border-radius: 50%;
+                                        z-index: 999;
+                                        color: #fff;
+                                        background-color: #dc3545;
+                                    }
+                                }
+                            }
+                            .for_notification {
+                                .count {
+                                    position: absolute;
+                                    top: -4px;
+                                    right: -14px;
+                                }
+                            }
+                            .for_message {
+                                .count {
+                                    position: absolute;
+                                    top: -4px;
+                                    right: -18px;
+                                }
+                            }
+                        }
+                    }
+                    .user_area {
+                        position: relative;
+                        .user_dropdown {
+                            img {
+                                width: 32px;
+                                height: 32px;
+                                border-radius: 50%;
+                            }
+                        }
+                    }
+                    &.navbar_nav_right {
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+                    }
+                }
+            }
+            &.bg_white {
+                background-color: $white !important;
+            }
+            &.bg_black {
+                background-color: #263238 !important;
+                .navbar_collapse {
+                    .navbar_nav {
+                        ul {
+                            li {
+                                button {
+                                    color: #c8c9ce !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.bg_red {
+                background-color: #f44336 !important;
+                .navbar_collapse {
+                    .navbar_nav {
+                        ul {
+                            li {
+                                button {
+                                    color: white !important;
+                                    .count {
+                                        background-color: $primary !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.fixed_top {
+        position: fixed;
+        top: 0;
+        width: -webkit-fill-available;
+        z-index: 999;
+    }
+    &[dark-mode="true"] {
+        .navbar {
+            .container_fluid {
+                border-color: var(--border-color);
+                background-color: var(--bg-content) !important;
+                .navbar_collapse {
+                    .navbar_nav {
+                        ul {
+                            li {
+                                button {
+                                    color: var(--hedging-text-color) !important;
+                                }
+                                .for_notification {
+                                    color: var(--hedging-text-color) !important;
+                                    .count {
+                                        background-color: $danger !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .top_navbar {
+        .navbar {
+            .container_fluid {
+                .navbar_collapse {
+                    .navbar_nav {
+                        .header_left {
+                            .sidebar_menu {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

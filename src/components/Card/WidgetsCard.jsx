@@ -1,5 +1,7 @@
 import { Card } from "react-bootstrap";
 import CardHeader from "react-bootstrap/esm/CardHeader";
+import widgetsCardStyle from "../../assets/scss/WidgetsCard.module.scss";
+import { useDashboardDataContext } from "../../context/dashboardDataContext";
 
 const WidgetsCard = ({
     cardBg = "",
@@ -14,19 +16,21 @@ const WidgetsCard = ({
     footerContent = "",
     cardBorderColor = "",
 }) => {
+    const { isDark } = useDashboardDataContext();
     return (
         <Card
-            className={`rounded-0 ${
+            data={isDark ? "true" : "false"}
+            className={`rounded-0 ${widgetsCardStyle.card} ${
                 cardBorderColor ? `border border-${cardBorderColor}` : ""
             } ${cardBg ? `bg-${cardBg}` : ""}`}
         >
             {headerTitle && (
                 <CardHeader
-                    className={`rounded-0 ${
+                    className={`rounded-0 ${widgetsCardStyle.card_header} ${
                         badge
                             ? "d-flex justify-content-between align-items-center"
                             : ""
-                    } ${headerBg ? `bg-${headerBg}` : "bg-white"}`}
+                    } ${headerBg ? `bg-${headerBg}` : ""}`}
                 >
                     <strong className={`${headerBg ? "text-white" : ""}`}>
                         {headerTitle}
@@ -38,9 +42,10 @@ const WidgetsCard = ({
             )}
             {cardImage && <img src={cardImage} alt="Card image cap" />}
             <Card.Body
-                className={`bg-${(cardBg && cardBg) || (bodyBg && bodyBg)}`}
+                className={`${widgetsCardStyle.card_body} bg-${
+                    cardBg || bodyBg || ""
+                }`}
                 style={{
-                    padding: "20px",
                     backgroundColor: `${cardBg ? "" : bodyBg}`,
                 }}
             >
@@ -50,13 +55,15 @@ const WidgetsCard = ({
                 <p
                     className={`fs-6 fw-normal lh-base ${
                         cardBg && "text-white"
-                    } ${bodyBg == "white" ? "text-secondary" : "text-white "}`}
+                    } ${bodyBg == "white" ? "text-secondary" : "text-white"}`}
                 >
                     {bodyContent}
                 </p>
             </Card.Body>
             {footerContent && (
-                <Card.Footer className="border-0 pt-0 bg-transparent">
+                <Card.Footer
+                    className={`${widgetsCardStyle.card_footer} border-0 pt-0 bg-transparent`}
+                >
                     <div className="d-flex gap-2 align-items-center">
                         <div
                             className="bg-light"

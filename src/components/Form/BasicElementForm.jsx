@@ -41,9 +41,7 @@ const BasicElementForm = () => {
                                             placeholder="Text"
                                             required
                                         />
-                                        <small className="form-text text-muted">
-                                            This is a help text
-                                        </small>
+                                        <small>This is a help text</small>
                                     </Col>
                                 </Row>
                             </div>
@@ -65,9 +63,7 @@ const BasicElementForm = () => {
                                             placeholder="Enter Email"
                                             required
                                         />
-                                        <small className="form-text text-muted">
-                                            Please enter your email
-                                        </small>
+                                        <small>Please enter your email</small>
                                     </Col>
                                 </Row>
                             </div>
@@ -89,7 +85,7 @@ const BasicElementForm = () => {
                                             placeholder="Password"
                                             required
                                         />
-                                        <small className="form-text text-muted">
+                                        <small>
                                             Please enter a complex password
                                         </small>
                                     </Col>

@@ -1,8 +1,8 @@
-import user1 from "../../../assets/img/avatar/user-1.jpg";
-import user2 from "../../../assets/img/avatar/user-2.jpg";
-import user3 from "../../../assets/img/avatar/user-3.jpg";
-import user4 from "../../../assets/img/avatar/user-4.jpg";
-import MessageStyle from "../../../assets/scss/Message.module.scss";
+import user1 from "../../../assets/image/avatar/user-1.jpg";
+import user2 from "../../../assets/image/avatar/user-2.jpg";
+import user3 from "../../../assets/image/avatar/user-3.jpg";
+import user4 from "../../../assets/image/avatar/user-4.jpg";
+import messageStyle from "../../../assets/scss/Message.module.scss";
 
 const Message = () => {
     const message_list = [
@@ -37,21 +37,21 @@ const Message = () => {
     ];
 
     return (
-        <div className={MessageStyle.message_menu}>
-            <p className={MessageStyle.message_counter}>You have 4 Mails</p>
+        <div className={messageStyle.message_menu}>
+            <p className={messageStyle.message_counter}>You have 4 Mails</p>
             {message_list?.map((data) => {
                 return (
                     <a
                         href="/"
                         key={data.id}
-                        className={`${MessageStyle.message_body} ${
-                            MessageStyle[`bg_${data.id}`]
+                        className={`${messageStyle.message_body} ${
+                            messageStyle[`bg_${data.id}`]
                         } d-flex gap-2`}
                     >
-                        <span className={MessageStyle.user_img}>
+                        <span className={messageStyle.user_img}>
                             <img src={data.img} alt="user" />
                         </span>
-                        <div className={MessageStyle.message}>
+                        <div className={messageStyle.message}>
                             <div className="d-flex justify-content-between align-items-center">
                                 <span className="name">{data.name}</span>
                                 <span className="time">{data.time}</span>

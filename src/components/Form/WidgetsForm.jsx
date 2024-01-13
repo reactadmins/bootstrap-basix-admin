@@ -18,7 +18,14 @@ const WidgetsForm = ({
                             }`}
                         >
                             {isPrepend && (
-                                <span className="input-group-text">
+                                <span
+                                    className="input-group-text"
+                                    style={{
+                                        backgroundColor: "var(--bg-content)",
+                                        borderColor: "var(--border-color)",
+                                        color: "var(  --hedging-text-color)",
+                                    }}
+                                >
                                     Username
                                 </span>
                             )}
@@ -41,6 +48,11 @@ const WidgetsForm = ({
                                         : "rounded-end"
                                 }`}
                                 id="inputGroupPrepend2"
+                                style={{
+                                    backgroundColor: "var(--bg-content)",
+                                    borderColor: "var(--border-color)",
+                                    color: "var(  --hedging-text-color)",
+                                }}
                             >
                                 <i className="fa fa-user"></i>
                             </span>
@@ -51,7 +63,16 @@ const WidgetsForm = ({
                             }`}
                         >
                             {isPrepend && (
-                                <span className="input-group-text">Email</span>
+                                <span
+                                    className="input-group-text"
+                                    style={{
+                                        backgroundColor: "var(--bg-content)",
+                                        borderColor: "var(--border-color)",
+                                        color: "var(  --hedging-text-color)",
+                                    }}
+                                >
+                                    Email
+                                </span>
                             )}
                             <input
                                 type="email"
@@ -72,6 +93,11 @@ const WidgetsForm = ({
                                         : "rounded-end"
                                 }`}
                                 id="inputGroupPrepend2"
+                                style={{
+                                    backgroundColor: "var(--bg-content)",
+                                    borderColor: "var(--border-color)",
+                                    color: "var(  --hedging-text-color)",
+                                }}
                             >
                                 <i className="fa-solid fa-envelope"></i>
                             </span>
@@ -82,7 +108,14 @@ const WidgetsForm = ({
                             }`}
                         >
                             {isPrepend && (
-                                <span className="input-group-text">
+                                <span
+                                    className="input-group-text"
+                                    style={{
+                                        backgroundColor: "var(--bg-content)",
+                                        borderColor: "var(--border-color)",
+                                        color: "var(  --hedging-text-color)",
+                                    }}
+                                >
                                     Password
                                 </span>
                             )}
@@ -105,6 +138,11 @@ const WidgetsForm = ({
                                         : "rounded-end"
                                 }`}
                                 id="inputGroupPrepend2"
+                                style={{
+                                    backgroundColor: "var(--bg-content)",
+                                    borderColor: "var(--border-color)",
+                                    color: "var(  --hedging-text-color)",
+                                }}
                             >
                                 <i className="fa fa-asterisk"></i>
                             </span>

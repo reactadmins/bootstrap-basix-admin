@@ -1,7 +1,8 @@
 import { Fragment, useState } from "react";
 import Card from "react-bootstrap/Card";
 import CardHeader from "react-bootstrap/esm/CardHeader";
-import CardContentStyle from "../../assets/scss/CardContent.module.scss";
+import cardContentStyle from "../../assets/scss/CardContent.module.scss";
+import { useDashboardDataContext } from "../../context/dashboardDataContext";
 
 const CardContent = ({
     title = "",
@@ -9,19 +10,24 @@ const CardContent = ({
     icons = "",
     CardBody = "",
     bodyHeight = "",
-    bodyBg = "#fff",
     CardFooter = "",
 }) => {
     const [isOpen, setIsOpen] = useState();
     const [hiddenContent, setHiddenContent] = useState();
+    const { isDark } = useDashboardDataContext();
 
     return (
         <Fragment>
             {!hiddenContent ? (
-                <Card className={`${CardContentStyle.card} rounded-0`}>
+                <Card
+                    className={`${cardContentStyle.card} rounded-0`}
+                    style={{
+                        border: `${isDark ? "0" : ""}`,
+                        boxShadow: `${isDark ? "0 0 0 1px #ffffff25" : ""}`,
+                    }}
+                >
                     <CardHeader
-                        className={`${CardContentStyle.card_header} rounded-0`}
-                        style={{ backgroundColor: "#F7F7F7" }}
+                        className={`${cardContentStyle.card_header} rounded-0`}
                     >
                         <div
                             className={`d-flex align-items-center ${
@@ -29,7 +35,7 @@ const CardContent = ({
                             }`}
                         >
                             <strong
-                                className={CardContentStyle.card_title}
+                                className={cardContentStyle.card_title}
                                 style={{
                                     fontSize: `${icons ? "0.875em" : "1rem"}`,
                                     fontWeight: `${icons ? "600" : "700"}`,
@@ -40,7 +46,7 @@ const CardContent = ({
                             {titleCode}
                             {icons && (
                                 <div
-                                    className={`d-flex align-items-center ${CardContentStyle.card_icon}`}
+                                    className={`d-flex align-items-center ${cardContentStyle.card_icon}`}
                                 >
                                     {icons?.map((item, index) => (
                                         <button
@@ -62,7 +68,7 @@ const CardContent = ({
                                                         : ""
                                                 );
                                             }}
-                                            className={`${CardContentStyle.content_settings} border-0 bg-transparent`}
+                                            className={`${cardContentStyle.content_settings} border-0 bg-transparent`}
                                         >
                                             <i className={item}></i>
                                         </button>
@@ -70,7 +76,7 @@ const CardContent = ({
                                     {isOpen ? (
                                         <div
                                             className={
-                                                CardContentStyle.card_setting
+                                                cardContentStyle.card_setting
                                             }
                                         >
                                             <button type="button">
@@ -94,12 +100,13 @@ const CardContent = ({
                         </div>
                     </CardHeader>
                     <Card.Body
-                        style={{ backgroundColor: bodyBg, height: bodyHeight }}
+                        className={cardContentStyle.card_body}
+                        style={{ height: bodyHeight }}
                     >
                         {CardBody}
                     </Card.Body>
                     {CardFooter && (
-                        <Card.Footer className="bg-white">
+                        <Card.Footer className={cardContentStyle.card_footer}>
                             {CardFooter}
                         </Card.Footer>
                     )}

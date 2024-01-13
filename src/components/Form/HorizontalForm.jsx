@@ -23,9 +23,9 @@ const HorizontalForm = () => {
                                                 placeholder="Enter Email...."
                                                 required
                                             />
-                                            <span className="help-block form-text">
+                                            <small className="help-block form-text">
                                                 Please enter your email
-                                            </span>
+                                            </small>
                                         </div>
                                     </div>
                                 </div>
@@ -45,9 +45,9 @@ const HorizontalForm = () => {
                                                 placeholder="Enter password...."
                                                 required
                                             />
-                                            <span className="help-block form-text">
+                                            <small className="help-block">
                                                 Please enter your password
-                                            </span>
+                                            </small>
                                         </div>
                                     </div>
                                 </div>

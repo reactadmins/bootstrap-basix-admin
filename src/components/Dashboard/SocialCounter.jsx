@@ -12,8 +12,11 @@ const SocialCounter = ({
 }) => {
     return (
         <Card
-            className="rounded-0 bg-white"
-            style={{ border: "1px solid #DEE2E6" }}
+            className="rounded-0"
+            style={{
+                backgroundColor: "var(--bg-content)",
+                border: "1px solid var(--border-color)",
+            }}
         >
             <Card.Body className="p-0">
                 <div
@@ -44,13 +47,14 @@ const SocialCounter = ({
                                 style={{
                                     fontSize: "1.1rem",
                                     fontWeight: "500",
+                                    color: "var(--hedging-text-color)",
                                 }}
                             />
                             <span
                                 className="d-block"
                                 style={{
                                     fontSize: "14px",
-                                    color: "rgb(134, 142, 150)",
+                                    color: "var(--content-text-color)",
                                 }}
                             >
                                 Followers
@@ -60,7 +64,7 @@ const SocialCounter = ({
                         <div className="d-flex gap-3 justify-content-center align-items-center py-3">
                             <div
                                 style={{
-                                    color: "rgb(148, 156, 160)",
+                                    color: "var(--content-text-color)",
                                     textAlign: "right",
                                 }}
                             >
@@ -94,7 +98,7 @@ const SocialCounter = ({
                             />
                             <p
                                 style={{
-                                    color: "rgb(148, 156, 160)",
+                                    color: "var(--content-text-color)",
                                     textAlign: "left",
                                 }}
                             >

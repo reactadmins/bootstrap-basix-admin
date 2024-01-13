@@ -1,15 +1,17 @@
 import { Fragment } from "react";
 import CardContent from "../components/Card/CardContent";
-import TypographyStyle from "../assets/scss/Typography.module.scss";
+import typographyStyle from "../assets/scss/Typography.module.scss";
+import { useDashboardDataContext } from "../context/dashboardDataContext";
 
 const Typography = () => {
+    const { isDark } = useDashboardDataContext();
     return (
         <Fragment>
             <CardContent
                 title="Typography"
                 CardBody={
-                    <div className={TypographyStyle.typography}>
-                        <div className="typo-headers">
+                    <div className={typographyStyle.typography}>
+                        <div className={typographyStyle.typo_headers}>
                             <h1 className="fw-bolder">
                                 Very Important Information H1
                             </h1>
@@ -29,8 +31,10 @@ const Typography = () => {
                                 Random Tiny Heading H6
                             </h6>
                         </div>
-                        <div className="mt-5" style={{ width: "90%" }}>
-                            <p className="lh-2 text-secondary text-start">
+                        <div
+                            className={`${typographyStyle.typo_articles} mt-5`}
+                        >
+                            <p className="lh-2 text-start">
                                 The unique stripes of zebras make them one of
                                 the animals most familiar to people. They occur
                                 in a variety of habitats, such as grasslands,
@@ -46,7 +50,7 @@ const Typography = () => {
                                 <mark className="mx-1">highlighted text</mark>
                                 zebra are endangered.
                             </p>
-                            <blockquote className="text-secondary text-end">
+                            <blockquote className="text-end">
                                 <p>
                                     Blockquotes. However, various anthropogenic
                                     factors have had a severe impact on zebra
@@ -68,13 +72,13 @@ const Typography = () => {
                                 lacked a dewlap and resembled their
                             </p>
                         </div>
-                        <div className="row">
-                            <h3 className="fw-bold mt-4">Lists</h3>
-                            <div className="col-md-6 col-lg-6 col-xl-6">
-                                <h2 className="fw-bold mt-2">Unordered</h2>
-                                <ul
-                                    className={`list-group ${TypographyStyle.list_group}`}
-                                >
+                        <div className={`row ${typographyStyle.lists}`}>
+                            <h2 className="fw-bold mt-4">Lists</h2>
+                            <div
+                                className={`col-md-6 col-lg-6 col-xl-6 ${typographyStyle.unordered_list}`}
+                            >
+                                <h3 className="fw-bold mt-2">Unordered</h3>
+                                <ul className="list-group">
                                     <li className="list-square">
                                         A wide variety of hypotheses have been
                                         proposed to account for the evolution of
@@ -94,7 +98,7 @@ const Typography = () => {
                                         the striking striping merges to an
                                         apparent grey.
                                         <ul
-                                            className={`list-inner ${TypographyStyle.list_inner}`}
+                                            className={`list-inner ${typographyStyle.list_inner}`}
                                         >
                                             <li className="list-circle">
                                                 However, the camouflage has been
@@ -112,15 +116,17 @@ const Typography = () => {
                                         </ul>
                                     </li>
                                     <li
-                                        className={`list-square ${TypographyStyle.list_square}`}
+                                        className={`list-square ${typographyStyle.list_square}`}
                                     >
                                         Before seeing it from a distance,
                                         especially at night.
                                     </li>
                                 </ul>
                             </div>
-                            <div className="col-md-6 col-lg-6 col-xl-6">
-                                <h2 className="fw-bold mt-2">Ordered</h2>
+                            <div
+                                className={`col-md-6 col-lg-6 col-xl-6 ${typographyStyle.ordered_Lists}`}
+                            >
+                                <h3 className="fw-bold mt-2">Ordered</h3>
                                 <ol>
                                     <li>
                                         A wide variety of hypotheses have been
@@ -162,10 +168,10 @@ const Typography = () => {
                                     </li>
                                 </ol>
                             </div>
-                            <div className="row">
-                                <h3 className="fw-bold mt-4">Misc</h3>
+                            <div className={`row ${typographyStyle.misc}`}>
+                                <h2 className="fw-bold mt-4">Misc</h2>
                                 <div className="col-md-6 col-lg-6 col-xl-6">
-                                    <h2 className="fw-bold mt-2">Address</h2>
+                                    <h3 className="fw-bold mt-2">Address</h3>
                                     <address>
                                         <strong className="d-block">
                                             SJØNNA
@@ -184,16 +190,29 @@ const Typography = () => {
                                         </b>
                                         <a
                                             href="#"
-                                            className="text-decoration-none text-secondary"
+                                            className="text-decoration-none"
                                         >
                                             hello@examplemail.com
                                         </a>
                                     </address>
                                 </div>
-                                <div className="col-md-6 col-lg-6 col-xl-6">
+                                <div
+                                    className={`col-md-6 col-lg-6 col-xl-6 ${typographyStyle.well}`}
+                                >
                                     <h2 className="fw-bold mt-2">Well</h2>
                                     <div
-                                        style={{ backgroundColor: "#e9ecef" }}
+                                        style={{
+                                            backgroundColor: `${
+                                                isDark
+                                                    ? "var(--bg-content)"
+                                                    : "#e9ecef"
+                                            }`,
+                                            border: `${
+                                                isDark
+                                                    ? "1px solid var(--border-color)"
+                                                    : "0"
+                                            }`,
+                                        }}
                                         className="px-3 py-5 rounded"
                                     >
                                         <span>

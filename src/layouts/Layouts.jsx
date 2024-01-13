@@ -1,47 +1,47 @@
-import { Outlet } from "react-router-dom";
-import Sidebar from "../components/Sidebar/Sidebar";
-import AdminNavbar from "../components/Navbars/AdminNavbar";
+import Combo from "../components/LayoutsType/Combo";
+import DualNav from "../components/LayoutsType/DualNav";
+import Horizontal from "../components/LayoutsType/Horizontal";
+import Vertical from "../components/layoutsType/Vertical";
 import { useDashboardDataContext } from "../context/dashboardDataContext";
-import LayoutStyle from "../assets/scss/Layouts.module.scss";
 
 const Layouts = ({ setSidebarMini, sidebarMini }) => {
-    const { isSwitcher, navbarFixed, isThemeDirection } =
-        useDashboardDataContext();
-    return (
-        <div
-            className={`${LayoutStyle.layouts_container} ${
-                !isSwitcher ? LayoutStyle.switcher_active : ""
-            }`}
-            data={!isThemeDirection ? "false" : "true"}
-        >
-            <div
-                className={`${LayoutStyle.sidebar_nav} ${
-                    sidebarMini ? LayoutStyle.active_menu : ""
-                }`}
-            >
-                <Sidebar
-                    setSidebarMini={setSidebarMini}
+    const { activeVariation } = useDashboardDataContext();
+    switch (activeVariation ? activeVariation : "vertical") {
+        case "vertical": {
+            return (
+                <Vertical
                     sidebarMini={sidebarMini}
-                />
-            </div>
-            <div
-                className={`${LayoutStyle.right_panel} ${
-                    sidebarMini ? LayoutStyle.sidebar_mini : ""
-                }`}
-            >
-                <AdminNavbar
                     setSidebarMini={setSidebarMini}
-                    sidebarMini={sidebarMini}
                 />
-                <div
-                    className={LayoutStyle.content}
-                    style={{ marginTop: `${navbarFixed ? "80px" : "0"}` }}
-                >
-                    <Outlet />
-                </div>
-            </div>
-        </div>
-    );
+            );
+        }
+        case "horizontal": {
+            return (
+                <Horizontal
+                    sidebarMini={sidebarMini}
+                    setSidebarMini={setSidebarMini}
+                />
+            );
+        }
+        case "combo": {
+            return (
+                <Combo
+                    sidebarMini={sidebarMini}
+                    setSidebarMini={setSidebarMini}
+                />
+            );
+        }
+        case "dual_nav": {
+            return (
+                <DualNav
+                    sidebarMini={sidebarMini}
+                    setSidebarMini={setSidebarMini}
+                />
+            );
+        }
+        default:
+            return null;
+    }
 };
 
 export default Layouts;

@@ -61,23 +61,25 @@ const AnalyticsStats = () => {
     return (
         <Fragment>
             <CardContent
-                style={{ heidth: "300px" }}
                 title="Analytics Stats"
                 icons={["fa fa-cog", "fa fa-angle-down", "fa fa-times"]}
-                bodyHeight={"310px"}
-                CardBody={<Line options={options} data={data} />}
-                CardFooter={
-                    <Row
-                        className="gy-4"
-                        style={{ padding: "48px 48px 24px 28px" }}
+                CardBody={
+                    <div
+                        className="d-flex justify-content-center"
+                        style={{ width: "100%", height: "310px" }}
                     >
-                        <Col sm={12} md={4}>
+                        <Line options={options} data={data} />
+                    </div>
+                }
+                CardFooter={
+                    <Row className="gy-4 m-0" style={{ padding: "16px 20px" }}>
+                        <Col sm={12} md={4} className="m-0">
                             <AnalyticsInfo count={65.79} title="Bounce Rate" />
                         </Col>
-                        <Col sm={12} md={4}>
+                        <Col sm={12} md={4} className="m-0">
                             <AnalyticsInfo count={65.79} title="Pageviews" />
                         </Col>
-                        <Col sm={12} md={4}>
+                        <Col sm={12} md={4} className="m-0">
                             <AnalyticsInfo count={65.79} title="New Users" />
                         </Col>
                     </Row>

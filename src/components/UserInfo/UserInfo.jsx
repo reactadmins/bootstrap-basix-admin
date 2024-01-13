@@ -1,5 +1,6 @@
 import { Card } from "react-bootstrap";
 import ProgressBar from "../ProgressBar/ProgressBar";
+import { useDashboardDataContext } from "../../context/dashboardDataContext";
 
 const UserInfo = ({
     cardBg = "#fff",
@@ -10,11 +11,13 @@ const UserInfo = ({
     ProgressBarBg = "#fff",
     progressPercent = "",
 }) => {
+    const { isDark } = useDashboardDataContext();
     return (
         <Card
             className="rounded-0"
             style={{
-                backgroundColor: `${cardBg}`,
+                borderColor: "var(--border-color)",
+                backgroundColor: `${isDark ? "var(--bg-content)" : cardBg}`,
             }}
         >
             <Card.Body>
@@ -26,30 +29,42 @@ const UserInfo = ({
                                 (iconfontSize == "sm" && "17px") ||
                                 (iconfontSize == "2xl" && "2rem")
                             }`,
-                            color: `${cardBg == "#fff" ? "#868E96" : "#fff"}`,
+                            color: `${
+                                cardBg == "#fff"
+                                    ? "var(--content-text-color)"
+                                    : "#fff"
+                            }`,
                         }}
                     ></i>
                 </div>
                 <div>
-                    <span
+                    <h2
                         style={{
                             fontSize: "1.5rem",
-                            color: `${cardBg == "#fff" ? "#212529" : "#fff"}`,
+                            color: `${
+                                cardBg == "#fff"
+                                    ? "var(--hedging-text-color)"
+                                    : "#fff"
+                            }`,
                             fontWeight: "500",
                         }}
                     >
                         {conunt}
-                    </span>
-                    <small
+                    </h2>
+                    <span
                         className="d-block text-uppercase"
                         style={{
                             fontSize: "14px",
-                            color: `${cardBg == "#fff" ? "#868e96" : "#fff"}`,
+                            color: `${
+                                cardBg == "#fff"
+                                    ? "var(--content-text-color)"
+                                    : "#fff"
+                            }`,
                             fontWeight: "700",
                         }}
                     >
                         {title}
-                    </small>
+                    </span>
                 </div>
                 <div
                     className={`mt-3 ${

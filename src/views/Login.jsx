@@ -1,33 +1,36 @@
-import logo from "../assets/img/logo.png";
+import logo from "../assets/image/logo.png";
 import { Link } from "react-router-dom";
-import Authentication from "../assets/scss/Authentication.module.scss";
+import loginStyle from "../assets/scss/Authentication.module.scss";
+import { useDashboardDataContext } from "../context/dashboardDataContext";
 
 const Login = () => {
+    const { isThemeDirection } = useDashboardDataContext();
+
     return (
-        <div className={`${Authentication.container_fluid} p-0`}>
-            <div className={Authentication.auth_wrapper}>
+        <div
+            data={isThemeDirection ? "true" : "false"}
+            className={`${loginStyle.container_fluid}`}
+        >
+            <div className={loginStyle.auth_wrapper}>
                 <div
-                    className={`${Authentication.from_container} d-flex justify-content-center align-items-center bg-white h-100`}
+                    className={`${loginStyle.from_container} d-flex justify-content-center align-items-center h-100`}
                 >
                     <div className="col-md-10 col-lg-8 col-xl-5">
-                        <div className="card rounded-0">
+                        <div className={`${loginStyle.card} card rounded-0`}>
                             <div
-                                className="card-header"
-                                style={{
-                                    backgroundColor: "#f7f7f7",
-                                    padding: "12px 20px",
-                                }}
+                                className={`${loginStyle.card_header} card-header`}
                             >
                                 <strong> Welcome !</strong>
                             </div>
                             <div
-                                className="card-body"
-                                style={{ padding: "40px" }}
+                                className={`${loginStyle.card_body} card-body`}
                             >
                                 <form>
-                                    <div className="input-group mb-3">
+                                    <div
+                                        className={`${loginStyle.input_group} input-group mb-3`}
+                                    >
                                         <span
-                                            className="input-group-text rounded-star"
+                                            className={`${loginStyle.input_group_icon} input-group-text rounded-star`}
                                             htmlFor="email"
                                         >
                                             <i className="fa fa-envelope"></i>
@@ -40,9 +43,11 @@ const Login = () => {
                                             required
                                         />
                                     </div>
-                                    <div className="input-group mb-3">
+                                    <div
+                                        className={`${loginStyle.input_group} input-group mb-3`}
+                                    >
                                         <span
-                                            className="input-group-text rounded-star"
+                                            className={`${loginStyle.input_group_icon} input-group-text rounded-star`}
                                             htmlFor="password"
                                         >
                                             <i className="fa fa-asterisk"></i>
@@ -59,22 +64,13 @@ const Login = () => {
                                         <button
                                             type="submit"
                                             className="border-0 text-white"
-                                            style={{
-                                                padding: "6px 12px",
-                                                fontWeight: "400",
-                                                backgroundColor: "#28a745",
-                                            }}
                                         >
                                             Log In
                                         </button>
                                         <Link
                                             to=""
+                                            type="action"
                                             className="border-0 text-white text-decoration-none"
-                                            style={{
-                                                padding: "6px 12px",
-                                                fontWeight: "400",
-                                                backgroundColor: "#007bff",
-                                            }}
                                         >
                                             Create Account
                                         </Link>
@@ -84,9 +80,9 @@ const Login = () => {
                         </div>
                     </div>
                 </div>
-                <div className={`${Authentication.logo_container} h-100`}>
-                    <div className={Authentication.oblique}></div>
-                    <div className={Authentication.logo}>
+                <div className={`${loginStyle.logo_container} h-100`}>
+                    <div className={loginStyle.oblique}></div>
+                    <div className={loginStyle.logo}>
                         <Link to="/">
                             <img src={logo} alt="logo" />
                         </Link>

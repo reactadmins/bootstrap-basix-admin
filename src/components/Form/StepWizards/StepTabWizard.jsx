@@ -2,7 +2,7 @@ import { useState } from "react";
 import PersonalDetails from "./Page/PersonalDetails";
 import AdditionalInfo from "./Page/AdditionalInfo";
 import LoggedIn from "./Page/LoggedIn";
-import StepWizardStyle from "../../../assets/scss/StepWizard.module.scss";
+import stepWizardStyle from "../../../assets/scss/StepTabWizard.module.scss";
 
 const StepTabWizard = () => {
     const [stepCounter, setStepCounter] = useState(1);
@@ -37,119 +37,66 @@ const StepTabWizard = () => {
     };
     return (
         <div
-            className={`${StepWizardStyle.wizard_wrapper} position-relative mt-5 px-3`}
+            className={`${stepWizardStyle.wizard_wrapper} position-relative mt-5 px-3`}
         >
             <div className="row">
-                <div className="text-center" style={{ padding: "15px" }}>
-                    <h3
-                        className="m-0"
-                        style={{
-                            fontSize: "1.1rem",
-                            color: "#252422",
-                            fontWeight: "300",
-                        }}
-                    >
-                        Awesome Wizard
-                    </h3>
-                    <p
-                        style={{
-                            fontSize: "14px",
-                            color: "#9a9a9a",
-                            fontWeight: "400",
-                        }}
-                    >
+                <div className={stepWizardStyle.wizard_header}>
+                    <h3 className="m-0 text-center">Awesome Wizard</h3>
+                    <p className="text-center">
                         Split a complicated flow in multiple steps
                     </p>
                 </div>
                 {arrayList.map((items, index) => (
                     <div className="col-3 text-center p-0" key={items.id}>
                         <div
-                            className={StepWizardStyle.step_block}
-                            style={{
-                                backgroundColor: `${
-                                    stepCounter === index + 1
-                                        ? "rgb(230, 126, 34)"
-                                        : "#F3F2EE"
-                                }`,
-                                padding: "8px",
-                                color: `${
-                                    stepCounter === index + 1
-                                        ? "#fff"
-                                        : "rgb(204, 204, 204)"
-                                }`,
-                            }}
+                            className={`${stepWizardStyle.step_block} ${
+                                stepCounter === index + 1
+                                    ? stepWizardStyle.active
+                                    : ""
+                            }`}
                         >
-                            <div
-                                className={StepWizardStyle.step_wrapper}
-                                onClick={() => updateStep(index + 1)}
-                            >
+                            <div onClick={() => updateStep(index + 1)}>
                                 <div className="mx-auto position-relative">
-                                    <i
-                                        className={`${items.icon}`}
-                                        style={{ fontSize: "23px" }}
-                                    ></i>
+                                    <i className={`${items.icon}`}></i>
                                 </div>
                             </div>
                         </div>
                         <span
-                            style={{
-                                color: `${
-                                    stepCounter === index + 1
-                                        ? "rgb(230, 126, 34)"
-                                        : "rgba(0, 0, 0, 0.2)"
-                                }`,
-                                fontSize: "17px",
-                            }}
+                            className={`${stepWizardStyle.step_title} ${
+                                stepCounter >= index + 1
+                                    ? stepWizardStyle.step_title_active
+                                    : ""
+                            }`}
                         >
                             {items.name}
                         </span>
                     </div>
                 ))}
             </div>
-            <div className={StepWizardStyle.step_content}>
+            <div className={stepWizardStyle.step_content}>
                 {stepCounter === 1 && <PersonalDetails />}
                 {stepCounter === 2 && <LoggedIn />}
                 {stepCounter === 3 && <AdditionalInfo />}
                 {stepCounter === 4 && (
-                    <span>Congratulations This is the Final Step</span>
+                    <span className={stepWizardStyle.step_content_title}>
+                        Congratulations This is the Final Step
+                    </span>
                 )}
             </div>
-            <div
-                className={`${StepWizardStyle.step_btn_wrapper} mb-4`}
-                style={{ padding: "0 20px" }}
-            >
+            <div className={`${stepWizardStyle.step_btn_wrapper} mb-4`}>
                 {stepCounter > 1 && stepCounter < arrayList.length && (
-                    <button
-                        style={{
-                            minWidth: "140px",
-                            fontSize: "14px",
-                            fontWeight: "600",
-                            padding: "8px 12px",
-                            backgroundColor: "rgb(230, 126, 34)",
-                            color: "#fff",
-                            border: "rgb(230, 126, 34)",
-                            borderRadius: "4px",
-                        }}
-                        onClick={() => updateStep(stepCounter - 1)}
-                    >
+                    <button onClick={() => updateStep(stepCounter - 1)}>
                         Back
                     </button>
                 )}
                 <button
                     className="float-end"
                     style={{
-                        minWidth: "140px",
-                        fontSize: "14px",
-                        fontWeight: "600",
-                        padding: "8px 12px",
                         backgroundColor: `${
                             stepCounter < arrayList.length
                                 ? "rgb(230, 126, 34)"
                                 : "rgb(67, 160, 71)"
                         }`,
-                        color: "#fff",
-                        border: "rgb(230, 126, 34)",
-                        borderRadius: "4px",
                     }}
                     onClick={() => updateStep(stepCounter + 1)}
                 >

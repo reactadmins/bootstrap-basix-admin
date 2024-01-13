@@ -1,4 +1,4 @@
-import NotificationStyle from "../../../assets/scss/Notification.module.scss";
+import notificationStyle from "../../../assets/scss/Notification.module.scss";
 
 const Notification = () => {
     const notification_list = [
@@ -24,13 +24,13 @@ const Notification = () => {
         },
     ];
     return (
-        <div className={NotificationStyle.notification_menu}>
+        <div className={notificationStyle.notification_menu}>
             {notification_list?.map((data) => (
                 <a
                     href="/"
                     key={data.id}
-                    className={`${NotificationStyle.notification} ${
-                        NotificationStyle[`bg_${data.id}`]
+                    className={`${notificationStyle.notification} ${
+                        notificationStyle[`bg_${data.id}`]
                     } d-flex align-items-center text-decoration-none`}
                 >
                     <i className={data.icon}></i>

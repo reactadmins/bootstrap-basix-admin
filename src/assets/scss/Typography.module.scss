@@ -1,14 +1,69 @@
 .typography {
-    .list_group {
-        padding-left: 30px;
+    .typo_headers {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--hedging-text-color);
+        }
     }
-    .list_inner {
-        padding-left: 30px;
+    .typo_articles {
+        width: 90%;
+        p {
+            color: var(--content-text-color);
+        }
+        footer {
+            color: var(--hedging-text-color);
+        }
     }
-    .list_square {
-        list-style-type: square;
-    }
-    .list_circle {
-        list-style-type: circle;
+    .lists {
+        h2 {
+            color: var(--hedging-text-color);
+        }
+        .unordered_list {
+            h3 {
+                color: var(--hedging-text-color);
+            }
+            ul {
+                padding: 30px;
+                li {
+                    color: var(--content-text-color);
+                }
+            }
+            .list_square {
+                list-style-type: square;
+            }
+        }
+        .ordered_Lists {
+            h3 {
+                color: var(--hedging-text-color);
+            }
+            ol {
+                padding: 30px;
+                li {
+                    color: var(--content-text-color);
+                }
+            }
+        }
+        .misc {
+            h2,
+            h3 {
+                color: var(--hedging-text-color);
+            }
+            address {
+                color: var(--content-text-color);
+                a {
+                    cursor: pointer;
+                    color: var(--link-color);
+                }
+            }
+            .well {
+                span {
+                    color: var(--hedging-text-color);
+                }
+            }
+        }
     }
 }

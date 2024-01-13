@@ -1,12 +1,14 @@
 import { Card } from "react-bootstrap";
-import admin from "../../assets/img/admin.jpg";
+import admin from "../../assets/image/admin.jpg";
+import notificationStyle from "../../assets/scss/NotificationStatsCart.module.scss";
 
 const NotificationStatsCart = () => {
     return (
-        <Card className="rounded-top rounded-0">
+        <Card
+            className={`${notificationStyle.card} rounded-top rounded-0 border-0`}
+        >
             <Card.Header
-                className="bg-dark border-0"
-                style={{ padding: "20px" }}
+                className={`${notificationStyle.card_header} bg-dark border-0`}
             >
                 <div className="d-flex align-items-center gap-3">
                     <a href="#">
@@ -14,40 +16,22 @@ const NotificationStatsCart = () => {
                             src={admin}
                             alt="user"
                             className="rounded-circle border border-5 border-secondary"
-                            style={{ width: "85px", height: "85px" }}
                         />
                     </a>
-                    <div className="media-body">
-                        <h3
-                            className="mb-0"
-                            style={{
-                                fontSize: "2rem",
-                                color: "#fff",
-                                fontWeight: "500",
-                            }}
-                        >
-                            Jim Doe
-                        </h3>
-                        <p
-                            style={{
-                                fontSize: "1rem",
-                                color: "#878787",
-                                fontWeight: "400",
-                            }}
-                        >
-                            Project Manager
-                        </p>
+                    <div className={notificationStyle.media_body}>
+                        <h3 className="mb-0">Jim Doe</h3>
+                        <p>Project Manager</p>
                     </div>
                 </div>
             </Card.Header>
-            <Card.Body className="p-0">
+            <Card.Body className={`${notificationStyle.card_body} p-0`}>
                 <ul>
                     <li>
                         <a
                             href="#"
-                            className="d-flex justify-content-between align-items-center p-3 border-top"
+                            className="d-flex justify-content-between align-items-center p-3"
                         >
-                            <span className="text-secondary d-flex align-items-center gap-2">
+                            <span className="d-flex align-items-center gap-2">
                                 <i className="fa-regular fa-envelope"></i>
                                 Mail Inbox
                             </span>
@@ -57,9 +41,9 @@ const NotificationStatsCart = () => {
                     <li>
                         <a
                             href="#"
-                            className="d-flex justify-content-between align-items-center p-3 border-top"
+                            className="d-flex justify-content-between align-items-center p-3"
                         >
-                            <span className="text-secondary d-flex align-items-center gap-2">
+                            <span className="d-flex align-items-center gap-2">
                                 <i className="fa-solid fa-server"></i>
                                 Recent Activity
                             </span>
@@ -69,9 +53,9 @@ const NotificationStatsCart = () => {
                     <li>
                         <a
                             href="#"
-                            className="d-flex justify-content-between align-items-center p-3 border-top"
+                            className="d-flex justify-content-between align-items-center p-3"
                         >
-                            <span className="text-secondary d-flex align-items-center gap-2">
+                            <span className="d-flex align-items-center gap-2">
                                 <i className="fa-regular fa-bell"></i>
                                 Notification
                             </span>
@@ -81,9 +65,9 @@ const NotificationStatsCart = () => {
                     <li>
                         <a
                             href="#"
-                            className="d-flex justify-content-between align-items-center p-3 border-top"
+                            className="d-flex justify-content-between align-items-center p-3"
                         >
-                            <span className="text-secondary d-flex align-items-center gap-2">
+                            <span className=" d-flex align-items-center gap-2">
                                 <i className="fa-solid fa-message"></i>
                                 Message
                             </span>

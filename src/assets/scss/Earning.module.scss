@@ -22,8 +22,8 @@
                 position: absolute;
                 top: 36px;
                 right: 16px;
-                background: #fff;
-                border: 1px solid rgba(0, 0, 0, 0.175);
+                background: var(--bg-content);
+                border: 1px solid var(--border-color);
                 padding: 8px 10px;
                 width: 100px;
                 z-index: 999;
@@ -33,7 +33,7 @@
                     align-items: center;
                     column-gap: 8px;
                     font-size: 14px;
-                    color: #868e96;
+                    color: var(--hedging-text-color);
                     font-weight: 400;
                     line-height: 16px;
                     padding: 5px 0;
@@ -55,6 +55,18 @@
                 font-size: 1rem;
                 font-weight: 400;
                 color: $white;
+            }
+        }
+    }
+    &[data="true"] {
+        .card {
+            border: 1px solid var(--border-color);
+            .header {
+                border-bottom: 1px solid var(--border-color) !important;
+            }
+            .footer {
+                background-color: var(--bg-content);
+                border-top: 1px solid var(--border-color) !important;
             }
         }
     }

@@ -1,22 +1,19 @@
 import { useState } from "react";
 import { Card } from "react-bootstrap";
 import CardHeader from "react-bootstrap/esm/CardHeader";
+import weatherStyle from "../../assets/scss/WeatherStats.module.scss";
+import { useDashboardDataContext } from "../../context/dashboardDataContext";
 
 export const Stats = ({ title, counter, Symbol }) => {
     return (
-        <div className="text-center" style={{ width: "33%" }}>
+        <div className={`${weatherStyle.stats} text-center`}>
             <span
-                className="text-uppercase fw-normal"
-                style={{ fontSize: " 14px", color: "#868e96" }}
+                className={`${weatherStyle.stats_title} text-uppercase fw-normal`}
             >
                 {title}
             </span>
             <span
-                className="d-block fw-semibold"
-                style={{
-                    color: "#333648",
-                    fontSize: " 13px",
-                }}
+                className={`${weatherStyle.stats_counter} d-block fw-semibold`}
             >
                 {counter}
                 {Symbol}
@@ -26,21 +23,21 @@ export const Stats = ({ title, counter, Symbol }) => {
 };
 
 const WeatherStats = () => {
+    const { isDark } = useDashboardDataContext();
     const [isOpen, setIsOpen] = useState();
     return (
-        <Card className="border-0 rounded-0">
+        <Card
+            className={`${weatherStyle.card} rounded-0 border-0`}
+            style={{
+                boxShadow: `${
+                    isDark ? "0px 0px 0px 1px var(--border-color)" : ""
+                }`,
+            }}
+        >
             <CardHeader
-                className="border-0 rounded-0 d-flex justify-content-between align-items-center"
-                style={{ padding: "12px 18px", backgroundColor: "#ffa726" }}
+                className={`${weatherStyle.card_header} border-0 rounded-0 d-flex justify-content-between align-items-center`}
             >
-                <h2
-                    className="text-white mb-0 fw-semibold"
-                    style={{
-                        fontSize: "0.875em",
-                    }}
-                >
-                    Weather
-                </h2>
+                <h2 className="text-white mb-0 fw-semibold">Weather</h2>
                 <button
                     type="button"
                     className="border-0 bg-transparent text-white"
@@ -49,10 +46,7 @@ const WeatherStats = () => {
                     <i className="fa fa-ellipsis-v"></i>
                 </button>
                 {isOpen ? (
-                    <div
-                        className="card-setting"
-                        style={{ top: "40px", right: "10px" }}
-                    >
+                    <div className={weatherStyle.card_setting}>
                         <button type="button">
                             <i className="fa-solid fa-gear"></i>
                             Edit
@@ -70,84 +64,43 @@ const WeatherStats = () => {
                     ""
                 )}
             </CardHeader>
-            <Card.Body className="p-0 bg-white">
+            <Card.Body className={`${weatherStyle.card_body} p-0 border-0`}>
                 <div
-                    className="p-4 pt-0 pb-2 d-flex justify-content-between align-items-center"
-                    style={{ backgroundColor: "#ffa726" }}
+                    className={`${weatherStyle.weather_stats} p-4 pt-0 pb-2 d-flex justify-content-between align-items-center`}
                 >
-                    <span style={{ fontSize: "3.75em" }}>
+                    <span className={weatherStyle.weather_icon}>
                         <i className="fa fa-cloud text-white"></i>
                     </span>
-                    <div>
-                        <h3
-                            className="text-white mb-0"
-                            style={{ fontSize: "1.125em", fontWeight: "400" }}
-                        >
-                            Partly Cloudy
-                        </h3>
-                        <span
-                            className="text-white text-end d-block"
-                            style={{ fontSize: "12px", marginTop: "5px" }}
-                        >
+                    <div className={weatherStyle.media_body}>
+                        <h3 className="text-white mb-0">Partly Cloudy</h3>
+                        <span className="text-white text-end d-block">
                             Sunday, April 2023
                         </span>
                     </div>
                 </div>
-                <div className="p-4 d-flex justify-content-between align-items-center">
+                <div
+                    className={`${weatherStyle.media_content} p-4 d-flex justify-content-between align-items-center`}
+                >
                     <div>
                         <h5 className="text-uppercase fs-6 fw-normal mb-0">
                             New York
                         </h5>
-                        <span
-                            className="text-uppercase fw-normal"
-                            style={{
-                                fontSize: "14px",
-                                color: "#868e96",
-                                marginTop: "4px",
-                            }}
-                        >
-                            Usa
-                        </span>
+                        <span className="text-uppercase fw-normal">Usa</span>
                     </div>
                     <div
-                        className="d-flex align-items-baseline"
-                        style={{ paddingRight: "15px" }}
+                        className={`${weatherStyle.weather_counte} d-flex align-items-baseline`}
                     >
-                        <h2
-                            className="mb-0 fw-normal"
-                            style={{ fontSize: "2rem" }}
-                        >
-                            21
-                        </h2>
-                        <span
-                            className="d-block"
-                            style={{ fontSize: "14px", color: "#868e96" }}
-                        >
-                            °C
-                        </span>
+                        <h2 className="mb-0 fw-normal">21</h2>
+                        <span className="d-block">°C</span>
                     </div>
                 </div>
             </Card.Body>
-            <Card.Footer className="bg-white">
+            <Card.Footer className={weatherStyle.card_footer}>
                 <div className="d-flex justify-content-between align-items-center">
                     <Stats title="Feels" counter={23} Symbol="°" />
-                    <hr
-                        className="mx-3"
-                        style={{
-                            width: "1px",
-                            height: "32px",
-                            backgroundColor: "rgb(18 18 18)",
-                        }}
-                    />
+                    <hr className="mx-3" />
                     <Stats title="Humidity" counter={37} Symbol="%" />
-                    <hr
-                        className="mx-3"
-                        style={{
-                            width: "1px",
-                            height: "32px",
-                            backgroundColor: "rgb(18 18 18)",
-                        }}
-                    />
+                    <hr className="mx-3" />
                     <Stats title="Wind" counter={4} Symbol=" km/h" />
                 </div>
             </Card.Footer>

@@ -1,21 +1,16 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Card } from "react-bootstrap";
 import CardHeader from "react-bootstrap/esm/CardHeader";
-import admin from "../../assets/img/admin.jpg";
+import admin from "../../assets/image/admin.jpg";
+import userStatsStryle from "../../assets/scss/UserStats.module.scss";
+import { useDashboardDataContext } from "../../context/dashboardDataContext";
 
 export const Stats = ({ icon, counter }) => {
     return (
-        <div className="text-center" style={{ width: "33%" }}>
-            <i
-                className={icon}
-                style={{ color: "#868e96", fontSize: "20px" }}
-            ></i>
+        <div className={`${userStatsStryle.stats} text-center`}>
+            <i className={icon}></i>
             <span
-                className="d-block fw-semibold"
-                style={{
-                    color: "#333648",
-                    fontSize: " 13px",
-                }}
+                className={`${userStatsStryle.stats_counter} d-block fw-semibold`}
             >
                 {counter}
             </span>
@@ -25,11 +20,16 @@ export const Stats = ({ icon, counter }) => {
 
 const UserStats = () => {
     const [isOpen, setIsOpen] = useState();
+    const { isDark } = useDashboardDataContext();
     return (
-        <Card className="border-0 rounded-0">
+        <Card
+            className={`${userStatsStryle.card} border-0 rounded-0`}
+            style={{
+                boxShadow: `${isDark ? "0 0 0 1px var(--border-color)" : ""}`,
+            }}
+        >
             <CardHeader
-                className="border-0 rounded-0 d-flex justify-content-end align-items-center"
-                style={{ padding: "12px 18px", backgroundColor: "#5c6bc0" }}
+                className={`${userStatsStryle.card_header} border-0 rounded-0 d-flex justify-content-end align-items-center`}
             >
                 <button
                     type="button"
@@ -39,10 +39,7 @@ const UserStats = () => {
                     <i className="fa fa-ellipsis-v"></i>
                 </button>
                 {isOpen ? (
-                    <div
-                        className="card-setting"
-                        style={{ top: "40px", right: "10px" }}
-                    >
+                    <div className={userStatsStryle.card_setting}>
                         <button type="button">
                             <i className="fa-solid fa-gear"></i>
                             Edit
@@ -60,48 +57,24 @@ const UserStats = () => {
                     ""
                 )}
             </CardHeader>
-            <Card.Body className="p-0">
-                <div style={{ backgroundColor: "#5c6bc0", height: "100px" }}>
+            <Card.Body className={`${userStatsStryle.card_body} p-0`}>
+                <div className={userStatsStryle.user_info}>
                     <h5 className="fs-6 fw-medium text-white text-center">
                         Martin Luther
                     </h5>
                 </div>
                 <div
-                    className="d-flex justify-content-center align-items-center"
-                    style={{
-                        position: "relative",
-                        marginTop: "-64px",
-                        marginBottom: "30px",
-                    }}
+                    className={`${userStatsStryle.image_continer} d-flex justify-content-center align-items-center`}
                 >
-                    <img
-                        className="rounded-circle"
-                        src={admin}
-                        alt="user"
-                        style={{ width: "130px" }}
-                    />
+                    <img className="rounded-circle" src={admin} alt="user" />
                 </div>
             </Card.Body>
-            <Card.Footer className="p-3 py-2 bg-white">
+            <Card.Footer className={`${userStatsStryle.card_footer} p-3 py-2`}>
                 <div className="d-flex justify-content-between align-items-center">
                     <Stats icon="fa-solid fa-thumbs-up" counter={3548} />
-                    <hr
-                        className="mx-3"
-                        style={{
-                            width: "1px",
-                            height: "32px",
-                            backgroundColor: "rgb(18 18 18)",
-                        }}
-                    />
+                    <hr className="mx-3" />
                     <Stats icon="fa-solid fa-user-group" counter={23548} />
-                    <hr
-                        className="mx-3"
-                        style={{
-                            width: "1px",
-                            height: "32px",
-                            backgroundColor: "rgb(18 18 18)",
-                        }}
-                    />
+                    <hr className="mx-3" />
                     <Stats icon="fa-solid fa-message" counter={3548} />
                 </div>
             </Card.Footer>

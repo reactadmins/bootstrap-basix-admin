@@ -22,9 +22,9 @@ const StackedForm = () => {
                                     placeholder="Enter Email...."
                                     required
                                 />
-                                <span className="help-block form-text">
+                                <small className="help-block form-text">
                                     Please enter your email
-                                </span>
+                                </small>
                             </div>
                             <div className="form-group mt-2">
                                 <label
@@ -40,9 +40,9 @@ const StackedForm = () => {
                                     placeholder="Enter password...."
                                     required
                                 />
-                                <span className="help-block form-text">
+                                <small className="help-block form-text">
                                     Please enter your password
-                                </span>
+                                </small>
                             </div>
                         </form>
                     </>

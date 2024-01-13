@@ -3,8 +3,6 @@ import { EntypoSprite } from "@entypo-icons/react";
 import { Routes, Route } from "react-router-dom";
 import routes from "./routes.jsx";
 import Layouts from "./layouts/Layouts.jsx";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.min.js";
 import { DashboardDataProvider } from "./context/dashboardDataContext.jsx";
 
 

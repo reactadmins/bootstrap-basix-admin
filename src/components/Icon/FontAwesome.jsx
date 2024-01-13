@@ -3,16 +3,18 @@ import { Link } from "react-router-dom";
 import fontAwesome from "../data/font-awesome.json";
 import CardContent from "../Card/CardContent";
 import { Col, Row } from "react-bootstrap";
-import IconStyle from "../../assets/scss/IconStyle.module.scss";
+import iconStyle from "../../assets/scss/IconStyle.module.scss";
 
 const FontAwesome = () => {
     const [search, setSearch] = useState("");
 
     return (
         <div
-            className={`${IconStyle.container} container-fluid overflow-hidden p-0`}
+            className={`${iconStyle.icon_container} container-fluid overflow-hidden p-0`}
         >
-            <div className="row bg-white px-3 py-4 align-items-center border">
+            <div
+                className={`${iconStyle.icon_search} row px-3 py-4 align-items-center`}
+            >
                 <div className="col-4">
                     <h2 className="fs-3 m-0">{fontAwesome?.name}</h2>
                 </div>
@@ -67,7 +69,7 @@ const FontAwesome = () => {
                                             >
                                                 <div
                                                     className={
-                                                        IconStyle.icon_wrapper
+                                                        iconStyle.icon_wrapper
                                                     }
                                                 >
                                                     <i

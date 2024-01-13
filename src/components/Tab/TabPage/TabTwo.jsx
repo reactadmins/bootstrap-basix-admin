@@ -1,7 +1,7 @@
-const TabThree = () => {
+const TabTwo = () => {
     return (
         <div style={{ padding: "20px" }}>
-            <p style={{ color: "#212529" }}>
+            <p style={{ color: "var(--hedging-text-color)" }}>
                 3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
                 do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -14,5 +14,5 @@ const TabThree = () => {
     );
 };
 
-export default TabThree;
+export default TabTwo;
 

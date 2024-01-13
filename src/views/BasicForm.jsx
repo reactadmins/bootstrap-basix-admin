@@ -470,6 +470,12 @@ const BasicForm = () => {
                                     <span
                                         className="input-group-text"
                                         id="inputGroupPrepend2"
+                                        style={{
+                                            backgroundColor:
+                                                "var(--bg-content)",
+                                            borderColor: "var(--border-color)",
+                                            color: "var(  --hedging-text-color)",
+                                        }}
                                     >
                                         <i className="fa fa-user"></i>
                                     </span>
@@ -494,6 +500,12 @@ const BasicForm = () => {
                                     <span
                                         className="input-group-text"
                                         id="inputGroupPrepend2"
+                                        style={{
+                                            backgroundColor:
+                                                "var(--bg-content)",
+                                            borderColor: "var(--border-color)",
+                                            color: "var(  --hedging-text-color)",
+                                        }}
                                     >
                                         <i className="fa-solid fa-envelope"></i>
                                     </span>
@@ -502,6 +514,12 @@ const BasicForm = () => {
                                     <span
                                         className="input-group-text"
                                         id="inputGroupPrepend2"
+                                        style={{
+                                            backgroundColor:
+                                                "var(--bg-content)",
+                                            borderColor: "var(--border-color)",
+                                            color: "var(  --hedging-text-color)",
+                                        }}
                                     >
                                         <i className="fa fa-euro"></i>
                                     </span>
@@ -516,6 +534,12 @@ const BasicForm = () => {
                                     <span
                                         className="input-group-text"
                                         id="inputGroupPrepend2"
+                                        style={{
+                                            backgroundColor:
+                                                "var(--bg-content)",
+                                            borderColor: "var(--border-color)",
+                                            color: "var(  --hedging-text-color)",
+                                        }}
                                     >
                                         .00
                                     </span>

@@ -4,16 +4,18 @@ import { Link } from "react-router-dom";
 import entypo from "../data/entypo.json";
 import CardContent from "../Card/CardContent";
 import { Icon } from "@iconify/react";
-import IconStyle from "../../assets/scss/IconStyle.module.scss";
+import iconStyle from "../../assets/scss/IconStyle.module.scss";
 
 const Entypo = () => {
     const [search, setSearch] = useState("");
 
     return (
         <div
-            className={`${IconStyle.container} container-fluid overflow-hidden p-0`}
+            className={`${iconStyle.icon_container} container-fluid overflow-hidden p-0`}
         >
-            <div className="row bg-white px-3 py-4 align-items-center border">
+            <div
+                className={`${iconStyle.icon_search} row px-3 py-4 align-items-center`}
+            >
                 <div className="col-4">
                     <h2 className="fs-3 m-0">{entypo?.name}</h2>
                 </div>
@@ -62,7 +64,7 @@ const Entypo = () => {
                                         className="col-6 col-md-4 col-lg-3 col-xl-2 m-0"
                                         key={index}
                                     >
-                                        <div className={IconStyle.icon_wrapper}>
+                                        <div className={iconStyle.icon_wrapper}>
                                             <Icon
                                                 style={{
                                                     fontSize: "30px",
@@ -96,7 +98,7 @@ const Entypo = () => {
                                         className="col-6 col-md-4 col-lg-3 col-xl-2 m-0"
                                         key={index}
                                     >
-                                        <div className={IconStyle.icon_wrapper}>
+                                        <div className={iconStyle.icon_wrapper}>
                                             <EntypoIcon
                                                 size={30}
                                                 color="black"

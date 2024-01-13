@@ -1,3 +1,30 @@
+:root {
+    // light mode colors
+    --bg-content: #fff;
+    --body-bg: #f1f2f7;
+    --border-color: #dddddd;
+    --hedging-text-color: #171717;
+    --content-text-color: #666666;
+    --stats-card-text: #fff;
+    --link-color: #0070f3;
+    --card-icon-color: #868e96;
+}
+
+.dark {
+    // dark mode colors
+    --bg-content: #0a0a0a;
+    --body-bg: #000;
+    --border-color: #ffffff25;
+    --hedging-text-color: #ededed;
+    --content-text-color: #a1a1a1;
+    --stats-card-text: var(--content-text-color);
+    --card-icon-color: var(--hedging-text-color);
+    --dark-hover-color: #1a1a1a;
+}
+
+$body_font_size: 1rem;
+$body_font_family: "Open Sans", sans-serif;
+
 // Color system
 $primary: #0d6efd;
 $secondary: #6c757d;
@@ -6,7 +33,7 @@ $info: #0dcaf0;
 $warning: #ffa726;
 $danger: #dc3545;
 $light: #f8f9fa;
-$dark: #212529;
+$dark: var(--dark-bg);
 $white: #ffff;
 $white-900: #f4f4f4;
 $green-white: #e8e9ed;
@@ -24,8 +51,8 @@ $periwinkle: #5c6bc0;
 $valentine-600: #cc4744;
 $valentine-red: #ef5350;
 $mint: #4dbd74;
-$light-bg: #f1f2f7;
 $red: #f44336;
+$card_bg: #f7f7f7;
 
 // social media bg color
 $mailbg: #0072c6;
@@ -39,8 +66,3 @@ $vimeobg: #1ab7ea;
 $pinterestbg: #cb2027;
 $instagrambg: #bc2a8d;
 $codepen: #212121;
-
-// body
-$body_bg: $light-bg;
-$body_font_size: 1rem;
-$body_font_family: "Open Sans", sans-serif;

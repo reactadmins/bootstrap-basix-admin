@@ -1,32 +1,33 @@
-import logo from "../assets/img/logo.png";
+import logo from "../assets/image/logo.png";
 import { Link } from "react-router-dom";
-import Authentication from "../assets/scss/Authentication.module.scss";
+import errorPageStyle from "../assets/scss/Authentication.module.scss";
+import { useDashboardDataContext } from "../context/dashboardDataContext";
 
 const Page500 = () => {
+    const { isThemeDirection } = useDashboardDataContext();
     return (
         <div
-            className={`${Authentication.container_fluid} container-fluid p-0"`}
+            data={isThemeDirection ? "true" : "false"}
+            className={`${errorPageStyle.container_fluid} container-fluid p-0`}
         >
-            <div className={Authentication.auth_wrapper}>
-                <div
-                    className={`${Authentication.error_container} bg-white h-100`}
-                >
+            <div className={errorPageStyle.auth_wrapper}>
+                <div className={`${errorPageStyle.error_container} h-100`}>
                     <div>
                         <div style={{ marginLeft: "20px" }}>
-                            <h1 className={Authentication.error_code}>500</h1>
-                            <h5 className={Authentication.error_title}>
+                            <h1 className={errorPageStyle.error_code}>500</h1>
+                            <h5 className={errorPageStyle.error_title}>
                                 Oops!{" You'"}re lost.
                             </h5>
-                            <p className={Authentication.error_description}>
+                            <p className={errorPageStyle.error_description}>
                                 Houston, we have a problem!
                             </p>
                         </div>
                         <div
-                            className={`${Authentication.input_group} input-group`}
+                            className={`${errorPageStyle.input_group} input-group`}
                         >
                             <button
                                 type="button"
-                                className={Authentication.error_search_btn}
+                                className={errorPageStyle.error_search_btn}
                             >
                                 <i className="fa fa-search"></i>
                             </button>
@@ -38,16 +39,16 @@ const Page500 = () => {
                             />
                             <button
                                 type="submit"
-                                className={Authentication.error_submit_btn}
+                                className={errorPageStyle.error_submit_btn}
                             >
                                 Search
                             </button>
                         </div>
                     </div>
                 </div>
-                <div className={`${Authentication.logo_container} h-100`}>
-                    <div className={Authentication.oblique}></div>
-                    <div className={Authentication.logo}>
+                <div className={`${errorPageStyle.logo_container} h-100`}>
+                    <div className={errorPageStyle.oblique}></div>
+                    <div className={errorPageStyle.logo}>
                         <Link to="/">
                             <img src={logo} alt="logo" />
                         </Link>

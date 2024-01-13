@@ -1,127 +1,168 @@
+import gridsStyle from "../assets/scss/Grids.module.scss";
 const Grids = () => {
     return (
-        <div className="animated fadeIn">
-            <h5 className="heading-title mb-1 text-secondary">Fixed Grid</h5>
+        <div className={gridsStyle.grids_contener}>
+            <h5 className="heading-title mb-2">Fixed Grid</h5>
             <div className="row gy-4 gx-4 mb-4">
                 <div className="col">
-                    <section className="card">
-                        <div className="card-body text-secondary">.col</div>
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
+                            .col
+                        </div>
                     </section>
                 </div>
                 <div className="col">
-                    <section className="card">
-                        <div className="card-body text-secondary">.col</div>
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
+                            .col
+                        </div>
                     </section>
                 </div>
                 <div className="col">
-                    <section className="card">
-                        <div className="card-body text-secondary">.col</div>
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
+                            .col
+                        </div>
                     </section>
                 </div>
             </div>
             <div className="row gy-4 gx-4 mb-4">
                 <div className="col">
-                    <section className="card">
-                        <div className="card-body text-secondary">.col</div>
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
+                            .col
+                        </div>
                     </section>
                 </div>
                 <div className="col">
-                    <section className="card">
-                        <div className="card-body text-secondary">.col</div>
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
+                            .col
+                        </div>
                     </section>
                 </div>
                 <div className="col">
-                    <section className="card">
-                        <div className="card-body text-secondary">.col</div>
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
+                            .col
+                        </div>
                     </section>
                 </div>
                 <div className="col">
-                    <section className="card">
-                        <div className="card-body text-secondary">.col</div>
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
+                            .col
+                        </div>
                     </section>
                 </div>
                 <div className="col">
-                    <section className="card">
-                        <div className="card-body text-secondary">.col</div>
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
+                            .col
+                        </div>
                     </section>
                 </div>
                 <div className="col">
-                    <section className="card">
-                        <div className="card-body text-secondary">.col</div>
-                    </section>
-                </div>
-            </div>
-
-            <div className="row gy-4 gx-4 mb-4">
-                <div className="col">
-                    <section className="card">
-                        <div className="card-body text-secondary">.col</div>
-                    </section>
-                </div>
-                <div className="col">
-                    <section className="card">
-                        <div className="card-body text-secondary">.col</div>
-                    </section>
-                </div>
-                <div className="col">
-                    <section className="card">
-                        <div className="card-body text-secondary">.col</div>
-                    </section>
-                </div>
-                <div className="col">
-                    <section className="card">
-                        <div className="card-body text-secondary">.col</div>
-                    </section>
-                </div>
-                <div className="col">
-                    <section className="card">
-                        <div className="card-body text-secondary">.col</div>
-                    </section>
-                </div>
-                <div className="col">
-                    <section className="card">
-                        <div className="card-body text-secondary">.col</div>
-                    </section>
-                </div>
-                <div className="col">
-                    <section className="card">
-                        <div className="card-body text-secondary">.col</div>
-                    </section>
-                </div>
-                <div className="col">
-                    <section className="card">
-                        <div className="card-body text-secondary">.col</div>
-                    </section>
-                </div>
-                <div className="col">
-                    <section className="card">
-                        <div className="card-body text-secondary">.col</div>
-                    </section>
-                </div>
-                <div className="col">
-                    <section className="card">
-                        <div className="card-body text-secondary">.col</div>
-                    </section>
-                </div>
-                <div className="col">
-                    <section className="card">
-                        <div className="card-body text-secondary">.col</div>
-                    </section>
-                </div>
-                <div className="col">
-                    <section className="card">
-                        <div className="card-body text-secondary">.col</div>
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
+                            .col
+                        </div>
                     </section>
                 </div>
             </div>
 
-            <h5 className="heading-title mb-1 mt-4 text-secondary">
-                Desktop Grid
-            </h5>
+            <div className="row gy-4 gx-4 mb-4">
+                <div className="col">
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
+                            .col
+                        </div>
+                    </section>
+                </div>
+                <div className="col">
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
+                            .col
+                        </div>
+                    </section>
+                </div>
+                <div className="col">
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
+                            .col
+                        </div>
+                    </section>
+                </div>
+                <div className="col">
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
+                            .col
+                        </div>
+                    </section>
+                </div>
+                <div className="col">
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
+                            .col
+                        </div>
+                    </section>
+                </div>
+                <div className="col">
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
+                            .col
+                        </div>
+                    </section>
+                </div>
+                <div className="col">
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
+                            .col
+                        </div>
+                    </section>
+                </div>
+                <div className="col">
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
+                            .col
+                        </div>
+                    </section>
+                </div>
+                <div className="col">
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
+                            .col
+                        </div>
+                    </section>
+                </div>
+                <div className="col">
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
+                            .col
+                        </div>
+                    </section>
+                </div>
+                <div className="col">
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
+                            .col
+                        </div>
+                    </section>
+                </div>
+                <div className="col">
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
+                            .col
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <h5 className="heading-title mb-2 mt-4">Desktop Grid</h5>
             <div className="row gy-4 gx-4 mb-4">
                 <div className="col col-lg-12">
-                    <section className="card">
-                        <div className="card-body text-secondary">
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
                             .col-lg-12
                         </div>
                     </section>
@@ -130,15 +171,15 @@ const Grids = () => {
 
             <div className="row gy-4 gx-4 mb-4">
                 <div className="col-lg-6">
-                    <section className="card">
-                        <div className="card-body text-secondary">
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
                             .col-lg-6
                         </div>
                     </section>
                 </div>
                 <div className="col-lg-6 ">
-                    <section className="card">
-                        <div className="card-body text-secondary">
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
                             .col-lg-6
                         </div>
                     </section>
@@ -147,22 +188,22 @@ const Grids = () => {
 
             <div className="row gy-4 gx-4 mb-4">
                 <div className="col-lg-4">
-                    <section className="card">
-                        <div className="card-body text-secondary">
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
                             .col-lg-4
                         </div>
                     </section>
                 </div>
                 <div className="col-lg-4">
-                    <section className="card">
-                        <div className="card-body text-secondary">
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
                             .col-lg-4
                         </div>
                     </section>
                 </div>
                 <div className="col-lg-4">
-                    <section className="card">
-                        <div className="card-body text-secondary">
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
                             .col-lg-4
                         </div>
                     </section>
@@ -171,29 +212,29 @@ const Grids = () => {
 
             <div className="row gy-4 gx-4 mb-4">
                 <div className="col-lg-3">
-                    <section className="card">
-                        <div className="card-body text-secondary">
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
                             .col-lg-3
                         </div>
                     </section>
                 </div>
                 <div className="col-lg-3">
-                    <section className="card">
-                        <div className="card-body text-secondary">
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
                             .col-lg-3
                         </div>
                     </section>
                 </div>
                 <div className="col-lg-3">
-                    <section className="card">
-                        <div className="card-body text-secondary">
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
                             .col-lg-3
                         </div>
                     </section>
                 </div>
                 <div className="col-lg-3">
-                    <section className="card">
-                        <div className="card-body text-secondary">
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
                             .col-lg-3
                         </div>
                     </section>
@@ -202,67 +243,71 @@ const Grids = () => {
 
             <div className="row gy-4 gx-4 mb-4">
                 <div className="col-lg-2">
-                    <section className="card">
-                        <div className="card-body text-secondary">
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
                             .col-lg-2
                         </div>
                     </section>
                 </div>
                 <div className="col-lg-2">
-                    <section className="card">
-                        <div className="card-body text-secondary">
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
                             .col-lg-2
                         </div>
                     </section>
                 </div>
                 <div className="col-lg-2">
-                    <section className="card">
-                        <div className="card-body text-secondary">
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
                             .col-lg-2
                         </div>
                     </section>
                 </div>
                 <div className="col-lg-2">
-                    <section className="card">
-                        <div className="card-body text-secondary">
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
                             .col-lg-2
                         </div>
                     </section>
                 </div>
                 <div className="col-lg-2">
-                    <section className="card">
-                        <div className="card-body text-secondary">
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
                             .col-lg-2
                         </div>
                     </section>
                 </div>
                 <div className="col-lg-2">
-                    <section className="card">
-                        <div className="card-body text-secondary">
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
                             .col-lg-2
                         </div>
                     </section>
                 </div>
             </div>
 
-            <h4 className="heading-title mt-5 mb-3 text-secondary">
+            <h4 className="heading-title mt-5 mb-3">
                 Mobile, Tablet, and Desktop
             </h4>
 
             <div className="row gy-4 gx-4 mb-4">
                 <div className="col-2">
-                    <section className="card">
-                        <div className="card-body text-secondary">.col-2</div>
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
+                            .col-2
+                        </div>
                     </section>
                 </div>
                 <div className="col-2">
-                    <section className="card">
-                        <div className="card-body text-secondary">.col-2</div>
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
+                            .col-2
+                        </div>
                     </section>
                 </div>
                 <div className="col-lg-8">
-                    <section className="card">
-                        <div className="card-body text-secondary">
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
                             .col-lg-8
                         </div>
                     </section>
@@ -271,22 +316,22 @@ const Grids = () => {
 
             <div className="row gy-4 gx-4 mb-4">
                 <div className="col-sm-3">
-                    <section className="card">
-                        <div className="card-body text-secondary">
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
                             .col-sm-3
                         </div>
                     </section>
                 </div>
                 <div className="col-sm-3">
-                    <section className="card">
-                        <div className="card-body text-secondary">
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
                             .col-sm-3
                         </div>
                     </section>
                 </div>
                 <div className="col-lg-6">
-                    <section className="card">
-                        <div className="card-body text-secondary">
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
                             .col-lg-6
                         </div>
                     </section>
@@ -295,22 +340,22 @@ const Grids = () => {
 
             <div className="row gy-4 gx-4 mb-4">
                 <div className="col-md-4">
-                    <section className="card">
-                        <div className="card-body text-secondary">
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
                             .col-md-4
                         </div>
                     </section>
                 </div>
                 <div className="col-md-4">
-                    <section className="card">
-                        <div className="card-body text-secondary">
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
                             .col-md-4
                         </div>
                     </section>
                 </div>
                 <div className="col-lg-4">
-                    <section className="card">
-                        <div className="card-body text-secondary">
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
                             .col-lg-4
                         </div>
                     </section>
@@ -319,29 +364,27 @@ const Grids = () => {
 
             <div className="row gy-4 gx-4 mb-4">
                 <div className="col-sm-6">
-                    <section className="card">
-                        <div className="card-body text-secondary">
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
                             .col-sm-6
                         </div>
                     </section>
                 </div>
                 <div className="col-sm-6">
-                    <section className="card">
-                        <div className="card-body text-secondary">
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
                             .col-sm-6
                         </div>
                     </section>
                 </div>
             </div>
 
-            <h5 className="heading-title mb-1 mt-4 text-secondary">
-                Offset Grid
-            </h5>
+            <h5 className="heading-title mb-2 mt-4">Offset Grid</h5>
 
             <div className="row gy-4 gx-4 mb-4">
                 <div className="col-md-6 col-sm-6 ms-auto">
-                    <section className="card">
-                        <div className="card-body text-secondary">
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
                             .col-md-6 .col-sm-6 .ms-auto
                         </div>
                     </section>
@@ -350,8 +393,8 @@ const Grids = () => {
 
             <div className="row gy-4 gx-4 mb-4">
                 <div className="col-md-6 mx-auto">
-                    <section className="card">
-                        <div className="card-body text-secondary">
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
                             .col-md-6 .mx-auto
                         </div>
                     </section>
@@ -359,15 +402,15 @@ const Grids = () => {
             </div>
             <div className="row">
                 <div className="col-md-4">
-                    <section className="card">
-                        <div className="card-body text-secondary">
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
                             .col-md-4
                         </div>
                     </section>
                 </div>
                 <div className="col-md-4 ms-auto">
-                    <section className="card">
-                        <div className="card-body text-secondary">
+                    <section className={`${gridsStyle.card} card border-0`}>
+                        <div className={`${gridsStyle.card_body} card-body`}>
                             .col-md-4 .ms-auto
                         </div>
                     </section>

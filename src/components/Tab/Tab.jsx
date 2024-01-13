@@ -2,22 +2,22 @@ import { useState } from "react";
 import TabOne from "./TabPage/TabOne";
 import TabTwo from "./TabPage/TabTwo";
 import TabThree from "./TabPage/TabThree";
-import TabsStyle from "../../assets/scss/Tabs.module.scss";
+import tabsStyle from "../../assets/scss/Tabs.module.scss";
 
 const Tab = ({ tabData = {}, tabDirection = "top" }) => {
     const [date, setDate] = useState(1);
     return (
         <div
-            className={`${TabsStyle.tablist_container} ${TabsStyle[tabDirection]}`}
+            className={`${tabsStyle.tablist_container} ${tabsStyle[tabDirection]}`}
         >
-            <div className={TabsStyle.tab_title}>
-                <ul className={TabsStyle.title_list}>
+            <div className={tabsStyle.tab_title}>
+                <ul className={tabsStyle.title_list}>
                     {tabData?.map((tab, index) => (
                         <li
                             className={`${
                                 date === tab.id
-                                    ? TabsStyle.active_tab
-                                    : TabsStyle.inactive_tab
+                                    ? tabsStyle.active_tab
+                                    : tabsStyle.inactive_tab
                             }`}
                             onClick={() => setDate(tab.id)}
                             key={index}
