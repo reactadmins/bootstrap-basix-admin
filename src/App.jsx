@@ -18,6 +18,7 @@ function App() {
                             <Fragment key={index}>
                                 {(item?.path && (
                                     <Route
+                                        exact
                                         path="/"
                                         element={
                                             <Layouts
@@ -34,6 +35,7 @@ function App() {
                                 )) ||
                                     (item?.route && (
                                         <Route
+                                            exact
                                             path={item?.route}
                                             element={<item.component />}
                                         />

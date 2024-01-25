@@ -33,7 +33,7 @@ const VerticalSidebar = ({ setSidebarMini, sidebarMini }) => {
                     className={`${sidebarStyle.navbar_header} d-flex align-items-center justify-content-between`}
                 >
                     {!isDark ? (
-                        <a href="/" className={sidebarStyle.logo}>
+                        <Link to="/" className={sidebarStyle.logo}>
                             {sidebarMini ? (
                                 <img
                                     src={
@@ -53,14 +53,14 @@ const VerticalSidebar = ({ setSidebarMini, sidebarMini }) => {
                                     alt="basix-admin"
                                 />
                             )}
-                        </a>
+                        </Link>
                     ) : (
-                        <a href="/" className={sidebarStyle.logo}>
+                        <Link to="/" className={sidebarStyle.logo}>
                             <img
                                 src={sidebarMini ? mini_logo : logo}
                                 alt="basix-admin"
                             />
-                        </a>
+                        </Link>
                     )}
 
                     <button

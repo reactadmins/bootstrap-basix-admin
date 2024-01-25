@@ -151,10 +151,6 @@ const routes = [
         component: Page404,
     },
     {
-        route: "*",
-        component: Page404,
-    },
-    {
         route: "/auth/page500",
         component: Page500,
     },
