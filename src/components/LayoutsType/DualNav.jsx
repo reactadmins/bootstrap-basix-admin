@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import DualTopNav from "../Navbars/NavbarType/DualTopNav";
-import layoutStyle from "../../assets/scss/variation/Layouts/DualNav.module.scss";
+import layoutStyle from "../../assets/scss/variation/layouts/DualNav.module.scss";
 import { useDashboardDataContext } from "../../context/dashboardDataContext";
 
 const DualNav = ({ sidebarMini, setSidebarMini }) => {
