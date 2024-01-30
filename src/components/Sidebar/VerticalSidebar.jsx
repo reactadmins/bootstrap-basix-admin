@@ -7,7 +7,7 @@ import mini_logo from "../../assets/image/mini-logo.png";
 import black_logo from "../../assets/image/black-logo.png";
 import black_mini_logo from "../../assets/image/black-mini-logo.png";
 import { useDashboardDataContext } from "../../context/dashboardDataContext";
-import sidebarStyle from "../../assets/scss/variation/Sidebar/VerticalSidebar.module.scss";
+import sidebarStyle from "../../assets/scss/variation/sidebar/VerticalSidebar.module.scss";
 
 const VerticalSidebar = ({ setSidebarMini, sidebarMini }) => {
     const [navIsOpen, setNavIsOpen] = useState(null);
