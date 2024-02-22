@@ -1,0 +1,27 @@
+{
+  "id": "Components/Badge",
+  "title": "Badge",
+  "description": "Snazzy little labels that pack a punch. Compact and vibrant, they're ideal for signaling status, displaying counts, or categorizing content. With their eye-catching design, they ensure important information stands out on your webpage.",
+  "source": "@site/docs/Components/Badge.mdx",
+  "sourceDirName": "Components",
+  "slug": "/Components/Badge",
+  "permalink": "/Components/Badge",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Components/Badge.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Alert",
+    "permalink": "/Components/Alert"
+  },
+  "next": {
+    "title": "Button",
+    "permalink": "/Components/Button"
+  }
+}

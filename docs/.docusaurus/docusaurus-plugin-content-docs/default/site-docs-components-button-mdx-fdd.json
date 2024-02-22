@@ -1,0 +1,27 @@
+{
+  "id": "Components/Button",
+  "title": "Button",
+  "description": "We worked over the Bootstrap custom button styles, for actions in forms, dialogs, and more with support for multiple sizes, states, and more.",
+  "source": "@site/docs/Components/Button.mdx",
+  "sourceDirName": "Components",
+  "slug": "/Components/Button",
+  "permalink": "/Components/Button",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Components/Button.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Badge",
+    "permalink": "/Components/Badge"
+  },
+  "next": {
+    "title": "Card",
+    "permalink": "/Components/Card"
+  }
+}

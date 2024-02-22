@@ -1,0 +1,346 @@
+---
+sidebar_position: 3
+---
+
+This is short description
+
+import CodePreview from "@site/src/components/CodePreview/CodePreview";
+import LineRechart from "@site/src/components/Charts/LineRechart/LineRechart";
+import AreaRechart from "@site/src/components/Charts/AreaRechart/AreaRechart";
+import BarRechart from "@site/src/components/Charts/BarRechart/BarRechart";
+import ScatterRechart from "@site/src/components/Charts/ScatterRechart/ScatterRechart";
+
+## Examples
+
+### Line Chart
+<CodePreview>
+    <LineRechart />
+</CodePreview>
+
+```jsx title="Line Chart"
+import {
+    LineChart,
+    Line,
+    XAxis,
+    YAxis,
+    CartesianGrid,
+    Tooltip,
+    Legend,
+    ResponsiveContainer,
+} from "recharts";
+import Card from "@/components/Card/Card";
+import { CardBody } from "react-bootstrap";
+
+const data = [
+    {
+        name: "Page A",
+        uv: 4000,
+        pv: 2400,
+        amt: 2400,
+    },
+    {
+        name: "Page B",
+        uv: 3000,
+        pv: 1398,
+        amt: 2210,
+    },
+    ...
+];
+
+const LineRechart = () => {
+    return (
+        <Card title="Line Chart">
+            <CardBody>
+                <ResponsiveContainer width="100%" height={300}>
+                    <LineChart width={500} height={300} data={data}>
+                        <CartesianGrid strokeDasharray="3 3" />
+                        <XAxis
+                            dataKey="name"
+                            padding={{ left: 30, right: 30 }}
+                        />
+                        <YAxis />
+                        <Tooltip />
+                        <Legend />
+                        <Line
+                            type="monotone"
+                            dataKey="pv"
+                            stroke="#8884d8"
+                            activeDot={{ r: 8 }}
+                        />
+                        <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+                    </LineChart>
+                </ResponsiveContainer>
+            </CardBody>
+        </Card>
+    );
+};
+
+export default LineRechart;
+```
+
+### Area Chart
+<CodePreview>
+    <AreaRechart />
+</CodePreview>
+
+```jsx title="Area Chart"
+import {
+    AreaChart,
+    Area,
+    XAxis,
+    YAxis,
+    CartesianGrid,
+    Tooltip,
+    ResponsiveContainer,
+} from "recharts";
+import Card from "@/components/Card/Card";
+import { CardBody } from "react-bootstrap";
+
+const data = [
+    {
+        name: "Page A",
+        uv: 4000,
+        pv: 2400,
+        amt: 2400,
+    },
+    {
+        name: "Page B",
+        uv: 3000,
+        pv: 1398,
+        amt: 2210,
+    },
+    ...
+];
+
+const gradientOffset = () => {
+    const dataMax = Math.max(...data.map((i) => i.uv));
+    const dataMin = Math.min(...data.map((i) => i.uv));
+
+    if (dataMax <= 0) {
+        return 0;
+    }
+    if (dataMin >= 0) {
+        return 1;
+    }
+
+    return dataMax / (dataMax - dataMin);
+};
+
+const off = gradientOffset();
+const AreaRechart = () => {
+    return (
+        <Card title="Area Chart">
+            <CardBody>
+                <ResponsiveContainer width="100%" height={300}>
+                    <AreaChart
+                        width={600}
+                        height={300}
+                        data={data}
+                        margin={{
+                            top: 10,
+                            right: 30,
+                            left: 0,
+                            bottom: 0,
+                        }}
+                    >
+                        <CartesianGrid strokeDasharray="3 3" />
+                        <XAxis dataKey="name" />
+                        <YAxis />
+                        <Tooltip />
+                        <defs>
+                            <linearGradient
+                                id="splitColor"
+                                x1="0"
+                                y1="0"
+                                x2="0"
+                                y2="1"
+                            >
+                                <stop
+                                    offset={off}
+                                    stopColor="green"
+                                    stopOpacity={1}
+                                />
+                                <stop
+                                    offset={off}
+                                    stopColor="red"
+                                    stopOpacity={1}
+                                />
+                            </linearGradient>
+                        </defs>
+                        <Area
+                            type="monotone"
+                            dataKey="uv"
+                            stroke="#000"
+                            fill="url(#splitColor)"
+                        />
+                    </AreaChart>
+                </ResponsiveContainer>
+            </CardBody>
+        </Card>
+    );
+};
+
+export default AreaRechart;
+```
+
+### Bar Chart
+<CodePreview>
+    <BarRechart />
+</CodePreview>
+
+```jsx title="Bar Chart"
+import { CardBody } from "react-bootstrap";
+import Card from "@/components/Card/Card";
+import {
+    BarChart,
+    Bar,
+    XAxis,
+    YAxis,
+    CartesianGrid,
+    Tooltip,
+    Legend,
+    ResponsiveContainer,
+} from "recharts";
+
+const data = [
+    {
+        name: "Page A",
+        uv: 4000,
+        pv: 2400,
+        amt: 2400,
+    },
+    {
+        name: "Page B",
+        uv: 3000,
+        pv: 1398,
+        amt: 2210,
+    },
+    ...
+];
+const BarRechart = () => {
+    return (
+        <Card title="Bar Chart">
+            <CardBody>
+                <ResponsiveContainer width="100%" height={300}>
+                    <BarChart
+                        width={500}
+                        height={300}
+                        data={data}
+                        margin={{
+                            top: 20,
+                            right: 30,
+                            left: 20,
+                            bottom: 5,
+                        }}
+                    >
+                        <CartesianGrid strokeDasharray="3 3" />
+                        <XAxis dataKey="name" />
+                        <YAxis />
+                        <Tooltip />
+                        <Legend />
+                        <Bar dataKey="pv" stackId="a" fill="#8884d8" />
+                        <Bar dataKey="amt" stackId="a" fill="#82ca9d" />
+                        <Bar dataKey="uv" fill="#ffc658" />
+                    </BarChart>
+                </ResponsiveContainer>
+            </CardBody>
+        </Card>
+    );
+};
+
+export default BarRechart;
+```
+
+### Scatter Chart
+<CodePreview>
+    <ScatterRechart />
+</CodePreview>
+
+```jsx title="Line Chart"
+import {
+    ScatterChart,
+    Scatter,
+    XAxis,
+    YAxis,
+    CartesianGrid,
+    Tooltip,
+    ResponsiveContainer,
+} from "recharts";
+import Card from "@/components/Card/Card";
+import { CardBody } from "react-bootstrap";
+
+const data01 = [
+    { x: 100, y: 200, z: 200 },
+    { x: 120, y: 100, z: 260 },
+    ...
+];
+const data02 = [
+    { x: 300, y: 300, z: 200 },
+    { x: 400, y: 500, z: 260 },
+    ...
+];
+
+const ScatterRechart = () => {
+    return (
+        <Card title="Scatter Chart">
+            <CardBody>
+                <ResponsiveContainer width="100%" height={300}>
+                    <div className="d-flex justify-content-center align-items-center">
+                        <ScatterChart
+                            width={500}
+                            height={300}
+                            margin={{
+                                top: 20,
+                                right: 20,
+                                bottom: 20,
+                                left: 20,
+                            }}
+                        >
+                            <CartesianGrid />
+                            <XAxis
+                                type="number"
+                                dataKey="x"
+                                name="stature"
+                                unit="cm"
+                            />
+                            <YAxis
+                                yAxisId="left"
+                                type="number"
+                                dataKey="y"
+                                name="weight"
+                                unit="kg"
+                                stroke="#8884d8"
+                            />
+                            <YAxis
+                                yAxisId="right"
+                                type="number"
+                                dataKey="z"
+                                name="weight"
+                                unit="kg"
+                                orientation="right"
+                                stroke="#82ca9d"
+                            />
+                            <Tooltip cursor={{ strokeDasharray: "3 3" }} />
+                            <Scatter
+                                yAxisId="left"
+                                name="A school"
+                                data={data01}
+                                fill="#8884d8"
+                            />
+                            <Scatter
+                                yAxisId="right"
+                                name="A school"
+                                data={data02}
+                                fill="#82ca9d"
+                            />
+                        </ScatterChart>
+                    </div>
+                </ResponsiveContainer>
+            </CardBody>
+        </Card>
+    );
+};
+
+export default ScatterRechart;
+
+```

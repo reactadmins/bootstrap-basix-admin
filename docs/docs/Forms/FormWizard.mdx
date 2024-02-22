@@ -1,0 +1,320 @@
+---
+sidebar_position: 3
+sidebar_label: Form Wizard
+---
+
+This is short description
+
+import CodePreview from "@site/src/components/CodePreview/CodePreview";
+import StepCircleWizard from "@site/src/components/WizardForm/StepCircleWizard";
+import StepSquarWizard from "@site/src/components/WizardForm/StepSquarWizard";
+import StepTabWizard from "@site/src/components/WizardForm/StepTabWizard";
+
+## Examples
+
+<CodePreview>
+    <StepCircleWizard />
+</CodePreview>
+
+```jsx title="Wizard Form"
+import { useState } from "react";
+import PersonalDetails from "./Page/PersonalDetails";
+import AdditionalInfo from "./Page/AdditionalInfo";
+import styles from "@/assets/scss/StepCircleWizard.module.scss";
+
+const StepCircleWizard = () => {
+    const [activeTab, setActiveTab] = useState(1);
+
+    const tabs = [
+        {
+            id: 1,
+            name: "Personal details",
+        },
+        {
+            id: 2,
+            name: "Additional Info",
+        },
+        {
+            id: 3,
+            name: "Last step",
+        },
+    ];
+
+    const updateStep = (step) => {
+        if (step > 0 && step <= tabs.length) {
+            setActiveTab(step);
+        }
+    };
+
+    return (
+        <div className={`${styles.wizard_wrapper} position-relative mt-5 px-3`}>
+            <div className="row">
+                <div
+                    className={`position-absolute ${styles.wizard_progress}`}
+                    style={{
+                        width: `${
+                            activeTab === 1
+                                ? "18%"
+                                : activeTab === 2
+                                ? "50%"
+                                : activeTab === 3
+                                ? "85%"
+                                : ""
+                        }`,
+                    }}></div>
+                {tabs.map((items, index) => (
+                    <div className="col-4 text-center p-0" key={items.id}>
+                        <div className={styles.step_block}>
+                            <div
+                                className={styles.step_wrapper}
+                                onClick={() => updateStep(index + 1)}>
+                                <div
+                                    className={`${styles.wizard_icon} ${
+                                        activeTab >= index + 1 ? styles.active : ""
+                                    } mx-auto position-relative`}>
+                                    <span>{items.id}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <span
+                            className={`${styles.step_title} ${
+                                activeTab >= index + 1 ? styles.step_title_active : ""
+                            }`}>
+                            {items.name}
+                        </span>
+                    </div>
+                ))}
+            </div>
+            <div className={styles.step_content}>
+                {activeTab === 1 && <PersonalDetails />}
+                {activeTab === 2 && <AdditionalInfo />}
+                {activeTab === 3 && (
+                    <span className={`py-2 mb-3 ${styles.step_content_title}`}>
+                        Congratulations This is the Final Step
+                    </span>
+                )}
+            </div>
+            <div
+                className={`${styles.step_btn_wrapper} mb-4`}
+                style={{ padding: "0 20px" }}>
+                {activeTab > 1 && <button onClick={() => updateStep(activeTab - 1)}>Back</button>}
+                <button className="float-end" onClick={() => updateStep(activeTab + 1)}>
+                    Next
+                </button>
+            </div>
+        </div>
+    );
+};
+
+export default StepCircleWizard;
+```
+
+<CodePreview>
+    <StepSquarWizard />
+</CodePreview>
+
+```jsx title="Wizard Form"
+import { useState } from "react";
+import PersonalDetails from "./Page/PersonalDetails";
+import AdditionalInfo from "./Page/AdditionalInfo";
+import styles from "@/assets/scss/StepSquarWizard.module.scss";
+
+const StepSquarWizard = () => {
+    const [activeTab, setActiveTab] = useState(1);
+
+    const tabs = [
+        {
+            id: 1,
+            icon: "fa-solid fa-user",
+            name: "Personal details",
+        },
+        {
+            id: 2,
+            icon: "fa-solid fa-gear",
+            name: "Additional Info",
+        },
+        {
+            id: 3,
+            icon: "fa-solid fa-check",
+            name: "Last step",
+        },
+    ];
+
+    const updateStep = (step) => {
+        if (step > 0 && step <= tabs.length) {
+            setActiveTab(step);
+        }
+    };
+    return (
+        <div className={`${styles.wizard_wrapper} position-relative mt-5 px-3`}>
+            <div className="row">
+                <div
+                    className={`position-absolute ${styles.wizard_progress}`}
+                    style={{
+                        width: `${
+                            activeTab === 1
+                                ? "18%"
+                                : activeTab === 2
+                                ? "50%"
+                                : activeTab === 3
+                                ? "85%"
+                                : ""
+                        }`,
+                    }}></div>
+                {tabs.map((items, index) => (
+                    <div className="col-4 text-center p-0" key={items.id}>
+                        <div className={styles.step_block}>
+                            <div
+                                className={styles.step_wrapper}
+                                onClick={() => updateStep(index + 1)}>
+                                <div
+                                    className={`${styles.wizard_icon} ${
+                                        activeTab >= index + 1 ? styles.active : ""
+                                    } mx-auto position-relative`}>
+                                    <i className={`${items.icon}`} style={{ fontSize: "24px" }}></i>
+                                </div>
+                            </div>
+                        </div>
+                        <span
+                            className={`${styles.step_title} ${
+                                activeTab >= index + 1 ? styles.step_title_active : ""
+                            }`}>
+                            {items.name}
+                        </span>
+                    </div>
+                ))}
+            </div>
+            <div className={styles.step_content}>
+                {activeTab === 1 && <PersonalDetails />}
+                {activeTab === 2 && <AdditionalInfo />}
+                {activeTab === 3 && (
+                    <span className={styles.step_content_title}>
+                        Congratulations This is the Final Step
+                    </span>
+                )}
+            </div>
+            <div
+                className={`${styles.step_btn_wrapper} mb-4`}
+                style={{ padding: "0 20px" }}>
+                {activeTab > 1 && activeTab < tabs.length && (
+                    <button onClick={() => updateStep(activeTab - 1)}>Back</button>
+                )}
+                <button
+                    className="float-end"
+                    style={{
+                        backgroundColor: `${
+                            activeTab < tabs.length ? "rgb(52, 152, 219)" : "#43a047"
+                        }`,
+                    }}
+                    onClick={() => updateStep(activeTab + 1)}>
+                    {activeTab < tabs.length ? "Next" : "Done"}
+                </button>
+            </div>
+        </div>
+    );
+};
+
+export default StepSquarWizard;
+```
+
+<CodePreview>
+    <StepTabWizard />
+</CodePreview>
+
+```jsx title="Wizard Form"
+import { useState } from "react";
+import PersonalDetails from "./Page/PersonalDetails";
+import AdditionalInfo from "./Page/AdditionalInfo";
+import LoggedIn from "./Page/LoggedIn";
+import styles from "@/assets/scss/StepTabWizard.module.scss";
+
+const StepTabWizard = () => {
+    const [activeTab, setActiveTab] = useState(1);
+
+    const tabs = [
+        {
+            id: 1,
+            icon: "fa-solid fa-user",
+            name: "Personal details",
+        },
+        {
+            id: 2,
+            icon: "fa-solid fa-user",
+            name: "Is Logged In?",
+        },
+        {
+            id: 3,
+            icon: "fa-solid fa-gear",
+            name: "Additional Info",
+        },
+        {
+            id: 4,
+            icon: "fa-solid fa-map",
+            name: "Final step",
+        },
+    ];
+
+    const updateStep = (step) => {
+        if (step > 0 && step <= tabs.length) {
+            setActiveTab(step);
+        }
+    };
+    return (
+        <div className={`${styles.wizard_wrapper} position-relative mt-5 px-3`}>
+            <div className="row">
+                <div className={styles.wizard_header}>
+                    <h3 className="m-0 text-center">Awesome Wizard</h3>
+                    <p className="text-center">Split a complicated flow in multiple steps</p>
+                </div>
+                {tabs.map((items, index) => (
+                    <div className="col-3 text-center p-0" key={items.id}>
+                        <div
+                            className={`${styles.step_block} ${
+                                activeTab === index + 1 ? styles.active : ""
+                            }`}>
+                            <div onClick={() => updateStep(index + 1)}>
+                                <div className="mx-auto position-relative">
+                                    <i className={`${items.icon}`}></i>
+                                </div>
+                            </div>
+                        </div>
+                        <span
+                            className={`${styles.step_title} ${
+                                activeTab >= index + 1 ? styles.step_title_active : ""
+                            }`}>
+                            {items.name}
+                        </span>
+                    </div>
+                ))}
+            </div>
+            <div className={styles.step_content}>
+                {activeTab === 1 && <PersonalDetails />}
+                {activeTab === 2 && <LoggedIn />}
+                {activeTab === 3 && <AdditionalInfo />}
+                {activeTab === 4 && (
+                    <span className={styles.step_content_title}>
+                        Congratulations This is the Final Step
+                    </span>
+                )}
+            </div>
+            <div className={`${styles.step_btn_wrapper} mb-4`}>
+                {activeTab > 1 && activeTab < tabs.length && (
+                    <button onClick={() => updateStep(activeTab - 1)}>Back</button>
+                )}
+                <button
+                    className="float-end"
+                    style={{
+                        backgroundColor: `${
+                            activeTab < tabs.length ? "rgb(230, 126, 34)" : "rgb(67, 160, 71)"
+                        }`,
+                    }}
+                    onClick={() => updateStep(activeTab + 1)}>
+                    {activeTab < tabs.length ? "Next" : "Done"}
+                </button>
+            </div>
+        </div>
+    );
+};
+
+export default StepTabWizard;
+```

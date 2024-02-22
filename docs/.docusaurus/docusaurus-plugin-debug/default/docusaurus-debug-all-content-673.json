@@ -1,0 +1,746 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "loadedVersions": [
+        {
+          "versionName": "current",
+          "label": "Next",
+          "banner": null,
+          "badge": false,
+          "noIndex": false,
+          "className": "docs-version-current",
+          "path": "/",
+          "tagsPath": "/tags",
+          "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs",
+          "editUrlLocalized": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/i18n/en/docusaurus-plugin-content-docs/current",
+          "isLast": true,
+          "routePriority": -1,
+          "sidebarFilePath": "/home/kakon/Projects/templates/bootstrap/basix-admin/docs/sidebars.js",
+          "contentPath": "/home/kakon/Projects/templates/bootstrap/basix-admin/docs/docs",
+          "contentPathLocalized": "/home/kakon/Projects/templates/bootstrap/basix-admin/docs/i18n/en/docusaurus-plugin-content-docs/current",
+          "docs": [
+            {
+              "id": "Charts/ApexCharts",
+              "title": "ApexCharts",
+              "description": "This is short description",
+              "source": "@site/docs/Charts/ApexCharts.mdx",
+              "sourceDirName": "Charts",
+              "slug": "/Charts/ApexCharts",
+              "permalink": "/Charts/ApexCharts",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Charts/ApexCharts.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "sidebar_position": 2,
+                "sidebar_label": "Apex Charts"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Chartjs",
+                "permalink": "/Charts/Chartjs"
+              },
+              "next": {
+                "title": "Recharts",
+                "permalink": "/Charts/Recharts"
+              }
+            },
+            {
+              "id": "Charts/Chartjs",
+              "title": "Chartjs",
+              "description": "This is short description",
+              "source": "@site/docs/Charts/Chartjs.mdx",
+              "sourceDirName": "Charts",
+              "slug": "/Charts/Chartjs",
+              "permalink": "/Charts/Chartjs",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Charts/Chartjs.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "sidebar_position": 1
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Form Wizard",
+                "permalink": "/Forms/FormWizard"
+              },
+              "next": {
+                "title": "Apex Charts",
+                "permalink": "/Charts/ApexCharts"
+              }
+            },
+            {
+              "id": "Charts/Recharts",
+              "title": "Recharts",
+              "description": "This is short description",
+              "source": "@site/docs/Charts/Recharts.mdx",
+              "sourceDirName": "Charts",
+              "slug": "/Charts/Recharts",
+              "permalink": "/Charts/Recharts",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Charts/Recharts.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 3,
+              "frontMatter": {
+                "sidebar_position": 3
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Apex Charts",
+                "permalink": "/Charts/ApexCharts"
+              },
+              "next": {
+                "title": "Google Map",
+                "permalink": "/Maps/GoogleMap"
+              }
+            },
+            {
+              "id": "Components/Alert",
+              "title": "Alert",
+              "description": "Provides feedback messages relevant to common user actions, including warning messages to the user.",
+              "source": "@site/docs/Components/Alert.mdx",
+              "sourceDirName": "Components",
+              "slug": "/Components/Alert",
+              "permalink": "/Components/Alert",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Components/Alert.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "sidebar_position": 1
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Setup",
+                "permalink": "/Setup"
+              },
+              "next": {
+                "title": "Badge",
+                "permalink": "/Components/Badge"
+              }
+            },
+            {
+              "id": "Components/Badge",
+              "title": "Badge",
+              "description": "Snazzy little labels that pack a punch. Compact and vibrant, they're ideal for signaling status, displaying counts, or categorizing content. With their eye-catching design, they ensure important information stands out on your webpage.",
+              "source": "@site/docs/Components/Badge.mdx",
+              "sourceDirName": "Components",
+              "slug": "/Components/Badge",
+              "permalink": "/Components/Badge",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Components/Badge.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "sidebar_position": 2
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Alert",
+                "permalink": "/Components/Alert"
+              },
+              "next": {
+                "title": "Button",
+                "permalink": "/Components/Button"
+              }
+            },
+            {
+              "id": "Components/Button",
+              "title": "Button",
+              "description": "We worked over the Bootstrap custom button styles, for actions in forms, dialogs, and more with support for multiple sizes, states, and more.",
+              "source": "@site/docs/Components/Button.mdx",
+              "sourceDirName": "Components",
+              "slug": "/Components/Button",
+              "permalink": "/Components/Button",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Components/Button.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 3,
+              "frontMatter": {
+                "sidebar_position": 3
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Badge",
+                "permalink": "/Components/Badge"
+              },
+              "next": {
+                "title": "Card",
+                "permalink": "/Components/Card"
+              }
+            },
+            {
+              "id": "Components/Card",
+              "title": "Card",
+              "description": "We've leveraged Bootstrap cards to enhance your card customization capabilities, enabling a diverse range of designs for our cards.",
+              "source": "@site/docs/Components/Card.mdx",
+              "sourceDirName": "Components",
+              "slug": "/Components/Card",
+              "permalink": "/Components/Card",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Components/Card.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 4,
+              "frontMatter": {
+                "sidebar_position": 4
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Button",
+                "permalink": "/Components/Button"
+              },
+              "next": {
+                "title": "Progress",
+                "permalink": "/Components/Progress"
+              }
+            },
+            {
+              "id": "Components/Modal",
+              "title": "Modal",
+              "description": "An interactive user modals system that empowers users with the ability to dismiss modal at their convenience.",
+              "source": "@site/docs/Components/Modal.mdx",
+              "sourceDirName": "Components",
+              "slug": "/Components/Modal",
+              "permalink": "/Components/Modal",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Components/Modal.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 8,
+              "frontMatter": {
+                "sidebar_position": 8
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Tabs",
+                "permalink": "/Components/Tabs"
+              },
+              "next": {
+                "title": "Typography",
+                "permalink": "/Components/Typography"
+              }
+            },
+            {
+              "id": "Components/Progress",
+              "title": "Progress",
+              "description": "Provide up-to-date feedback on the progression of tasks or workflows through adaptable and intuitive progress bars.",
+              "source": "@site/docs/Components/Progress.mdx",
+              "sourceDirName": "Components",
+              "slug": "/Components/Progress",
+              "permalink": "/Components/Progress",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Components/Progress.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 5,
+              "frontMatter": {
+                "sidebar_position": 5
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Card",
+                "permalink": "/Components/Card"
+              },
+              "next": {
+                "title": "Socials",
+                "permalink": "/Components/Socials"
+              }
+            },
+            {
+              "id": "Components/Socials",
+              "title": "Socials",
+              "description": "We've developed bespoke buttons tailored for popular social networks. With customizable styles and the inclusion of network brand icons, our buttons seamlessly integrate into any design, offering full flexibility in customization.",
+              "source": "@site/docs/Components/Socials.mdx",
+              "sourceDirName": "Components",
+              "slug": "/Components/Socials",
+              "permalink": "/Components/Socials",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Components/Socials.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 6,
+              "frontMatter": {
+                "sidebar_position": 6
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Progress",
+                "permalink": "/Components/Progress"
+              },
+              "next": {
+                "title": "Tabs",
+                "permalink": "/Components/Tabs"
+              }
+            },
+            {
+              "id": "Components/Table",
+              "title": "Table",
+              "description": "We've developed a versatile table showcasing user data, dynamically displaying notices tailored to the data. Users can easily filter the content to streamline the information displayed within the table. Explore the code below for a detailed view of the implementation.",
+              "source": "@site/docs/Components/Table.mdx",
+              "sourceDirName": "Components",
+              "slug": "/Components/Table",
+              "permalink": "/Components/Table",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Components/Table.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 11,
+              "frontMatter": {
+                "sidebar_position": 11
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Widgets",
+                "permalink": "/Components/Widgets"
+              },
+              "next": {
+                "title": "Basic Form",
+                "permalink": "/Forms/BasicForm"
+              }
+            },
+            {
+              "id": "Components/Tabs",
+              "title": "Tabs",
+              "description": "Our custom tabs are designed to create a dynamic tab interface for your app. By default, the first tab is displayed as the active tab. You can change this by setting the active tab value in the code. You can also customize the appearance of the active tab by choosing the background color, text color, and icon. The icon can be placed on the left or right side of the tab title. To change the orientation of the tabs, you can set the tab position to top, bottom, left, or right. This way, you can create a beautiful interface that suits your needs.",
+              "source": "@site/docs/Components/Tabs.mdx",
+              "sourceDirName": "Components",
+              "slug": "/Components/Tabs",
+              "permalink": "/Components/Tabs",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Components/Tabs.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 7,
+              "frontMatter": {
+                "sidebar_position": 7
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Socials",
+                "permalink": "/Components/Socials"
+              },
+              "next": {
+                "title": "Modal",
+                "permalink": "/Components/Modal"
+              }
+            },
+            {
+              "id": "Components/Typography",
+              "title": "Typography",
+              "description": "Simplifies text styling. Consistent, responsive, and customizable. Ensures readability and visual appeal.",
+              "source": "@site/docs/Components/Typography.mdx",
+              "sourceDirName": "Components",
+              "slug": "/Components/Typography",
+              "permalink": "/Components/Typography",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Components/Typography.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 9,
+              "frontMatter": {
+                "sidebar_position": 9
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Modal",
+                "permalink": "/Components/Modal"
+              },
+              "next": {
+                "title": "Widgets",
+                "permalink": "/Components/Widgets"
+              }
+            },
+            {
+              "id": "Components/Widgets",
+              "title": "Widgets",
+              "description": "We've created a collection of widget card designs tailored to your dashboard needs, facilitating seamless data visualization of user data counts along with interactive progress bar functionality. Seen in the code below.",
+              "source": "@site/docs/Components/Widgets.mdx",
+              "sourceDirName": "Components",
+              "slug": "/Components/Widgets",
+              "permalink": "/Components/Widgets",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Components/Widgets.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 10,
+              "frontMatter": {
+                "sidebar_position": 10
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Typography",
+                "permalink": "/Components/Typography"
+              },
+              "next": {
+                "title": "Table",
+                "permalink": "/Components/Table"
+              }
+            },
+            {
+              "id": "Forms/AdvancedForm",
+              "title": "AdvancedForm",
+              "description": "This is short description",
+              "source": "@site/docs/Forms/AdvancedForm.mdx",
+              "sourceDirName": "Forms",
+              "slug": "/Forms/AdvancedForm",
+              "permalink": "/Forms/AdvancedForm",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Forms/AdvancedForm.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "sidebar_position": 2,
+                "sidebar_label": "Advanced Form"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Basic Form",
+                "permalink": "/Forms/BasicForm"
+              },
+              "next": {
+                "title": "Form Wizard",
+                "permalink": "/Forms/FormWizard"
+              }
+            },
+            {
+              "id": "Forms/BasicForm",
+              "title": "BasicForm",
+              "description": "This is short description",
+              "source": "@site/docs/Forms/BasicForm.mdx",
+              "sourceDirName": "Forms",
+              "slug": "/Forms/BasicForm",
+              "permalink": "/Forms/BasicForm",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Forms/BasicForm.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "sidebar_position": 1,
+                "sidebar_label": "Basic Form"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Table",
+                "permalink": "/Components/Table"
+              },
+              "next": {
+                "title": "Advanced Form",
+                "permalink": "/Forms/AdvancedForm"
+              }
+            },
+            {
+              "id": "Forms/FormWizard",
+              "title": "FormWizard",
+              "description": "This is short description",
+              "source": "@site/docs/Forms/FormWizard.mdx",
+              "sourceDirName": "Forms",
+              "slug": "/Forms/FormWizard",
+              "permalink": "/Forms/FormWizard",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Forms/FormWizard.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 3,
+              "frontMatter": {
+                "sidebar_position": 3,
+                "sidebar_label": "Form Wizard"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Advanced Form",
+                "permalink": "/Forms/AdvancedForm"
+              },
+              "next": {
+                "title": "Chartjs",
+                "permalink": "/Charts/Chartjs"
+              }
+            },
+            {
+              "id": "index",
+              "title": "Getting Started",
+              "description": "A versatile admin dashboard template built on Bootstrap, offering a clean and intuitive interface for managing web applications. Packed with essential features, it provides easy customization and responsiveness, making it ideal for various backend management tasks.",
+              "source": "@site/docs/index.md",
+              "sourceDirName": ".",
+              "slug": "/",
+              "permalink": "/",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/index.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "sidebar_position": 1,
+                "path": "/"
+              },
+              "sidebar": "tutorialSidebar",
+              "next": {
+                "title": "Setup",
+                "permalink": "/Setup"
+              }
+            },
+            {
+              "id": "Maps/GoogleMap",
+              "title": "GoogleMap",
+              "description": "This is short description",
+              "source": "@site/docs/Maps/GoogleMap.mdx",
+              "sourceDirName": "Maps",
+              "slug": "/Maps/GoogleMap",
+              "permalink": "/Maps/GoogleMap",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Maps/GoogleMap.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "sidebar_position": 1,
+                "sidebar_label": "Google Map"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Recharts",
+                "permalink": "/Charts/Recharts"
+              },
+              "next": {
+                "title": "Leaflet Map",
+                "permalink": "/Maps/LeafletMaps"
+              }
+            },
+            {
+              "id": "Maps/LeafletMaps",
+              "title": "LeafletMaps",
+              "description": "This is short description",
+              "source": "@site/docs/Maps/LeafletMaps.mdx",
+              "sourceDirName": "Maps",
+              "slug": "/Maps/LeafletMaps",
+              "permalink": "/Maps/LeafletMaps",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Maps/LeafletMaps.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "sidebar_position": 2,
+                "sidebar_label": "Leaflet Map"
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Google Map",
+                "permalink": "/Maps/GoogleMap"
+              }
+            },
+            {
+              "id": "Setup",
+              "title": "Setup",
+              "description": "Run with NPM",
+              "source": "@site/docs/Setup.md",
+              "sourceDirName": ".",
+              "slug": "/Setup",
+              "permalink": "/Setup",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Setup.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "sidebar_position": 2
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Getting Started",
+                "permalink": "/"
+              },
+              "next": {
+                "title": "Alert",
+                "permalink": "/Components/Alert"
+              }
+            }
+          ],
+          "drafts": [],
+          "sidebars": {
+            "tutorialSidebar": [
+              {
+                "type": "doc",
+                "id": "index"
+              },
+              {
+                "type": "doc",
+                "id": "Setup"
+              },
+              {
+                "type": "category",
+                "label": "Components",
+                "collapsible": false,
+                "collapsed": false,
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "Components/Alert"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "Components/Badge"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "Components/Button"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "Components/Card"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "Components/Progress"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "Components/Socials"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "Components/Tabs"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "Components/Modal"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "Components/Typography"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "Components/Widgets"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "Components/Table"
+                  }
+                ]
+              },
+              {
+                "type": "category",
+                "label": "Forms",
+                "collapsible": false,
+                "collapsed": false,
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "Forms/BasicForm",
+                    "label": "Basic Form"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "Forms/AdvancedForm",
+                    "label": "Advanced Form"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "Forms/FormWizard",
+                    "label": "Form Wizard"
+                  }
+                ]
+              },
+              {
+                "type": "category",
+                "label": "Charts",
+                "collapsible": false,
+                "collapsed": false,
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "Charts/Chartjs"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "Charts/ApexCharts",
+                    "label": "Apex Charts"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "Charts/Recharts"
+                  }
+                ]
+              },
+              {
+                "type": "category",
+                "label": "Maps",
+                "collapsible": false,
+                "collapsed": false,
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "Maps/GoogleMap",
+                    "label": "Google Map"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "Maps/LeafletMaps",
+                    "label": "Leaflet Map"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "docusaurus-plugin-content-pages": {
+    "default": [
+      {
+        "type": "mdx",
+        "permalink": "/markdown-page",
+        "source": "@site/src/pages/markdown-page.md",
+        "title": "Markdown page example",
+        "description": "You don't need React to write simple standalone pages.",
+        "frontMatter": {
+          "title": "Markdown page example"
+        },
+        "unlisted": false
+      },
+      {
+        "type": "jsx",
+        "permalink": "/old-index",
+        "source": "@site/src/pages/old-index.js"
+      }
+    ]
+  },
+  "docusaurus-plugin-debug": {},
+  "docusaurus-theme-classic": {},
+  "docusaurus-lunr-search": {},
+  "docusaurus-plugin-sass": {},
+  "docusaurus-bootstrap-plugin": {},
+  "docusaurus-mdx-fallback-plugin": {}
+}

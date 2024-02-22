@@ -1,0 +1,234 @@
+---
+sidebar_position: 4
+---
+
+We've leveraged Bootstrap cards to enhance your card customization capabilities, enabling a diverse range of designs for our cards.
+
+import { Col } from "react-bootstrap";
+import FeatureTable from "@site/src/components/FeatureTable/FeatureTable";
+import CodePreview from "@site/src/components/CodePreview/CodePreview";
+import Card from "@site/src/components/Card/Card"
+import image from "@site/src/assets/images/admin.jpg"
+import placeholderImage from "@site/src/assets/images/placeholder.png"
+
+## Examples
+
+<CodePreview>
+    <Col md={6}>
+        <Card 
+            title="Profile Card" 
+            titleIcon="fa-solid fa-user" 
+            icons={[{ icon: "fa fa-cog"}, { icon: "fa fa-angle-down" }]}
+            dismissible={true}
+        >
+            <div className="d-flex flex-column align-items-center justify-content-center">
+                <img
+                    src={image}
+                    alt="Card image"
+                    className="rounded-circle inline-blocks"
+                />
+                <h2 className={`mt-2`}>Steven Lee</h2>            
+            </div>
+            <span className="text-center">
+                <i className="fa-solid fa-location-dot"></i>{" "}
+                California, United States
+            </span>
+            
+            <hr className="w-100 border-0" />
+            
+            <div className="d-flex gap-2">
+                <a
+                    href="#"
+                    className="text-decoration-none text-secondary"
+                >
+                    <i className="fa-brands fa-facebook-f"></i>
+                </a>
+                <a
+                    href="#"
+                    className="text-decoration-none text-secondary"
+                >
+                    <i className="fa-brands fa-twitter"></i>
+                </a>
+                <a
+                    href="#"
+                    className="text-decoration-none text-secondary"
+                >
+                    <i className="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a
+                    href="#"
+                    className="text-decoration-none text-secondary"
+                >
+                    <i className="fa-brands fa-pinterest"></i>
+                </a>
+            </div>
+        </Card>
+    </Col>
+</CodePreview>
+
+
+```jsx title="Card"
+import Card from "@/components/Card/Card"
+
+function MyComponent() {
+    return (
+        <Card 
+            title="Profile Card" 
+            titleIcon="fa-solid fa-user" 
+            icons={[{ icon: "fa fa-cog"}, { icon: "fa fa-angle-down" }]}
+            dismissible={true}
+        >
+            <div className="d-flex flex-column align-items-center justify-content-center">
+                <img
+                    src={...img}
+                    alt="Card image"
+                    className="rounded-circle inline-blocks"
+                />
+                <h2 className={`mt-2`}>Steven Lee</h2>            
+            </div>
+            <span className="text-center">
+                <i className="fa-solid fa-location-dot"></i>{" "}
+                California, United States
+            </span>
+            
+            <hr className="w-100 border-0" />
+            
+            <div className="d-flex gap-2">
+                <a
+                    href="#"
+                    className="text-decoration-none text-secondary"
+                >
+                    <i className="fa-brands fa-facebook-f"></i>
+                </a>
+                <a
+                    href="#"
+                    className="text-decoration-none text-secondary"
+                >
+                    <i className="fa-brands fa-twitter"></i>
+                </a>
+                <a
+                    href="#"
+                    className="text-decoration-none text-secondary"
+                >
+                    <i className="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a
+                    href="#"
+                    className="text-decoration-none text-secondary"
+                >
+                    <i className="fa-brands fa-pinterest"></i>
+                </a>
+            </div>
+        </Card>
+    );
+}
+
+export default MyComponent;
+```
+
+### Card With Image
+
+<CodePreview>
+    <Col md={6}>
+        <Card
+            isHeader={false}
+        >
+            <img src={placeholderImage} alt="" style={{width: "100%"}}  />
+            <h2 className="fs-5 mt-3">Card Wtih Image Title</h2>
+            <p className="fs-6 mt-2">
+                Some quick example text to build on the card
+                title and make up the bulk of the card's
+                content.
+            </p>
+        </Card>
+    </Col>
+</CodePreview>
+
+
+```jsx title="Card"
+import Card from "@/components/Card/Card"
+
+function MyComponent() {
+    return (
+        <Card
+            isHeader={false}
+        >
+            <img src={...img} alt="" style={{width: "100%"}}  />
+            <h2 className="fs-5 mt-3">Card Wtih Image Title</h2>
+            <p className="fs-6 mt-2">
+                Some quick example text to build on the card
+                title and make up the bulk of the card's
+                content.
+            </p>
+        </Card>
+    );
+}
+
+export default MyComponent;
+```
+
+## Props
+
+<FeatureTable>
+    <tr>
+        <td>title</td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>titleIcon</td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>titleBg</td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>isHeader</td>
+        <td>boolean</td>
+        <td>`false`</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>headerPosition</td>
+        <td>string</td>
+        <td>`top`</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>padding</td>
+        <td>string</td>
+        <td>`16px`</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>bodyBg</td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>icons</td>
+        <td>array</td>
+        <td>`[]`</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>dismissible</td>
+        <td>boolean</td>
+        <td>`false`</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>onClose</td>
+        <td>func</td>
+        <td></td>
+        <td></td>
+    </tr>
+
+</FeatureTable>

@@ -1,0 +1,27 @@
+{
+  "id": "Components/Table",
+  "title": "Table",
+  "description": "We've developed a versatile table showcasing user data, dynamically displaying notices tailored to the data. Users can easily filter the content to streamline the information displayed within the table. Explore the code below for a detailed view of the implementation.",
+  "source": "@site/docs/Components/Table.mdx",
+  "sourceDirName": "Components",
+  "slug": "/Components/Table",
+  "permalink": "/Components/Table",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Components/Table.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 11,
+  "frontMatter": {
+    "sidebar_position": 11
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Widgets",
+    "permalink": "/Components/Widgets"
+  },
+  "next": {
+    "title": "Basic Form",
+    "permalink": "/Forms/BasicForm"
+  }
+}

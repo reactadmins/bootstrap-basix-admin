@@ -1,0 +1,186 @@
+---
+sidebar_position: 8
+---
+
+An interactive user modals system that empowers users with the ability to dismiss modal at their convenience.
+
+import CodePreview from "@site/src/components/CodePreview/CodePreview";
+import SmallModal from "@site/src/components/Modal/SmallModal";
+import MediumModal from "@site/src/components/Modal/MediumModal";
+import LargeModal from "@site/src/components/Modal/LargeModal";
+import WithoutAnimatedModal from "@site/src/components/Modal/WithoutAnimatedModal";
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+## Examples
+
+<CodePreview>
+    <div className="d-flex gap-2">
+        <SmallModal />
+        <MediumModal />
+        <LargeModal />
+        <WithoutAnimatedModal />
+    </div>
+</CodePreview>
+
+<Tabs>
+    <TabItem value="small" label="Small">
+        ```jsx title="Small"
+        import { useState } from "react";
+        import { Button, Modal } from "react-bootstrap";
+
+        function SmallModal() {
+            const [show, setShow] = useState(false);
+
+            const handleClose = () => setShow(false);
+            const handleShow = () => setShow(true);
+
+            return (
+                <>
+                    <Button variant="secondary" onClick={handleShow}>
+                        Small
+                    </Button>
+                    <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false} size="sm">
+                        <Modal.Header closeButton>
+                            <Modal.Title>Modal title</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>
+                            I will not close if you click outside me. Do not even try to press escape key.
+                        </Modal.Body>
+                        <Modal.Footer>
+                            <Button variant="secondary" onClick={handleClose}>
+                                Close
+                            </Button>
+                            <Button variant="primary">Understood</Button>
+                        </Modal.Footer>
+                    </Modal>
+                </>
+            );
+        }
+
+        export default SmallModal;
+        ```
+    </TabItem>
+    
+    <TabItem value="medium" label="Medium">
+        ```jsx title="Medium"
+        import { useState } from "react";
+        import { Button, Modal } from "react-bootstrap";
+
+        function MediumModal() {
+            const [show, setShow] = useState(false);
+
+            const handleClose = () => setShow(false);
+            const handleShow = () => setShow(true);
+
+            return (
+                <>
+                    <Button variant="secondary" onClick={handleShow}>
+                        Medium
+                    </Button>
+                    <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false} size="md">
+                        <Modal.Header closeButton>
+                            <Modal.Title>Modal title</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>
+                            I will not close if you click outside me. Do not even try to press escape key.
+                        </Modal.Body>
+                        <Modal.Footer>
+                            <Button variant="secondary" onClick={handleClose}>
+                                Close
+                            </Button>
+                            <Button variant="primary">Understood</Button>
+                        </Modal.Footer>
+                    </Modal>
+                </>
+            );
+        }
+
+        export default MediumModal;
+        ```
+    </TabItem>
+
+    <TabItem value="large" label="Large">
+        ```jsx title="Large"
+        import { useState } from "react";
+        import { Button, Modal } from "react-bootstrap";
+
+        function LargeModal() {
+            const [show, setShow] = useState(false);
+
+            const handleClose = () => setShow(false);
+            const handleShow = () => setShow(true);
+
+            return (
+                <>
+                    <Button variant="secondary" onClick={handleShow}>
+                        Large
+                    </Button>
+                    <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false} size="lg">
+                        <Modal.Header closeButton>
+                            <Modal.Title>Modal title</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>
+                            I will not close if you click outside me. Do not even try to press escape key.
+                        </Modal.Body>
+                        <Modal.Footer>
+                            <Button variant="secondary" onClick={handleClose}>
+                                Close
+                            </Button>
+                            <Button variant="primary">Understood</Button>
+                        </Modal.Footer>
+                    </Modal>
+                </>
+            );
+        }
+
+        export default LargeModal;
+        ```
+    </TabItem>
+
+     <TabItem value="withoutanimation" label="Without Animation">
+        ```jsx title="Modals"
+        import { useState } from "react";
+        import { Button, Modal } from "react-bootstrap";
+
+        function WithoutAnimatedModal() {
+            const [show, setShow] = useState(false);
+
+            const handleClose = () => setShow(false);
+            const handleShow = () => setShow(true);
+
+            return (
+                <>
+                    <Button variant="secondary" onClick={handleShow}>
+                        Without Animated
+                    </Button>
+                    <Modal
+                        show={show}
+                        onHide={handleClose}
+                        backdrop="static"
+                        keyboard={false}
+                        animation={false}>
+                        <Modal.Header closeButton>
+                            <Modal.Title>Modal title</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>
+                            I will not close if you click outside me. Do not even try to press escape key.
+                        </Modal.Body>
+                        <Modal.Footer>
+                            <Button variant="secondary" onClick={handleClose}>
+                                Close
+                            </Button>
+                            <Button variant="primary">Understood</Button>
+                        </Modal.Footer>
+                    </Modal>
+                </>
+            );
+        }
+
+        export default WithoutAnimatedModal;
+        ```
+    </TabItem>
+</Tabs>
+
+## Props
+For more props or variant please visit to <a href="https://react-bootstrap.netlify.app/docs/components/modal#overview" target="_blank">react-bootstrap</a>

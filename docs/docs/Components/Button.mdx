@@ -1,0 +1,159 @@
+---
+sidebar_position: 3
+---
+
+We worked over the Bootstrap custom button styles, for actions in forms, dialogs, and more with support for multiple sizes, states, and more.
+
+import Button from "react-bootstrap/Button";
+import FeatureTable from "@site/src/components/FeatureTable/FeatureTable";
+import CodePreview from "@site/src/components/CodePreview/CodePreview";
+
+
+## Examples
+### Normal
+
+<CodePreview>
+    <div className="d-flex gap-2">
+        <Button variant="primary">Primary</Button>
+        <Button variant="secondary">Secondary</Button>
+        <Button variant="success">Success</Button>
+        <Button variant="warning">Warning</Button>
+        <Button variant="danger">Danger</Button>
+        <Button variant="info">Info</Button>
+        <Button variant="light">Light</Button>
+        <Button variant="dark">Dark</Button>
+        <Button variant="link">Link</Button>
+    </div>
+    
+</CodePreview>
+
+```jsx title="Buttons"
+import Button from "react-bootstrap/Button";
+
+function MyComponent() {
+    return (
+        <>
+            <Button variant="primary">Primary</Button>
+            <Button variant="secondary">Secondary</Button>
+            <Button variant="success">Success</Button>
+            <Button variant="warning">Warning</Button>
+            <Button variant="danger">Danger</Button>
+            <Button variant="info">Info</Button>
+            <Button variant="light">Light</Button>
+            <Button variant="dark">Dark</Button>
+            <Button variant="link">Link</Button>
+        </>
+    );
+}
+
+export default MyComponent;
+```
+
+### Outline
+
+<CodePreview>
+    <div className="d-flex gap-2">
+        <Button variant="outline-primary">Primary</Button>
+        <Button variant="outline-secondary">Secondary</Button>
+        <Button variant="outline-success">Success</Button>
+        <Button variant="outline-warning">Warning</Button>
+        <Button variant="outline-danger">Danger</Button>
+        <Button variant="outline-info">Info</Button>
+        <Button variant="outline-light">Light</Button>
+        <Button variant="outline-dark">Dark</Button>
+        <Button variant="outline-link">Link</Button>
+    </div>
+    
+</CodePreview>
+
+```jsx title="Buttons"
+import Button from "react-bootstrap/Button";
+
+function MyComponent() {
+    return (
+        <>
+            <Button variant="outline-primary">Primary</Button>
+            <Button variant="outline-secondary">Secondary</Button>
+            <Button variant="outline-success">Success</Button>
+            <Button variant="outline-warning">Warning</Button>
+            <Button variant="outline-danger">Danger</Button>
+            <Button variant="outline-info">Info</Button>
+            <Button variant="outline-light">Light</Button>
+            <Button variant="outline-dark">Dark</Button>
+            <Button variant="outline-link">Link</Button>
+        </>
+    );
+}
+
+export default TypesExample;
+```
+
+### Sizes
+
+<CodePreview>
+    <div className="mb-2">
+        <Button variant="primary" size="lg">Large Button</Button>
+    </div>
+    <div className="mb-2">
+        <Button variant="primary">Normal Button</Button>
+    </div>
+    <div className="mb-2">
+        <Button variant="primary" size="sm">Small Button</Button>
+    </div>
+    
+</CodePreview>
+
+```jsx title="Buttons"
+import Button from "react-bootstrap/Button";
+
+function MyComponent() {
+    return (
+        <>
+            <Button variant="primary" size="lg">Large Button</Button>
+            <Button variant="primary">Normal Button</Button>
+            <Button variant="primary" size="sm">Small Button</Button>
+        </>
+    );
+}
+
+export default TypesExample;
+```
+
+## Props
+
+<FeatureTable>
+    <tr>
+        <td>variant</td>
+        <td>string</td>
+        <td>`primary`</td>
+        <td>One or more button variant combinations buttons may be one of a variety of visual variants such as: <br />
+        `primary`, `secondary`, `success`, `danger`, `warning`, `info`, `dark`, `light`, `link` 
+        as well as "outline" versions (prefixed by `outline-*`) <br /> `outline-primary`, `outline-secondary`, `outline-success`, `outline-danger`, `outline-warning`, `outline-info`, `outline-dark`, `outline-light`</td>
+    </tr>
+    <tr>
+        <td>size</td>
+        <td>`sm` | `lg`</td>
+        <td></td>
+        <td>Specifies a large or small button.</td>
+    </tr> 
+    <tr>
+        <td>onClick</td>
+        <td>func</td>
+        <td></td>
+        <td>Callback fired when the button is clicked.</td>
+    </tr>
+    <tr>
+        <td>active</td>
+        <td>boolean</td>
+        <td>`false`</td>
+        <td>Manually set the visual state of the button to `active`</td>
+    </tr>
+    <tr>
+        <td>disabled</td>
+        <td>boolean</td>
+        <td>`false`</td>
+        <td>Disables the Button, preventing mouse events, even if the underlying component is an `<a>` element</td>
+    </tr>
+</FeatureTable>
+
+For more props please visit to <a href="https://react-bootstrap.netlify.app/docs/components/buttons/#button" target="_blank">react-bootstrap</a>

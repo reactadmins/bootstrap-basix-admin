@@ -1,0 +1,321 @@
+{
+  "pluginId": "default",
+  "version": "current",
+  "label": "Next",
+  "banner": null,
+  "badge": false,
+  "noIndex": false,
+  "className": "docs-version-current",
+  "isLast": true,
+  "docsSidebars": {
+    "tutorialSidebar": [
+      {
+        "type": "link",
+        "label": "Getting Started",
+        "href": "/",
+        "docId": "index",
+        "unlisted": false
+      },
+      {
+        "type": "link",
+        "label": "Setup",
+        "href": "/Setup",
+        "docId": "Setup",
+        "unlisted": false
+      },
+      {
+        "type": "category",
+        "label": "Components",
+        "collapsible": false,
+        "collapsed": false,
+        "items": [
+          {
+            "type": "link",
+            "label": "Alert",
+            "href": "/Components/Alert",
+            "docId": "Components/Alert",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Badge",
+            "href": "/Components/Badge",
+            "docId": "Components/Badge",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Button",
+            "href": "/Components/Button",
+            "docId": "Components/Button",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Card",
+            "href": "/Components/Card",
+            "docId": "Components/Card",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Progress",
+            "href": "/Components/Progress",
+            "docId": "Components/Progress",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Socials",
+            "href": "/Components/Socials",
+            "docId": "Components/Socials",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Tabs",
+            "href": "/Components/Tabs",
+            "docId": "Components/Tabs",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Modal",
+            "href": "/Components/Modal",
+            "docId": "Components/Modal",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Typography",
+            "href": "/Components/Typography",
+            "docId": "Components/Typography",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Widgets",
+            "href": "/Components/Widgets",
+            "docId": "Components/Widgets",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Table",
+            "href": "/Components/Table",
+            "docId": "Components/Table",
+            "unlisted": false
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Forms",
+        "collapsible": false,
+        "collapsed": false,
+        "items": [
+          {
+            "type": "link",
+            "label": "Basic Form",
+            "href": "/Forms/BasicForm",
+            "docId": "Forms/BasicForm",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Advanced Form",
+            "href": "/Forms/AdvancedForm",
+            "docId": "Forms/AdvancedForm",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Form Wizard",
+            "href": "/Forms/FormWizard",
+            "docId": "Forms/FormWizard",
+            "unlisted": false
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Charts",
+        "collapsible": false,
+        "collapsed": false,
+        "items": [
+          {
+            "type": "link",
+            "label": "Chartjs",
+            "href": "/Charts/Chartjs",
+            "docId": "Charts/Chartjs",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Apex Charts",
+            "href": "/Charts/ApexCharts",
+            "docId": "Charts/ApexCharts",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Recharts",
+            "href": "/Charts/Recharts",
+            "docId": "Charts/Recharts",
+            "unlisted": false
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Maps",
+        "collapsible": false,
+        "collapsed": false,
+        "items": [
+          {
+            "type": "link",
+            "label": "Google Map",
+            "href": "/Maps/GoogleMap",
+            "docId": "Maps/GoogleMap",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Leaflet Map",
+            "href": "/Maps/LeafletMaps",
+            "docId": "Maps/LeafletMaps",
+            "unlisted": false
+          }
+        ]
+      }
+    ]
+  },
+  "docs": {
+    "Charts/ApexCharts": {
+      "id": "Charts/ApexCharts",
+      "title": "ApexCharts",
+      "description": "This is short description",
+      "sidebar": "tutorialSidebar"
+    },
+    "Charts/Chartjs": {
+      "id": "Charts/Chartjs",
+      "title": "Chartjs",
+      "description": "This is short description",
+      "sidebar": "tutorialSidebar"
+    },
+    "Charts/Recharts": {
+      "id": "Charts/Recharts",
+      "title": "Recharts",
+      "description": "This is short description",
+      "sidebar": "tutorialSidebar"
+    },
+    "Components/Alert": {
+      "id": "Components/Alert",
+      "title": "Alert",
+      "description": "Provides feedback messages relevant to common user actions, including warning messages to the user.",
+      "sidebar": "tutorialSidebar"
+    },
+    "Components/Badge": {
+      "id": "Components/Badge",
+      "title": "Badge",
+      "description": "Snazzy little labels that pack a punch. Compact and vibrant, they're ideal for signaling status, displaying counts, or categorizing content. With their eye-catching design, they ensure important information stands out on your webpage.",
+      "sidebar": "tutorialSidebar"
+    },
+    "Components/Button": {
+      "id": "Components/Button",
+      "title": "Button",
+      "description": "We worked over the Bootstrap custom button styles, for actions in forms, dialogs, and more with support for multiple sizes, states, and more.",
+      "sidebar": "tutorialSidebar"
+    },
+    "Components/Card": {
+      "id": "Components/Card",
+      "title": "Card",
+      "description": "We've leveraged Bootstrap cards to enhance your card customization capabilities, enabling a diverse range of designs for our cards.",
+      "sidebar": "tutorialSidebar"
+    },
+    "Components/Modal": {
+      "id": "Components/Modal",
+      "title": "Modal",
+      "description": "An interactive user modals system that empowers users with the ability to dismiss modal at their convenience.",
+      "sidebar": "tutorialSidebar"
+    },
+    "Components/Progress": {
+      "id": "Components/Progress",
+      "title": "Progress",
+      "description": "Provide up-to-date feedback on the progression of tasks or workflows through adaptable and intuitive progress bars.",
+      "sidebar": "tutorialSidebar"
+    },
+    "Components/Socials": {
+      "id": "Components/Socials",
+      "title": "Socials",
+      "description": "We've developed bespoke buttons tailored for popular social networks. With customizable styles and the inclusion of network brand icons, our buttons seamlessly integrate into any design, offering full flexibility in customization.",
+      "sidebar": "tutorialSidebar"
+    },
+    "Components/Table": {
+      "id": "Components/Table",
+      "title": "Table",
+      "description": "We've developed a versatile table showcasing user data, dynamically displaying notices tailored to the data. Users can easily filter the content to streamline the information displayed within the table. Explore the code below for a detailed view of the implementation.",
+      "sidebar": "tutorialSidebar"
+    },
+    "Components/Tabs": {
+      "id": "Components/Tabs",
+      "title": "Tabs",
+      "description": "Our custom tabs are designed to create a dynamic tab interface for your app. By default, the first tab is displayed as the active tab. You can change this by setting the active tab value in the code. You can also customize the appearance of the active tab by choosing the background color, text color, and icon. The icon can be placed on the left or right side of the tab title. To change the orientation of the tabs, you can set the tab position to top, bottom, left, or right. This way, you can create a beautiful interface that suits your needs.",
+      "sidebar": "tutorialSidebar"
+    },
+    "Components/Typography": {
+      "id": "Components/Typography",
+      "title": "Typography",
+      "description": "Simplifies text styling. Consistent, responsive, and customizable. Ensures readability and visual appeal.",
+      "sidebar": "tutorialSidebar"
+    },
+    "Components/Widgets": {
+      "id": "Components/Widgets",
+      "title": "Widgets",
+      "description": "We've created a collection of widget card designs tailored to your dashboard needs, facilitating seamless data visualization of user data counts along with interactive progress bar functionality. Seen in the code below.",
+      "sidebar": "tutorialSidebar"
+    },
+    "Forms/AdvancedForm": {
+      "id": "Forms/AdvancedForm",
+      "title": "AdvancedForm",
+      "description": "This is short description",
+      "sidebar": "tutorialSidebar"
+    },
+    "Forms/BasicForm": {
+      "id": "Forms/BasicForm",
+      "title": "BasicForm",
+      "description": "This is short description",
+      "sidebar": "tutorialSidebar"
+    },
+    "Forms/FormWizard": {
+      "id": "Forms/FormWizard",
+      "title": "FormWizard",
+      "description": "This is short description",
+      "sidebar": "tutorialSidebar"
+    },
+    "index": {
+      "id": "index",
+      "title": "Getting Started",
+      "description": "A versatile admin dashboard template built on Bootstrap, offering a clean and intuitive interface for managing web applications. Packed with essential features, it provides easy customization and responsiveness, making it ideal for various backend management tasks.",
+      "sidebar": "tutorialSidebar"
+    },
+    "Maps/GoogleMap": {
+      "id": "Maps/GoogleMap",
+      "title": "GoogleMap",
+      "description": "This is short description",
+      "sidebar": "tutorialSidebar"
+    },
+    "Maps/LeafletMaps": {
+      "id": "Maps/LeafletMaps",
+      "title": "LeafletMaps",
+      "description": "This is short description",
+      "sidebar": "tutorialSidebar"
+    },
+    "Setup": {
+      "id": "Setup",
+      "title": "Setup",
+      "description": "Run with NPM",
+      "sidebar": "tutorialSidebar"
+    }
+  }
+}

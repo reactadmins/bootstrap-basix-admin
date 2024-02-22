@@ -1,0 +1,107 @@
+---
+sidebar_position: 9
+---
+
+Simplifies text styling. Consistent, responsive, and customizable. Ensures readability and visual appeal.
+
+import CodePreview from "@site/src/components/CodePreview/CodePreview";
+
+## Examples
+### Heading
+
+<CodePreview>
+    <h1 className="fw-bolder">
+        Very Important Information H1
+    </h1>
+    <h2 className="fw-bolder">
+        Sections & Modal Names H2
+    </h2>
+    <h3 className="fw-bolder">
+        Articles & Block Headings H3
+    </h3>
+    <h4 className="fw-bolder">
+        Random Tiny Heading H4
+    </h4>
+    <h5 className="fw-bolder">
+        Random Tiny Heading H5
+    </h5>
+    <h6 className="fw-bolder">
+        Random Tiny Heading H6
+    </h6>
+</CodePreview>
+
+```jsx title="Typography"
+import React from "react";
+
+const MyComponent = () => {
+    return (
+        <>
+            <h1 className="fw-bolder">
+                Very Important Information H1
+            </h1>
+            <h2 className="fw-bolder">
+                Sections & Modal Names H2
+            </h2>
+            <h3 className="fw-bolder">
+                Articles & Block Headings H3
+            </h3>
+            <h4 className="fw-bolder">
+                Random Tiny Heading H4
+            </h4>
+            <h5 className="fw-bolder">
+                Random Tiny Heading H5
+            </h5>
+            <h6 className="fw-bolder">
+                Random Tiny Heading H6
+            </h6>
+        </>   
+    )
+}
+
+export default MyComponent;
+```
+
+### Pragraph
+
+<CodePreview>
+    <p className="lh-2 text-start">
+        The unique stripes of zebras make them one of
+        the animals most familiar to people. They occur
+        in a variety of habitats, such as grasslands,
+        savannas,
+        <mark className="bg-primary text-light mx-1">woodlands</mark>
+        , thorny scrublands, mountains , and coastal
+        hills. However, various anthropogenic factors
+        have had a severe impact on zebra populations,
+        in particular hunting for skins and habitat
+        destruction. {"Grévy'"}s zebra and the mountain
+        <mark className="mx-1">highlighted text</mark>
+        zebra are endangered.
+    </p>
+</CodePreview>
+
+
+```jsx title="Typography"
+import React from "react";
+
+const MyComponent = () => {
+    return (
+        <p className="lh-2 text-start">
+            The unique stripes of zebras make them one of
+            the animals most familiar to people. They occur
+            in a variety of habitats, such as grasslands,
+            savannas,
+            <mark className="bg-primary text-light mx-1">woodlands</mark>
+            , thorny scrublands, mountains , and coastal
+            hills. However, various anthropogenic factors
+            have had a severe impact on zebra populations,
+            in particular hunting for skins and habitat
+            destruction. {"Grévy'"}s zebra and the mountain
+            <mark className="mx-1">highlighted text</mark>
+            zebra are endangered.
+        </p>
+    )
+}
+
+export default MyComponent;
+```

@@ -1,0 +1,141 @@
+---
+sidebar_position: 11
+---
+
+We've developed a versatile table showcasing user data, dynamically displaying notices tailored to the data. Users can easily filter the content to streamline the information displayed within the table. Explore the code below for a detailed view of the implementation.
+
+import FeatureTable from "@site/src/components/FeatureTable/FeatureTable";
+import CodePreview from "@site/src/components/CodePreview/CodePreview";
+import Table from "@site/src/components/Table/Table";
+import {tableData} from "@site/data/tableData";
+
+<CodePreview>
+    <Table data={tableData} />
+</CodePreview>
+
+```jsx title="Table"
+    import React from "react"
+    import Table from "@/components/Table/Table";
+
+    const data = [
+    {
+        id: 1,
+        name: "Matthew McCormick",
+        email: "matthew30@mail.ol",
+        city: "Vancouver",
+        score: 93,
+    },
+    {
+        id: 2,
+        name: "Nancy Bo",
+        email: "nancy@boonweb.com",
+        city: "Washington",
+        score: 280,
+    },
+    ...
+]
+
+const MyComponent = () => {
+    return (
+         <Table data={data} />
+    )
+}
+
+export default MyComponent;
+```
+
+<CodePreview>
+    <Table isVariants={true} data={tableData} />
+</CodePreview>
+
+
+```jsx title="Table"
+    import React from "react"
+    import Table from "@/components/Table/Table";
+
+    const data = [
+    {
+        id: 1,
+        name: "Matthew McCormick",
+        email: "matthew30@mail.ol",
+        city: "Vancouver",
+        score: 93,
+    },
+    {
+        id: 2,
+        name: "Nancy Bo",
+        email: "nancy@boonweb.com",
+        city: "Washington",
+        score: 280,
+    },
+    ...
+]
+
+const MyComponent = () => {
+    return (
+         <Table isVariants={true} data={data} />
+    )
+}
+
+export default MyComponent;
+```
+
+
+<CodePreview>
+    <Table isSearch={true} data={tableData} />
+</CodePreview>
+
+
+```jsx title="Table"
+    import React from "react"
+    import Table from "@/components/Table/Table";
+
+    const data = [
+    {
+        id: 1,
+        name: "Matthew McCormick",
+        email: "matthew30@mail.ol",
+        city: "Vancouver",
+        score: 93,
+    },
+    {
+        id: 2,
+        name: "Nancy Bo",
+        email: "nancy@boonweb.com",
+        city: "Washington",
+        score: 280,
+    },
+    ...
+]
+
+const MyComponent = () => {
+    return (
+         <Table isSearch={true} data={data} />
+    )
+}
+
+export default MyComponent;
+```
+
+## Props 
+
+<FeatureTable>
+    <tr>
+        <td>data</td>
+        <td>array</td>
+        <td>`[]`</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>isSearch</td>
+        <td>boolean</td>
+        <td>`false`</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>isVariants</td>
+        <td>boolean</td>
+        <td>`false`</td>
+        <td></td>
+    </tr>
+</FeatureTable>

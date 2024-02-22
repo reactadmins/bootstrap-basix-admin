@@ -1,0 +1,14 @@
+.progressbar_container {
+    .progress_bar {
+        animation: progress_bar 1.5s ease-in-out forwards;
+    }
+
+    @keyframes progress_bar {
+        from {
+            width: 0%;
+        }
+        to {
+            width: 100% !important;
+        }
+    }
+}

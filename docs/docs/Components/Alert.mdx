@@ -1,0 +1,168 @@
+---
+sidebar_position: 1
+---
+
+Provides feedback messages relevant to common user actions, including warning messages to the user.
+
+import { Alert, Badge } from "react-bootstrap";
+import FeatureTable from "@site/src/components/FeatureTable/FeatureTable";
+import CodePreview from "@site/src/components/CodePreview/CodePreview";
+
+
+## Examples
+
+<CodePreview>
+    <Alert variant="primary" dismissible>This is a primary alert—check it out!</Alert>
+    <Alert variant="secondary" dismissible>This is a secondary alert—check it out!</Alert>
+    <Alert variant="success" dismissible>This is a success alert—check it out!</Alert>
+</CodePreview>
+
+```jsx title="Alerts"
+import Alert from "react-bootstrap/Alert";
+
+function MyComponent() {
+    return (
+        <>
+            <Alert variant="primary" dismissible>This is a primary alert—check it out!</Alert>
+            <Alert variant="secondary" dismissible>This is a secondary alert—check it out!</Alert>
+            <Alert variant="success" dismissible>This is a success alert—check it out!</Alert>
+        </>
+    );
+}
+
+export default MyComponent;
+```
+
+### Link
+
+<CodePreview>
+    <Alert variant="primary">This is a primary alert with <Alert.Link href="#">an example link</Alert.Link>. Give it a click if you like.</Alert>
+    <Alert variant="secondary">This is a secondary alert with <Alert.Link href="#">an example link</Alert.Link>. Give it a click if you like.</Alert>
+    <Alert variant="success">This is a success alert with <Alert.Link href="#">an example link</Alert.Link>. Give it a click if you like.</Alert>
+</CodePreview>
+
+```jsx title="Alerts"
+import Alert from "react-bootstrap/Alert";
+
+function MyComponent() {
+    return (
+        <>
+            <Alert variant="primary">
+                This is a primary alert with 
+                <Alert.Link href="#">an example link</Alert.Link>. 
+                Give it a click if you like.
+            </Alert>
+            <Alert variant="secondary">
+                This is a secondary alert with
+                <Alert.Link href="#">an example link</Alert.Link>.
+                Give it a click if you like.
+            </Alert>
+            <Alert variant="success">
+                This is a success alert with 
+                <Alert.Link href="#">an example link</Alert.Link>.
+                Give it a click if you like.
+            </Alert>
+        </>
+    );
+}
+
+export default MyComponent;
+```
+
+### With Badge
+
+<CodePreview>
+    <Alert variant="success"><Badge bg="success">Success</Badge> You successfully read this important alert.</Alert>
+    <Alert variant="primary"> <Badge bg="primary">Primary</Badge> You successfully read this important alert.</Alert>
+    <Alert variant="secondary"><Badge bg="secondary">Secondary</Badge> You successfully read this important alert.</Alert>
+</CodePreview>
+
+```jsx title="Alerts"
+import { Alert, Badge } from "react-bootstrap";
+
+function MyComponent() {
+    return (
+        <>
+            <Alert variant="success">
+                <Badge bg="success">Success</Badge> 
+                You successfully read this important alert.
+            </Alert>
+            <Alert variant="primary">
+                <Badge bg="primary">Primary</Badge>
+                You successfully read this important alert.
+            </Alert>
+            <Alert variant="secondary">
+                <Badge bg="secondary">Secondary</Badge>
+                You successfully read this important alert.
+            </Alert>
+        </>
+    );
+}
+
+export default MyComponent;
+```
+
+### Additional content
+
+<CodePreview>
+    <Alert variant="success" dismissible>
+        <Alert.Heading>Well done!</Alert.Heading>
+        <p>
+          You successfully read this important alert message. This example text is going to run a bit longer so that you can see alert content.
+        </p>
+        <hr />
+       <p>Whenever you need to, be sure to use margin utilities nice and tidy.</p>
+    </Alert>
+</CodePreview>
+
+```jsx title="Alerts"
+import Alert from "react-bootstrap/Alert";
+
+function MyComponent() {
+    return (
+        <Alert variant="success" dismissible>
+            <Alert.Heading>Well done!</Alert.Heading>
+            <p>
+            You successfully read this important alert message. This example text is going to run a bit longer so that you can see alert content.
+            </p>
+            <hr />
+            <p>Whenever you need to, be sure to use margin utilities nice and tidy.</p>
+        </Alert>
+    );
+}
+
+export default MyComponent;
+```
+
+## Props
+
+<FeatureTable>
+    <tr>
+        <td>variant</td>
+        <td>`primary` | `secondary` | `success` | 
+        <br />`danger` | `warning` | `info` | <br/> 
+        `dark` | `light`</td>
+        <td></td>
+        <td>The Alert visual variant</td>
+    </tr>
+    <tr>
+        <td>dismissible</td>
+        <td>boolean</td>
+        <td></td>
+        <td>produces an appropriately positioned dismissal button and increases the Alert's horizontal padding.</td>
+    </tr>
+    <tr>
+        <td>show</td>
+        <td>boolean</td>
+        <td></td>
+        <td>Controls the visual state of the Alert.</td>
+    </tr>
+    <tr>
+        <td>onClose</td>
+        <td>func</td>
+        <td></td>
+        <td>Callback fired when alert is closed.</td>
+    </tr>
+</FeatureTable>
+
+For more props please visit to <a href="https://react-bootstrap.netlify.app/docs/components/alerts" target="_blank">react-bootstrap</a>

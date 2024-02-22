@@ -1,0 +1,27 @@
+{
+  "id": "Components/Modal",
+  "title": "Modal",
+  "description": "An interactive user modals system that empowers users with the ability to dismiss modal at their convenience.",
+  "source": "@site/docs/Components/Modal.mdx",
+  "sourceDirName": "Components",
+  "slug": "/Components/Modal",
+  "permalink": "/Components/Modal",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Components/Modal.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "sidebar_position": 8
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Tabs",
+    "permalink": "/Components/Tabs"
+  },
+  "next": {
+    "title": "Typography",
+    "permalink": "/Components/Typography"
+  }
+}

@@ -1,0 +1,153 @@
+---
+sidebar_position: 5
+---
+
+Provide up-to-date feedback on the progression of tasks or workflows through adaptable and intuitive progress bars.
+
+import FeatureTable from "@site/src/components/FeatureTable/FeatureTable";
+import CodePreview from "@site/src/components/CodePreview/CodePreview";
+import ProgressBar from "react-bootstrap/ProgressBar";
+
+## Examples
+
+<CodePreview>
+    <div className="d-flex flex-column gap-2">
+        <ProgressBar variant="success" now={25} label="25" striped />
+        <ProgressBar variant="info" now={50} label="50" striped />
+        <ProgressBar variant="warning" now={75} label="75" striped />
+        <ProgressBar variant="danger" now={100} label="100" striped />
+    </div>
+</CodePreview>
+
+```jsx title="Progress Bar"
+import ProgressBar from "react-bootstrap/ProgressBar";
+
+function MyComponent() {
+    return (
+        <>
+            <ProgressBar variant="success" now={25} label="25" striped />
+            <ProgressBar variant="info" now={50} label="50" striped />
+            <ProgressBar variant="warning" now={75} label="75" striped />
+            <ProgressBar variant="danger" now={100} label="100" striped />
+        </>
+    );
+}
+
+export default MyComponent;
+```
+
+### Animated Progress
+
+<CodePreview>
+    <div className="d-flex flex-column gap-2">
+        <ProgressBar variant="success" now={25} label="25" striped animated />
+        <ProgressBar variant="info" now={50} label="50" striped animated />
+        <ProgressBar variant="warning" now={75} label="75" striped animated />
+        <ProgressBar variant="danger" now={100} label="100" striped animated />
+    </div>
+</CodePreview>
+
+```jsx title="Progress Bar"
+import ProgressBar from "react-bootstrap/ProgressBar";
+
+function MyComponent() {
+    return (
+        <>
+            <ProgressBar
+                label="25"
+                variant="success"
+                now={25}
+                striped
+                Animated
+            />
+            <ProgressBar 
+                label="50"
+                variant="info"
+                value="50"
+                isStriped={true}
+                isAnimated={true} />
+            <ProgressBar
+                label="75"
+                variant="warning"
+                value="75"
+                isStriped={true}
+                isAnimated={true}
+            />
+            <ProgressBar
+                label="100"
+                variant="danger"
+                value="100"
+                isStriped={true}
+                isAnimated={true}
+            />
+        </>
+    );
+}
+
+export default MyComponent;
+```
+### Stacked
+
+<CodePreview>
+    <div className="d-flex flex-column gap-2">
+          <ProgressBar>
+            <ProgressBar striped variant="success" now={30} key={1} />
+            <ProgressBar variant="warning" now={16} key={2} />
+            <ProgressBar striped variant="danger" now={22} key={3} />
+        </ProgressBar>
+    </div>
+</CodePreview>
+
+```jsx title="Progress Bar"
+import ProgressBar from "react-bootstrap/ProgressBar";
+
+function MyComponent() {
+    return (
+        <ProgressBar>
+            <ProgressBar striped variant="success" now={30} key={1} />
+            <ProgressBar variant="warning" now={16} key={2} />
+            <ProgressBar striped variant="danger" now={22} key={3} />
+        </ProgressBar>
+    );
+}
+
+export default MyComponent;
+```
+
+## Props
+
+<FeatureTable>
+    <tr>
+        <td>variant</td>
+        <td>`success`, `danger`, `warning`, `info`</td>
+        <td></td>
+        <td>Sets the background class of the progress bar.</td>
+    </tr>
+    <tr>
+        <td>now</td>
+        <td>number</td>
+        <td></td>
+        <td>Current value of progress</td>
+    </tr>
+    <tr>
+        <td>label</td>
+        <td>node</td>
+        <td></td>
+        <td>Show label that represents visual percentage. EG. 60%</td>
+    </tr>
+    <tr>
+        <td>striped</td>
+        <td>boolean</td>
+        <td></td>
+        <td>Uses a gradient to create a striped effect.</td>
+    </tr>
+    <tr>
+        <td>animated</td>
+        <td>boolean</td>
+        <td></td>
+        <td>Animate's the stripes from right to left</td>
+    </tr>
+
+</FeatureTable>
+
+For more props please visit to <a href="https://react-bootstrap.netlify.app/docs/components/progress/#api" target="_blank">react-bootstrap</a>

@@ -1,0 +1,64 @@
+:root {
+    --bg-content: #fff;
+    --body-bg: #f1f2f7;
+    --border-color: #dddddd;
+    --hedging-text-color: #171717;
+    --content-text-color: #666666;
+    --stats-card-text: #fff;
+    --link-color: #0070f3;
+    --card-icon-color: #868e96;
+}
+
+body[data-theme="dark"] {
+    --bg-content: #0a0a0a;
+    --body-bg: #000;
+    --border-color: #ffffff25;
+    --hedging-text-color: #ededed;
+    --content-text-color: #a1a1a1;
+    --stats-card-text: var(--content-text-color);
+    --card-icon-color: var(--hedging-text-color);
+    --dark-hover-color: #1a1a1a;
+}
+
+$body_font_size: 1rem;
+$body_font_family: "Open Sans", sans-serif;
+
+$primary: #0d6efd;
+$secondary: #6c757d;
+$success: #28a745;
+$info: #0dcaf0;
+$warning: #ffa726;
+$danger: #dc3545;
+$light: #f8f9fa;
+$dark: var(--dark-bg);
+$white: #ffff;
+$white-900: #f4f4f4;
+$green-white: #e8e9ed;
+$ghost: #c8c9ce;
+$grey-700: #868e96;
+$grey-800: #8b939b;
+$grey-900: #41434d;
+$pink: #e9ecef;
+$gunsmoke: #878787;
+$baltic-800: #262832;
+$baltic-900: #292b35;
+$matched: #343a40;
+$blue: #42a5f5;
+$periwinkle: #5c6bc0;
+$valentine-600: #cc4744;
+$valentine-red: #ef5350;
+$mint: #4dbd74;
+$red: #f44336;
+$card_bg: #f7f7f7;
+
+$mailbg: #0072c6;
+$facebookbg: #3b5998;
+$linkedinbg: #0077b5;
+$github: #6e5494;
+$twitterbg: #00aced;
+$googlebg: #dd4b39;
+$dribbblebg: #ea4c89;
+$vimeobg: #1ab7ea;
+$pinterestbg: #cb2027;
+$instagrambg: #bc2a8d;
+$codepen: #212121;

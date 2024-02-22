@@ -1,0 +1,174 @@
+---
+sidebar_position: 2
+---
+
+Snazzy little labels that pack a punch. Compact and vibrant, they're ideal for signaling status, displaying counts, or categorizing content. With their eye-catching design, they ensure important information stands out on your webpage.
+
+import { Badge, Button } from "react-bootstrap";
+import FeatureTable from "@site/src/components/FeatureTable/FeatureTable";
+import CodePreview from "@site/src/components/CodePreview/CodePreview";
+
+
+## Examples
+
+<CodePreview>
+    <div>
+        <h1 style={{marginBottom: "8px"}}>Example heading <Badge bg="secondary">New</Badge></h1>
+        <h2>Example heading <Badge bg="secondary">New</Badge></h2>
+        <h3>Example heading <Badge bg="secondary">New</Badge></h3>
+        <h4>Example heading <Badge bg="secondary">New</Badge></h4>
+        <h5>Example heading <Badge bg="secondary">New</Badge></h5>
+        <h6>Example heading <Badge bg="secondary">New</Badge></h6>
+    </div>
+    
+</CodePreview>
+
+```jsx title="Badges"
+import Badge from "react-bootstrap/Badge";
+
+function MyComponent() {
+    return (
+        <div>
+            <h1>Example heading <Badge bg="secondary">New</Badge></h1>
+            <h2>Example heading <Badge bg="secondary">New</Badge></h2>
+            <h3>Example heading <Badge bg="secondary">New</Badge></h3>
+            <h4>Example heading <Badge bg="secondary">New</Badge></h4>
+            <h5>Example heading <Badge bg="secondary">New</Badge></h5>
+            <h6>Example heading <Badge bg="secondary">New</Badge></h6>
+        </div>
+    );
+}
+
+export default MyComponent;
+```
+
+### With Button Counter
+
+<CodePreview>
+    <div className="d-flex gap-2">
+        <Button variant="primary">Profile <Badge bg="light" text="dark">9</Badge><span className="visually-hidden">unread messages</span></Button>
+        <Button variant="success">Profile <Badge bg="light" text="dark">9</Badge><span className="visually-hidden">unread messages</span></Button>
+        <Button variant="info">Profile <Badge bg="light" text="dark">9</Badge><span className="visually-hidden">unread messages</span></Button>
+        <Button variant="warning">Profile <Badge bg="light" text="dark">9</Badge><span className="visually-hidden">unread messages</span></Button>
+        <Button variant="danger">Profile <Badge bg="light" text="dark">9</Badge><span className="visually-hidden">unread messages</span></Button>
+    </div>
+    
+</CodePreview>
+
+```jsx title="Badges"
+import Badge from "react-bootstrap/Badge";
+
+function MyComponent() {
+    return (
+        <div>
+            <Button variant="primary">
+                Profile <Badge bg="light" text="dark">9</Badge>
+            </Button>
+            <Button variant="success">
+                Profile <Badge bg="light" text="dark">9</Badge>    
+            </Button>
+            <Button variant="info">
+                Profile <Badge bg="light" text="dark">9</Badge>
+            </Button>
+            <Button variant="warning">
+                Profile <Badge bg="light" text="dark">9</Badge>
+            </Button>
+            <Button variant="danger">
+                Profile <Badge bg="light" text="dark">9</Badge>
+            </Button>
+        </div>
+    );
+}
+
+export default MyComponent;
+```
+
+### Contextual Variations
+
+<CodePreview>
+    <div className="d-flex flex-wrap gap-2">
+        <Badge bg="primary">Primary</Badge>
+        <Badge bg="secondary">Secondary</Badge>
+        <Badge bg="success">Success</Badge>
+        <Badge bg="danger">Danger</Badge>
+        <Badge bg="warning" text="dark">Warning</Badge>
+        <Badge bg="info" text="dark">Info</Badge>
+        <Badge bg="light" text="dark">Light</Badge>
+        <Badge bg="dark">Dark</Badge>
+    </div>
+</CodePreview>
+
+```jsx title="Badges"
+import Badge from "react-bootstrap/Badge";
+
+function MyComponent() {
+    return (
+        <div className="d-flex flex-wrap gap-2">
+            <Badge bg="primary">Primary</Badge>
+            <Badge bg="secondary">Secondary</Badge>
+            <Badge bg="success">Success</Badge>
+            <Badge bg="danger">Danger</Badge>
+            <Badge bg="warning" text="dark">Warning</Badge>
+            <Badge bg="info" text="dark">Info</Badge>
+            <Badge bg="light" text="dark">Light</Badge>
+            <Badge bg="dark">Dark</Badge>
+        </div>
+    );
+}
+
+export default MyComponent;
+```
+
+### Pill badges
+
+<CodePreview>
+    <div className="d-flex flex-wrap gap-2">
+        <Badge pill bg="primary">Primary</Badge>
+        <Badge pill bg="secondary">Secondary</Badge>
+        <Badge pill bg="success">Success</Badge>
+        <Badge pill bg="danger">Danger</Badge>
+        <Badge pill bg="warning" text="dark">Warning</Badge>
+        <Badge pill bg="info" text="dark">Info</Badge>
+        <Badge pill bg="light" text="dark">Light</Badge>
+        <Badge pill bg="dark">Dark</Badge>
+    </div>
+</CodePreview>
+
+```jsx title="Badges"
+import Badge from "react-bootstrap/Badge";
+
+function MyComponent() {
+    return (
+        <div className="d-flex flex-wrap gap-2">
+            <Badge pill bg="primary">Primary</Badge>
+            <Badge pill bg="secondary">Secondary</Badge>
+            <Badge pill bg="success">Success</Badge>
+            <Badge pill bg="danger">Danger</Badge>
+            <Badge pill bg="warning" text="dark">Warning</Badge>
+            <Badge pill bg="info" text="dark">Info</Badge>
+            <Badge pill bg="light" text="dark">Light</Badge>
+            <Badge pill bg="dark">Dark</Badge>
+        </div>
+    );
+}
+
+export default MyComponent;
+```
+
+
+<FeatureTable>
+    <tr>
+        <td>bg</td>
+        <td>`primary` | `secondary` | `success` | <br /> `danger` | `warning` | `info` | <br /> `light` | `dark`</td>
+        <td>`primary`</td>
+        <td>The visual style of the badge</td>
+    </tr>
+    <tr>
+        <td>pill</td>
+        <td>boolean</td>
+        <td>`false`</td>
+        <td>Add the pill modifier to make badges more rounded.</td>
+    </tr>
+</FeatureTable>
+
+For more props please visit to <a href="https://react-bootstrap.netlify.app/docs/components/badge" target="_blank">react-bootstrap</a>

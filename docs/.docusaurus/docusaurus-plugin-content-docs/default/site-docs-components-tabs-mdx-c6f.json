@@ -1,0 +1,27 @@
+{
+  "id": "Components/Tabs",
+  "title": "Tabs",
+  "description": "Our custom tabs are designed to create a dynamic tab interface for your app. By default, the first tab is displayed as the active tab. You can change this by setting the active tab value in the code. You can also customize the appearance of the active tab by choosing the background color, text color, and icon. The icon can be placed on the left or right side of the tab title. To change the orientation of the tabs, you can set the tab position to top, bottom, left, or right. This way, you can create a beautiful interface that suits your needs.",
+  "source": "@site/docs/Components/Tabs.mdx",
+  "sourceDirName": "Components",
+  "slug": "/Components/Tabs",
+  "permalink": "/Components/Tabs",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Components/Tabs.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "sidebar_position": 7
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Socials",
+    "permalink": "/Components/Socials"
+  },
+  "next": {
+    "title": "Modal",
+    "permalink": "/Components/Modal"
+  }
+}

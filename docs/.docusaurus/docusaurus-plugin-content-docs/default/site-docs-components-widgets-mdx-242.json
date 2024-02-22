@@ -1,0 +1,27 @@
+{
+  "id": "Components/Widgets",
+  "title": "Widgets",
+  "description": "We've created a collection of widget card designs tailored to your dashboard needs, facilitating seamless data visualization of user data counts along with interactive progress bar functionality. Seen in the code below.",
+  "source": "@site/docs/Components/Widgets.mdx",
+  "sourceDirName": "Components",
+  "slug": "/Components/Widgets",
+  "permalink": "/Components/Widgets",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Components/Widgets.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "sidebar_position": 10
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Typography",
+    "permalink": "/Components/Typography"
+  },
+  "next": {
+    "title": "Table",
+    "permalink": "/Components/Table"
+  }
+}

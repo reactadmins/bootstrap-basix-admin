@@ -1,0 +1,191 @@
+---
+sidebar_position: 2
+sidebar_label: Leaflet Map
+---
+
+This is short description
+
+import CodePreview from "@site/src/components/CodePreview/CodePreview";
+import Leaflet from "@site/src/components/Maps/Leaflet/Leaflet";
+
+## Examples
+
+### Voyager
+<CodePreview>
+    <Leaflet 
+        attr='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>' 
+        url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
+    />
+</CodePreview>
+
+```jsx title="Voyager"
+import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import Card from "@/components/Card/Card";
+import { CardBody } from "react-bootstrap";
+
+const MyComponent = () => {
+    const position = [51.505, -0.09];
+
+    return (
+        <Card title="Voyager">
+            <CardBody>
+                <MapContainer
+                    style={{ width: "100%", height: "400px" }}
+                    center={position}
+                    zoom={16}
+                    scrollWheelZoom={false}
+                >
+                    <TileLayer
+                        attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
+                        url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
+                    />
+                    <Marker position={position} >
+                        <Popup>
+                            A pretty CSS3 popup. <br /> Easily customizable.
+                        </Popup>
+                    </Marker>
+                </MapContainer>
+            </CardBody>
+        </Card>
+    );
+};
+
+export default MyComponent;
+```
+
+### Street Map
+<CodePreview>
+    <Leaflet
+        attr='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
+        url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+    />
+</CodePreview>
+
+```jsx title="Street Map"
+import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import Card from "@/components/Card/Card";
+import { CardBody } from "react-bootstrap";
+
+const MyComponent = () => {
+    const position = [51.505, -0.09];
+
+    return (
+        <Card title="Street Map">
+            <CardBody>
+                <MapContainer
+                    style={{ width: "100%", height: "400px" }}
+                    center={position}
+                    zoom={16}
+                    scrollWheelZoom={false}
+                >
+                    <TileLayer
+                        attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
+                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    />
+                    <Marker position={position} >
+                        <Popup>
+                            A pretty CSS3 popup. <br /> Easily customizable.
+                        </Popup>
+                    </Marker>
+                </MapContainer>
+            </CardBody>
+        </Card>
+    );
+};
+
+export default MyComponent;
+```
+
+### World Imagery
+<CodePreview>
+    <Leaflet
+        attr='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
+        url='https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
+    />
+</CodePreview>
+
+```jsx title="World Imagery"
+import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import Card from "@/components/Card/Card";
+import { CardBody } from "react-bootstrap";
+
+const MyComponent = () => {
+    const position = [51.505, -0.09];
+
+    return (
+        <Card title="World Imagery">
+            <CardBody>
+                <MapContainer
+                    style={{ width: "100%", height: "400px" }}
+                    center={position}
+                    zoom={16}
+                    scrollWheelZoom={false}
+                >
+                    <TileLayer
+                        attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
+                        url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+                    />
+                    <Marker position={position} >
+                        <Popup>
+                            A pretty CSS3 popup. <br /> Easily customizable.
+                        </Popup>
+                    </Marker>
+                </MapContainer>
+            </CardBody>
+        </Card>
+    );
+};
+
+export default MyComponent;
+```
+
+### Dark Matter
+<CodePreview>
+    <Leaflet 
+        attr='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
+        url='https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
+    />
+</CodePreview>
+
+```jsx title="Dark Matter"
+import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import Card from "@/components/Card/Card";
+import { CardBody } from "react-bootstrap";
+
+const MyComponent = () => {
+    const position = [51.505, -0.09];
+
+    return (
+        <Card title="Dark Matter">
+            <CardBody>
+                <MapContainer
+                    style={{ width: "100%", height: "400px" }}
+                    center={position}
+                    zoom={16}
+                    scrollWheelZoom={false}
+                >
+                    <TileLayer
+                        attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
+                        url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+                    />
+                    <Marker position={position} >
+                        <Popup>
+                            A pretty CSS3 popup. <br /> Easily customizable.
+                        </Popup>
+                    </Marker>
+                </MapContainer>
+            </CardBody>
+        </Card>
+    );
+};
+
+export default MyComponent;
+```
+
+<style>
+    {`
+        .leaflet-top, .leaflet-bottom{
+            z-index: 998;
+        }
+    `}
+</style>

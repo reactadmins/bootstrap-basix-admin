@@ -1,0 +1,461 @@
+---
+sidebar_position: 10
+---
+
+We've created a collection of widget card designs tailored to your dashboard needs, facilitating seamless data visualization of user data counts along with interactive progress bar functionality. Seen in the code below.
+
+import FeatureTable from "@site/src/components/FeatureTable/FeatureTable";
+import CodePreview from "@site/src/components/CodePreview/CodePreview";
+import StatsCard from "@site/src/components/Widgets/StatsCard/StasCard"
+import SocialCounter from "@site/src/components/Widgets/SocialCounter/SocialCounter"
+import UserStats from "@site/src/components/Widgets/UserStats/UserStats"
+import { BarChart, Bar} from "recharts";
+
+import {statsCardWithChart} from "../../data/data";
+
+## Examples
+
+### Stats Card
+
+<CodePreview>
+    <div className="d-flex gap-2">
+        <div className="col-4">
+            <StatsCard
+                type="revenue-counter"
+                bgColor="#5c6bc0"
+                symbol="$"
+                counter={23569}
+                isCounter={true}
+                title="Revenue"
+                icon="fa-solid fa-cart-shopping"
+            />
+        </div>
+
+        <div className="col-4">
+            <StatsCard
+                type="revenue-counter"
+                bgColor="#66bb6a"
+                symbolPosition="right"
+                symbol="%"
+                counter={23569}
+                isCounter={true}
+                title="Revenue"
+                icon={
+                    <BarChart width={100} height={80} data={statsCardWithChart}>
+                        <Bar dataKey="uv" fill="#fff" />
+                    </BarChart>
+                }
+            />
+        </div>
+
+        <div className="col-4">
+            <StatsCard
+                type="revenue-progressBar"
+                bgColor="#5c6bc0"
+                symbol="%"
+                symbolPosition="right"
+                counter={89}
+                isCounter={true}
+                title="Lorem ipsum..."
+                progressPercent={25}
+                description="Lorem ipsum dolor sit amet enim."
+            />
+        </div>
+    </div>
+   
+</CodePreview>
+
+```jsx title="Widgets"
+import React from "react";
+import StatsCard from "@/components/StatsCard/StatsCard";
+import { BarChart, Bar} from "recharts";
+
+const data = [
+    {
+        name: "Page A",
+        uv: 2000,
+        pv: 2400,
+        amt: 2400,
+    },
+    {
+        name: "Page B",
+        uv: 6000,
+        pv: 1398,
+        amt: 2210,
+    },
+    {
+        name: "Page C",
+        uv: 4000,
+        pv: 9800,
+        amt: 2290,
+    },
+    {
+        name: "Page D",
+        uv: 8000,
+        pv: 3908,
+        amt: 2000,
+    },
+    {
+        name: "Page E",
+        uv: 4000,
+        pv: 4800,
+        amt: 2181,
+    },
+    {
+        name: "Page F",
+        uv: 6000,
+        pv: 3800,
+        amt: 2500,
+    },
+    {
+        name: "Page G",
+        uv: 2000,
+        pv: 4300,
+        amt: 2100,
+    },
+    {
+        name: "Page G",
+        uv: 5000,
+        pv: 4300,
+        amt: 2100,
+    },
+];
+
+const MyComponent = () => {
+    return (
+        <>
+            <StatsCard
+                type="revenue-counter"
+                bgColor="#5c6bc0"
+                symbol="$"
+                counter={23569}
+                isCounter={true}
+                title="Revenue"
+                icon="fa-solid fa-cart-shopping"
+            />
+            <StatsCard
+                type="revenue-counter"
+                bgColor="#66bb6a"
+                symbolPosition="right"
+                symbol="%"
+                counter={23569}
+                isCounter={true}
+                title="Revenue"
+                icon={
+                    <BarChart width={100} height={80} data={statsCardWithChart}>
+                        <Bar dataKey="uv" fill="#fff" />
+                    </BarChart>
+                }
+            />
+            <StatsCard
+                type="revenue-progressBar"
+                bgColor="#5c6bc0"
+                symbol="%"
+                symbolPosition="right"
+                counter={89}
+                isCounter={true}
+                title="Lorem ipsum..."
+                progressPercent={25}
+                description="Lorem ipsum dolor sit amet enim."
+            />  
+        </> 
+    )
+}
+
+export default MyComponent;
+```
+
+## Props
+
+<FeatureTable >
+    <tr>
+        <td>type</td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>bgColor</td>
+        <td>string</td>
+        <td>`#fff`</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>icon</td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>isCounter</td>
+        <td>boolean</td>
+        <td>`false`</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>counter</td>
+        <td>number</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>symbolPosition</td>
+        <td>string</td>
+        <td>`left`</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>symbol</td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>symbolPosition</td>
+        <td>string</td>
+        <td>`left`</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>title</td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>description</td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>progressPercent</td>
+        <td>number</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>isIconBorder</td>
+        <td>boolean</td>
+        <td>`false`</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>borderColor</td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>padding</td>
+        <td>string</td>
+        <td>`16px`</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>width</td>
+        <td>string</td>
+        <td>`45px`</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>hight</td>
+        <td>string</td>
+        <td>`45px`</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>isViewMore</td>
+        <td>boolean</td>
+        <td>`false`</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>link</td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+    </tr>
+</FeatureTable>
+
+### Social Counter
+
+<CodePreview>
+    <div className="col-4">
+        <SocialCounter
+            bgColor="#3B5998"
+            padding="40px"
+            icon="fa-brands fa-facebook-f"
+            count="1875980"
+            iconPosition="top"
+            socialActivity={{
+                followers: 40,
+                countType: "K",
+                followersType: "Friends",
+                usre: 40,
+                feeds: "feeds",
+            }}
+        />
+    </div>
+   
+</CodePreview>
+
+```jsx title="Widgets"
+import React from "react";
+import SocialCounter from "@/components/SocialCounter/SocialCounter";
+
+const MyComponent = () => {
+    return (
+        <SocialCounter
+            bgColor="#3B5998"
+            padding="40px"
+            icon="fa-brands fa-facebook-f"
+            count="1875980"
+            iconPosition="top"
+            socialActivity={{
+                followers: 40,
+                countType: "K",
+                followersType: "Friends",
+                usre: 40,
+                feeds: "feeds",
+            }}
+        />   
+    )
+}
+
+export default MyComponent;
+```
+
+## Props
+
+<FeatureTable >
+    <tr>
+        <td>bgColor</td>
+        <td>string</td>
+        <td>`transparent`</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>icon</td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>iconPosition</td>
+        <td>string</td>
+        <td>`left`</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>count</td>
+        <td>number</td>
+        <td>`0`</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>padding</td>
+        <td>string</td>
+        <td>`24px`</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>isCounter</td>
+        <td>boolean</td>
+        <td>`false`</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>socialActivity</td>
+        <td>object</td>
+        <td>`{}`</td>
+        <td></td>
+    </tr>
+</FeatureTable>
+
+### User Stats
+
+<CodePreview>
+    <div className="col-4">
+        <UserStats
+            icon="fa-solid fa-users"
+            conunt={87500}
+            title="Visitors"
+            progressBg="#5c6bc0"
+            progressPercent={80}
+        />
+    </div>
+   
+</CodePreview>
+
+```jsx title="Widgets"
+import React from "react";
+import UserStats from "@/components/UserStats/UserStats";
+
+const MyComponent = () => {
+    return (
+        <UserStats
+            icon="fa-solid fa-users"
+            conunt={87500}
+            title="Visitors"
+            progressBg="#5c6bc0"
+            progressPercent={80}
+        />  
+    )
+}
+
+export default MyComponent;
+```
+
+## Props 
+
+<FeatureTable >
+    <tr>
+        <td>bgColor</td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>bgColor</td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>icon</td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>conunt</td>
+        <td>number</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>title</td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>size</td>
+        <td>string</td>
+        <td>`17px`</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>progressBg</td>
+        <td>string</td>
+        <td>`#fff`</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>progressPercent</td>
+        <td>number</td>
+        <td></td>
+        <td></td>
+    </tr>
+</FeatureTable>

@@ -1,0 +1,141 @@
+{
+  "docusaurus-lunr-search": {
+    "default": {
+      "fileNames": {
+        "searchDoc": "search-doc-1708620297607.json",
+        "lunrIndex": "lunr-index-1708620297607.json"
+      }
+    }
+  },
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/",
+          "mainDocId": "index",
+          "docs": [
+            {
+              "id": "Charts/ApexCharts",
+              "path": "/Charts/ApexCharts",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Charts/Chartjs",
+              "path": "/Charts/Chartjs",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Charts/Recharts",
+              "path": "/Charts/Recharts",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Components/Alert",
+              "path": "/Components/Alert",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Components/Badge",
+              "path": "/Components/Badge",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Components/Button",
+              "path": "/Components/Button",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Components/Card",
+              "path": "/Components/Card",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Components/Modal",
+              "path": "/Components/Modal",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Components/Progress",
+              "path": "/Components/Progress",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Components/Socials",
+              "path": "/Components/Socials",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Components/Table",
+              "path": "/Components/Table",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Components/Tabs",
+              "path": "/Components/Tabs",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Components/Typography",
+              "path": "/Components/Typography",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Components/Widgets",
+              "path": "/Components/Widgets",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Forms/AdvancedForm",
+              "path": "/Forms/AdvancedForm",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Forms/BasicForm",
+              "path": "/Forms/BasicForm",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Forms/FormWizard",
+              "path": "/Forms/FormWizard",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "index",
+              "path": "/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Maps/GoogleMap",
+              "path": "/Maps/GoogleMap",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Maps/LeafletMaps",
+              "path": "/Maps/LeafletMaps",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Setup",
+              "path": "/Setup",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/",
+                "label": "index"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

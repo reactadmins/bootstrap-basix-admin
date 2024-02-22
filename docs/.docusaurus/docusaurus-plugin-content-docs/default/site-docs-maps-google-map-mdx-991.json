@@ -1,0 +1,28 @@
+{
+  "id": "Maps/GoogleMap",
+  "title": "GoogleMap",
+  "description": "This is short description",
+  "source": "@site/docs/Maps/GoogleMap.mdx",
+  "sourceDirName": "Maps",
+  "slug": "/Maps/GoogleMap",
+  "permalink": "/Maps/GoogleMap",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Maps/GoogleMap.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1,
+    "sidebar_label": "Google Map"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Recharts",
+    "permalink": "/Charts/Recharts"
+  },
+  "next": {
+    "title": "Leaflet Map",
+    "permalink": "/Maps/LeafletMaps"
+  }
+}

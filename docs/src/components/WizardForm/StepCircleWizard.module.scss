@@ -1,0 +1,57 @@
+.wizard_wrapper {
+    .wizard_progress {
+        height: 4px;
+        top: 35px;
+        background-color: rgb(231, 76, 60);
+    }
+    .step_block {
+        .step_wrapper {
+            .wizard_icon {
+                width: 70px;
+                height: 70px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 3px solid var(--border-color);
+                background-color: var(--bg-content);
+                color: var(--content-text-color);
+                border-radius: 50%;
+                &.active {
+                    border: 3px solid rgb(231, 76, 60);
+                    background-color: rgb(231, 76, 60);
+                    color: #fff !important;
+                }
+            }
+        }
+    }
+    .step_title {
+        display: block;
+        margin-top: 5px;
+        color: var(--content-text-color);
+        font-size: 17px;
+        &.step_title_active {
+            color: rgb(231, 76, 60);
+        }
+    }
+    .step_content {
+        padding: 30px 20px 10px 20px;
+        .step_content_title {
+            color: var(--hedging-text-color);
+        }
+    }
+    .step_btn_wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        button {
+            min-width: 140px;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 8px 12px;
+            background-color: rgb(231, 76, 60);
+            color: #fff;
+            border: rgb(231, 76, 60);
+            border-radius: 4px;
+        }
+    }
+}

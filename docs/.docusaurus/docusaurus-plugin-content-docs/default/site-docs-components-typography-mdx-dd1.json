@@ -1,0 +1,27 @@
+{
+  "id": "Components/Typography",
+  "title": "Typography",
+  "description": "Simplifies text styling. Consistent, responsive, and customizable. Ensures readability and visual appeal.",
+  "source": "@site/docs/Components/Typography.mdx",
+  "sourceDirName": "Components",
+  "slug": "/Components/Typography",
+  "permalink": "/Components/Typography",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Components/Typography.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "sidebar_position": 9
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Modal",
+    "permalink": "/Components/Modal"
+  },
+  "next": {
+    "title": "Widgets",
+    "permalink": "/Components/Widgets"
+  }
+}

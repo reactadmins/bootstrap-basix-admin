@@ -1,0 +1,27 @@
+{
+  "id": "Setup",
+  "title": "Setup",
+  "description": "Run with NPM",
+  "source": "@site/docs/Setup.md",
+  "sourceDirName": ".",
+  "slug": "/Setup",
+  "permalink": "/Setup",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/Setup.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Getting Started",
+    "permalink": "/"
+  },
+  "next": {
+    "title": "Alert",
+    "permalink": "/Components/Alert"
+  }
+}

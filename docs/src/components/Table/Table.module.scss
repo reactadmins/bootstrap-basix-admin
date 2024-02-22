@@ -1,0 +1,104 @@
+@import "../../css/variable.scss";
+
+.table_wrapper {
+  .search_wrapper {
+    input[placeholder='Search'] {
+      color: var(--hedging-text-color);
+      border-color: var(--border-color);
+      background-color: var(--bg-content);
+      border-radius: 4px 0 0 4px;
+      &:focus {
+        box-shadow: none;
+      }
+      &::placeholder {
+        color: var(--hedging-text-color);
+      }
+    }
+    .show_entries {
+      select {
+        option {
+          color: var(--hedging-text-color);
+          border-bottom: 1px solid var(--border-color);
+          background-color: var(--bg-content);
+        }
+        &:focus-visible {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+  .table {
+    display: inline-table;
+    .thead {
+      tr {
+        td {
+          font-size: 16px;
+          font-weight: 600;
+          padding: 0.75rem;
+          border-bottom: 0px;
+          &:last-child {
+            text-align: center;
+          }
+        }
+      }
+    }
+    .tbody {
+      tr {
+        td {
+          color: #000;
+          padding: 0.75rem;
+          border-top: 1px solid #dee2e6;
+          border-bottom: 0px;
+          &:last-child {
+            text-align: center;
+          }
+        }
+        &:nth-child(even) {
+          background-color: #fff;
+        }
+        &:nth-child(odd) {
+          background-color: #f2f2f2;
+        }
+      }
+    }
+  }
+  &[data='true'] {
+    .table {
+      .thead {
+        tr {
+          td {
+            font-size: 16px;
+            font-weight: 600;
+            padding: 0.75rem;
+            border-bottom: 0px;
+            color: var(--content-text-color);
+            background-color: var(--bg-content);
+            &:last-child {
+              text-align: center;
+            }
+          }
+        }
+      }
+      .tbody {
+        tr {
+          td {
+            color: var(--hedging-text-color);
+            padding: 0.75rem;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 0px;
+            background-color: var(--bg-content);
+            &:last-child {
+              text-align: center;
+            }
+          }
+          &:nth-child(even) {
+            background-color: #fff;
+          }
+          &:nth-child(odd) {
+            background-color: #f2f2f2;
+          }
+        }
+      }
+    }
+  }
+}

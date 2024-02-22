@@ -1,0 +1,32 @@
+.notice-wrapper {
+    position: fixed;
+    background: #fff;
+    /* top: 40px; */
+    left: 0;
+    right: 0;
+    width: 1170px;
+    margin: auto;
+    box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25), 0 8px 16px -8px rgba(0, 0, 0, 0.3),
+        0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+    padding: 20px 40px;
+    border-radius: 8px;
+    z-index: 99999999;
+}
+.notice-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 16px;
+    color: rgb(24, 24, 24);
+}
+.button_wrapper > a {
+    font-size: 14px;
+    font-weight: 700;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+.notice-close {
+    position: absolute;
+    right: 28px;
+    cursor: pointer;
+}

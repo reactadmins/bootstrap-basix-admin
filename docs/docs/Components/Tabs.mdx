@@ -1,0 +1,414 @@
+---
+sidebar_position: 7
+---
+
+Our custom tabs are designed to create a dynamic tab interface for your app. By default, the first tab is displayed as the active tab. You can change this by setting the active tab value in the code. You can also customize the appearance of the active tab by choosing the background color, text color, and icon. The icon can be placed on the left or right side of the tab title. To change the orientation of the tabs, you can set the tab position to top, bottom, left, or right. This way, you can create a beautiful interface that suits your needs.
+
+import FeatureTable from "@site/src/components/FeatureTable/FeatureTable";
+import CodePreview from "@site/src/components/CodePreview/CodePreview";
+import { Tab, TabPage } from "@site/src/components/Tab/Tab";
+import "@site/node_modules/@fortawesome/fontawesome-free/css/all.min.css";
+
+## Examples
+
+### Top Horizontal
+
+<CodePreview>
+    <Tab activeTab="home" tabActiveBg="#292b35" tabActiveTextColor="#fff">
+        <TabPage eventKey="home" title="Home">
+            <div className="w-100 h-100" style={{ padding: "20px" }}>
+                <p
+                    style={{
+                        color: "var(--hedging-text-color)",
+                    }}>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </TabPage>
+        <TabPage eventKey="profile" title="Profile">
+            <div className="w-100 h-100" style={{ padding: "20px" }}>
+                <p
+                    style={{
+                        color: "var(--hedging-text-color)",
+                    }}>It is a long established fact that a reader will be distracted by the readable
+                    content of a page when looking at its layout. The point of using Lorem Ipsum.</p>
+            </div>
+        </TabPage>
+        <TabPage eventKey="messages" title="Messages">
+            <div className="w-100 h-100" style={{ padding: "20px" }}>
+                <p
+                    style={{
+                        color: "var(--hedging-text-color)",
+                    }}>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
+                    in a piece of classical Latin literature.</p>
+            </div>
+        </TabPage>
+    </Tab>
+</CodePreview>
+
+```jsx title="Tabs"
+import { Tab, TabPage } from "@/components/Tab/Tab";
+
+function MyComponent() {
+    return (
+        <Tab activeTab="home" tabActiveBg="#292b35" tabActiveTextColor="#fff">
+            <TabPage eventKey="home" title="Home">
+                <div className="w-100 h-100" style={{ padding: "20px" }}>
+                    <p
+                        style={{
+                            color: "var(--hedging-text-color)",
+                        }}>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                </div>
+            </TabPage>
+            <TabPage eventKey="profile" title="Profile">
+                <div className="w-100 h-100" style={{ padding: "20px" }}>
+                    <p
+                        style={{
+                            color: "var(--hedging-text-color)",
+                        }}>
+                        It is a long established fact that a reader will be distracted by the
+                        readable content of a page when looking at its layout. The point of using
+                        Lorem Ipsum.
+                    </p>
+                </div>
+            </TabPage>
+            <TabPage eventKey="messages" title="Messages">
+                <div className="w-100 h-100" style={{ padding: "20px" }}>
+                    <p
+                        style={{
+                            color: "var(--hedging-text-color)",
+                        }}>
+                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has
+                        roots in a piece of classical Latin literature.
+                    </p>
+                </div>
+            </TabPage>
+        </Tab>
+    );
+}
+
+export default MyComponent;
+```
+
+### Bottom Horizontal
+
+<CodePreview>
+    <Tab activeTab="home" tabActiveBg="#292b35" tabActiveTextColor="#fff" tabPosition="bottom">
+        <TabPage eventKey="home" title="Home" icon="fa fa-home">
+            <div className="w-100 h-100" style={{ padding: "20px" }}>
+                <p
+                    style={{
+                        color: "var(--hedging-text-color)",
+                    }}>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                    nostrud</p>
+            </div>
+        </TabPage>
+        <TabPage eventKey="profile" title="Profile" icon="fa-sharp fa-solid fa-user">
+            <div className="w-100 h-100" style={{ padding: "20px" }}>
+                <p
+                    style={{
+                        color: "var(--hedging-text-color)",
+                    }}>It is a long established fact that a reader will be distracted by the readable
+                    content of a page when looking at its layout. The point of using Lorem Ipsum is
+                    that it has a more-or-less normal distribution</p>
+            </div>
+        </TabPage>
+        <TabPage eventKey="messages" title="Messages" icon="fa fa-comments">
+            <div className="w-100 h-100" style={{ padding: "20px" }}>
+                <p
+                    style={{
+                        color: "var(--hedging-text-color)",
+                    }}>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
+                    in a piece of classical Latin literature from 45 BC, making it over 2000 years
+                    old. Richard McClintock, a Latin professor</p>
+            </div>
+        </TabPage>
+    </Tab>
+</CodePreview>
+
+```jsx title="Tabs"
+import { Tab, TabPage } from "@/components/Tab/Tab";
+
+function MyComponent() {
+    return (
+        <Tab activeTab="home" tabActiveBg="#292b35" tabActiveTextColor="#fff" tabPosition="bottom">
+            <TabPage eventKey="home" title="Home" icon="fa fa-home">
+                <div className="w-100 h-100" style={{ padding: "20px" }}>
+                    <p
+                        style={{
+                            color: "var(--hedging-text-color)",
+                        }}>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud
+                    </p>
+                </div>
+            </TabPage>
+            <TabPage eventKey="profile" title="Profile" icon="fa-sharp fa-solid fa-user">
+                <div className="w-100 h-100" style={{ padding: "20px" }}>
+                    <p
+                        style={{
+                            color: "var(--hedging-text-color)",
+                        }}>
+                        It is a long established fact that a reader will be distracted by the
+                        readable content of a page when looking at its layout. The point of using
+                        Lorem Ipsum is that it has a more-or-less normal distribution
+                    </p>
+                </div>
+            </TabPage>
+            <TabPage eventKey="messages" title="Messages" icon="fa fa-comments">
+                <div className="w-100 h-100" style={{ padding: "20px" }}>
+                    <p
+                        style={{
+                            color: "var(--hedging-text-color)",
+                        }}>
+                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has
+                        roots in a piece of classical Latin literature from 45 BC, making it over
+                        2000 years old. Richard McClintock, a Latin professor
+                    </p>
+                </div>
+            </TabPage>
+        </Tab>
+    );
+}
+
+export default MyComponent;
+```
+
+### Left Vertical
+
+<CodePreview>
+    <Tab activeTab="home" tabActiveBg="#292b35" tabActiveTextColor="#fff" tabPosition="left">
+        <TabPage eventKey="home" icon="fa fa-home">
+            <div className="w-100 h-100" style={{ padding: "20px" }}>
+                <p
+                    style={{
+                        color: "var(--hedging-text-color)",
+                    }}>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+            </div>
+        </TabPage>
+        <TabPage eventKey="profile" icon="fa-sharp fa-solid fa-user">
+            <div className="w-100 h-100" style={{ padding: "20px" }}>
+                <p
+                    style={{
+                        color: "var(--hedging-text-color)",
+                    }}>It is a long established fact that a reader will be distracted by the readable
+                    content of a page when looking at its layout. The point of using Lorem Ipsum is
+                    that it has a more-or-less normal distribution</p>
+            </div>
+        </TabPage>
+        <TabPage eventKey="messages" icon="fa fa-comments">
+            <div className="w-100 h-100" style={{ padding: "20px" }}>
+                <p
+                    style={{
+                        color: "var(--hedging-text-color)",
+                    }}>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
+                    in a piece of classical Latin literature from 45 BC, making it over 2000 years
+                    old.</p>
+            </div>
+        </TabPage>
+    </Tab>
+</CodePreview>
+
+```jsx title="Tabs"
+import { Tab, TabPage } from "@/components/Tab/Tab";
+
+function MyComponent() {
+    return (
+        <Tab activeTab="home" tabActiveBg="#292b35" tabActiveTextColor="#fff" tabPosition="left">
+            <TabPage eventKey="home" icon="fa fa-home">
+                <div className="w-100 h-100" style={{ padding: "20px" }}>
+                    <p
+                        style={{
+                            color: "var(--hedging-text-color)",
+                        }}>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                    </p>
+                </div>
+            </TabPage>
+            <TabPage eventKey="profile" icon="fa-sharp fa-solid fa-user">
+                <div className="w-100 h-100" style={{ padding: "20px" }}>
+                    <p
+                        style={{
+                            color: "var(--hedging-text-color)",
+                        }}>
+                        It is a long established fact that a reader will be distracted by the
+                        readable content of a page when looking at its layout. The point of using
+                        Lorem Ipsum is that it has a more-or-less normal distribution
+                    </p>
+                </div>
+            </TabPage>
+            <TabPage eventKey="messages" icon="fa fa-comments">
+                <div className="w-100 h-100" style={{ padding: "20px" }}>
+                    <p
+                        style={{
+                            color: "var(--hedging-text-color)",
+                        }}>
+                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has
+                        roots in a piece of classical Latin literature from 45 BC, making it over
+                        2000 years old.
+                    </p>
+                </div>
+            </TabPage>
+        </Tab>
+    );
+}
+
+export default MyComponent;
+```
+
+### Right Vertical
+
+<CodePreview>
+    <Tab activeTab="home" tabActiveBg="#292b35" tabActiveTextColor="#fff" tabPosition="right">
+        <TabPage eventKey="home" title="Home" icon="fa fa-home">
+            <div className="w-100 h-100" style={{ padding: "20px" }}>
+                <p
+                    style={{
+                        color: "var(--hedging-text-color)",
+                    }}>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </TabPage>
+        <TabPage eventKey="profile" title="Profile" icon="fa-sharp fa-solid fa-user">
+            <div className="w-100 h-100" style={{ padding: "20px" }}>
+                <p
+                    style={{
+                        color: "var(--hedging-text-color)",
+                    }}>It is a long established fact that a reader will be distracted by the readable
+                    content of a page when looking at its layout. The point of using Lorem Ipsum is
+                    that it has a more-or-less normal distribution</p>
+            </div>
+        </TabPage>
+        <TabPage eventKey="messages" title="Messages" icon="fa fa-comments">
+            <div className="w-100 h-100" style={{ padding: "20px" }}>
+                <p
+                    style={{
+                        color: "var(--hedging-text-color)",
+                    }}>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
+                    in a piece of classical Latin literature from 45 BC, making it over 2000 years
+                    old. Richard McClintock, a Latin professor at Hampden-Sydney College in
+                    Virginia, looked up one of the more.</p>
+            </div>
+        </TabPage>
+    </Tab>
+</CodePreview>
+
+```jsx title="Tabs"
+import { Tab, TabPage } from "@/components/Tab/Tab";
+
+function MyComponent() {
+    return (
+        <Tab activeTab="home" tabActiveBg="#292b35" tabActiveTextColor="#fff" tabPosition="right">
+            <TabPage eventKey="home" title="Home" icon="fa fa-home">
+                <div className="w-100 h-100" style={{ padding: "20px" }}>
+                    <p
+                        style={{
+                            color: "var(--hedging-text-color)",
+                        }}>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.
+                    </p>
+                </div>
+            </TabPage>
+            <TabPage eventKey="profile" title="Profile" icon="fa-sharp fa-solid fa-user">
+                <div className="w-100 h-100" style={{ padding: "20px" }}>
+                    <p
+                        style={{
+                            color: "var(--hedging-text-color)",
+                        }}>
+                        It is a long established fact that a reader will be distracted by the
+                        readable content of a page when looking at its layout. The point of using
+                        Lorem Ipsum is that it has a more-or-less normal distribution
+                    </p>
+                </div>
+            </TabPage>
+            <TabPage eventKey="messages" title="Messages" icon="fa fa-comments">
+                <div className="w-100 h-100" style={{ padding: "20px" }}>
+                    <p
+                        style={{
+                            color: "var(--hedging-text-color)",
+                        }}>
+                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has
+                        roots in a piece of classical Latin literature from 45 BC, making it over
+                        2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
+                        College in Virginia, looked up one of the more.
+                    </p>
+                </div>
+            </TabPage>
+        </Tab>
+    );
+}
+
+export default MyComponent;
+```
+
+## Props
+
+### Tab
+
+<FeatureTable>
+    <tr>
+        <td>activeTab</td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>tabPosition</td>
+        <td>`top`, `bottom`, `left`, `right`</td>
+        <td>`top`</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>iconPosition</td>
+        <td>`left` | `right`</td>
+        <td>`left`</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>tabActiveBg</td>
+        <td>string</td>
+        <td>`#292b35`</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>tabActiveTextColor</td>
+        <td>string</td>
+        <td>`#fff`</td>
+        <td></td>
+    </tr>
+
+</FeatureTable>
+
+### TabPage
+
+<FeatureTable>
+    <tr>
+        <td>eventKey</td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>title</td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>icon</td>
+        <td>string</td>
+        <td></td>
+        <td></td>
+    </tr>
+
+</FeatureTable>

@@ -1,0 +1,64 @@
+@import "../../css/variable.scss";
+
+.wizard_wrapper {
+    .wizard_header {
+        padding: 15px;
+        h3 {
+            font-size: 1.1rem;
+            color: var(--hedging-text-color);
+            font-weight: 300;
+        }
+        p {
+            font-size: 14px;
+            color: var(--content-text-color);
+            font-weight: 400;
+        }
+    }
+    .step_block {
+        padding: 8px;
+        border: 1px solid var(--border-color);
+        background-color: var(--bg-content) !important;
+        i {
+            font-size: 22px;
+            color: var(--content-text-color);
+        }
+        &.active {
+            border-color: rgb(230, 126, 34) !important;
+            background-color: rgb(230, 126, 34) !important;
+            i {
+                color: $white;
+            }
+        }
+    }
+    .step_title {
+        display: block;
+        margin-top: 5px;
+        color: var(--content-text-color);
+        font-size: 17px;
+        &.step_title_active {
+            color: rgb(230, 126, 34);
+        }
+    }
+    .step_content {
+        padding: 30px 20px 10px 20px;
+        .step_content_title {
+            color: var(--hedging-text-color);
+        }
+    }
+    .step_btn_wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        button {
+            min-width: 140px;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 8px 12px;
+            background-color: rgb(230, 126, 34);
+            color: #fff;
+            border: rgb(230, 126, 34);
+            border-radius: 4px;
+        }
+    }
+}
