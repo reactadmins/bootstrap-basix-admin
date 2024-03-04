@@ -1,29 +1,24 @@
 import { Nav } from "react-bootstrap";
-import userProfileStyle from "../../../assets/scss/UesrProfile.module.scss";
+import styles from "@/assets/scss/UesrProfile.module.scss";
 
-const UserProfile = ({ isThemeDirection }) => {
+const UserProfile = () => {
     return (
-        <div
-            className={userProfileStyle.user_menu}
-            data={!isThemeDirection ? "false" : "true"}
-        >
-            <Nav className={`p-0 flex-column ${userProfileStyle.navbar_nav}`}>
-                <Nav.Link href="#" className={userProfileStyle.nav_link}>
+        <div className={styles.user_menu}>
+            <Nav className="p-0 flex-column">
+                <Nav.Link href="#" className={styles.menu}>
                     <i className="fa fa-user"></i>
                     <span>My Profile</span>
                 </Nav.Link>
-                <Nav.Link href="#" className={userProfileStyle.nav_link}>
+                <Nav.Link href="#" className={styles.menu}>
                     <i className="fa-solid fa-bell"></i>
                     <span>Notifications</span>
-                    <span className={`${userProfileStyle.count} bg-danger`}>
-                        13
-                    </span>
+                    <span className={`${styles.count} bg-danger`}>13</span>
                 </Nav.Link>
-                <Nav.Link href="#" className={userProfileStyle.nav_link}>
+                <Nav.Link href="#" className={styles.menu}>
                     <i className="fa-solid fa-gear"></i>
                     <span>Settings</span>
                 </Nav.Link>
-                <Nav.Link href="#" className={userProfileStyle.nav_link}>
+                <Nav.Link href="#" className={styles.menu}>
                     <i className="fa-solid fa-right-from-bracket"></i>
                     <span>Logout</span>
                 </Nav.Link>

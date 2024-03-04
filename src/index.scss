@@ -1,10 +1,5 @@
 @import "./assets/scss/variable.scss";
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
 body {
     font-size: $body_font_size;
     font-family: $body_font_family;

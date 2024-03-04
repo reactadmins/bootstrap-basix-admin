@@ -1,42 +1,109 @@
-import Combo from "../components/LayoutsType/Combo";
-import DualNav from "../components/LayoutsType/DualNav";
-import Horizontal from "../components/LayoutsType/Horizontal";
-import Vertical from "../components/LayoutsType/Vertical";
-import { useDashboardDataContext } from "../context/dashboardDataContext";
+import { Outlet } from "react-router-dom";
+import Sidebar from "@/components/Sidebar/Sidebar";
+import { useDashboardDataContext } from "@/context/dashboardDataContext";
+import styles from "@/assets/scss/Layouts.module.scss";
+import { Fragment, useEffect, useState } from "react";
+import Navbars from "@/components/Navbars/Navrars";
 
-const Layouts = ({ setSidebarMini, sidebarMini }) => {
-    const { activeVariation } = useDashboardDataContext();
-    switch (activeVariation ? activeVariation : "vertical") {
+const Layouts = () => {
+    const [selectSize, setSelectSize] = useState(null);
+    const { activeVariation, sidebarMini, navbarFixed } =
+        useDashboardDataContext();
+
+    useEffect(() => {
+        window.onresize = function () {
+            setSelectSize(window.screen.width);
+        };
+    }, [selectSize]);
+
+    switch (activeVariation) {
         case "vertical": {
             return (
-                <Vertical
-                    sidebarMini={sidebarMini}
-                    setSidebarMini={setSidebarMini}
-                />
+                <div className={styles.layout}>
+                    <Sidebar />
+                    <div
+                        className={styles.content}
+                        style={{
+                            width: `${
+                                sidebarMini
+                                    ? "calc(100% - 70px)"
+                                    : "calc(100% - 280px)"
+                            }`,
+                        }}
+                    >
+                        <Navbars />
+                        <div
+                            className="p-4"
+                            style={{
+                                marginTop: `${navbarFixed ? "80px" : "0"}`,
+                            }}
+                        >
+                            <Outlet />
+                        </div>
+                    </div>
+                </div>
             );
         }
         case "horizontal": {
             return (
-                <Horizontal
-                    sidebarMini={sidebarMini}
-                    setSidebarMini={setSidebarMini}
-                />
+                <Fragment>
+                    <Navbars />
+                    <div
+                        className="p-4"
+                        style={{
+                            marginTop: `${navbarFixed ? "80px" : "0"}`,
+                        }}
+                    >
+                        <Outlet />
+                    </div>
+                </Fragment>
             );
         }
         case "combo": {
             return (
-                <Combo
-                    sidebarMini={sidebarMini}
-                    setSidebarMini={setSidebarMini}
-                />
+                <div className={styles.layout}>
+                    <Navbars />
+                    <div
+                        style={{
+                            marginTop: `${
+                                activeVariation === "combo" ? "80px" : "0"
+                            }`,
+                        }}
+                    >
+                        <Sidebar type="combo" />
+                        <div
+                            className={`${styles.content} p-4`}
+                            style={{
+                                width: `${
+                                    sidebarMini
+                                        ? "calc(100% - 70px)"
+                                        : "calc(100% - 280px)"
+                                }`,
+                            }}
+                        >
+                            <Outlet />
+                        </div>
+                    </div>
+                </div>
             );
         }
         case "dual_nav": {
             return (
-                <DualNav
-                    sidebarMini={sidebarMini}
-                    setSidebarMini={setSidebarMini}
-                />
+                <div className={styles.layout}>
+                    <Navbars />
+                    <div
+                        className={`${styles.content} p-4 w-100`}
+                        style={{
+                            marginTop: `${
+                                navbarFixed
+                                    ? `${selectSize > 1024 ? "150px" : "80px"}`
+                                    : "0"
+                            }`,
+                        }}
+                    >
+                        <Outlet />
+                    </div>
+                </div>
             );
         }
         default:

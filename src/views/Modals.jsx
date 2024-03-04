@@ -1,70 +1,141 @@
-import { Fragment } from "react";
-import CardContent from "../components/Card/CardContent";
-import Modal from "../components/Modal/Modal";
+import Card from "../components/Card/Card";
+import { CardBody, Col, Container, Row } from "react-bootstrap";
+import { useState } from "react";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
 
 const Modals = () => {
+    const [showSmall, setShowSmall] = useState(false);
+    const [showMedium, setShowMedium] = useState(false);
+    const [showLarge, setShowLarge] = useState(false);
+    const [showAnimated, setShowAnimated] = useState(false);
+
+    const handleCloseSmall = () => setShowSmall(false);
+    const handleShowSmall = () => setShowSmall(true);
+
+    const handleCloseMedium = () => setShowMedium(false);
+    const handleShowMedium = () => setShowMedium(true);
+
+    const handleCloseLarge = () => setShowLarge(false);
+    const handleShowLarge = () => setShowLarge(true);
+
+    const handleCloseAnimated = () => setShowAnimated(false);
+    const handleShowAnimated = () => setShowAnimated(true);
+
     return (
-        <Fragment>
-            <CardContent
-                title="Modals"
-                CardBody={
-                    <>
-                        <Modal
-                            label="Small"
-                            modalId="small"
-                            title="Small modal"
-                            modalSize="modal-sm"
-                            modalBody="There are three species of zebras: the plains zebra, the mountain zebra and the Grévy's zebra. The plains zebra and the mountain zebra belong to the subgenus Hippotigris, but Grévy's zebra is the sole species of subgenus Dolichohippus. The latter resembles an ass, to which it is closely related, while the former two are more horse-like. All three belong to the genus Equus, along with other living equids."
-                        ></Modal>
-                        <Modal
-                            label="Medium"
-                            modalId="medium"
-                            title="Medium modal"
-                            modalSize="modal-md"
-                            modalBody="There are three species of zebras: the plains zebra, the mountain zebra and the Grévy's zebra. The plains zebra and the mountain zebra belong to the subgenus Hippotigris, but Grévy's zebra is the sole species of subgenus Dolichohippus. The latter resembles an ass, to which it is closely related, while the former two are more horse-like. All three belong to the genus Equus, along with other living equids."
-                        ></Modal>
-                        <Modal
-                            label="Large"
-                            modalId="large"
-                            title="Large Modal"
-                            modalSize="modal-lg"
-                            modalBody="There are three species of zebras: the plains zebra, the mountain zebra and the Grévy's zebra. The plains zebra and the mountain zebra belong to the subgenus Hippotigris, but Grévy's zebra is the sole species of subgenus Dolichohippus. The latter resembles an ass, to which it is closely related, while the former two are more horse-like. All three belong to the genus Equus, along with other living equids."
-                        ></Modal>
-                        <Modal
-                            label="Scrolling"
-                            modalId="scrolling"
-                            title="Scrolling Long Content Modal"
-                            modalSize="modal-lg"
-                            modalBody="Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-              Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
-              Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-              Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
-              Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-              Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
-              Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-              Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
-              Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-              Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
-              Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-              Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla."
-                        ></Modal>
-                        <Modal
-                            label="Static"
-                            modalId="static"
-                            title="Static Modal"
-                            modalSize="modal-sm"
-                            modalBody="This is a static modal, backdrop click will not close it."
-                        ></Modal>
-                    </>
-                }
-            />
-        </Fragment>
+        <Container fluid className="p-0">
+            <Row>
+                <Col sm={12}>
+                    <Card title="Modals">
+                        <CardBody>
+                            <div className="d-flex gap-2">
+                                <Button variant="secondary" onClick={handleShowSmall}>
+                                    Small
+                                </Button>
+                                <Modal
+                                    show={showSmall}
+                                    onHide={handleCloseSmall}
+                                    backdrop="static"
+                                    keyboard={false}
+                                    size="sm">
+                                    <Modal.Header closeButton>
+                                        <Modal.Title>Modal title</Modal.Title>
+                                    </Modal.Header>
+                                    <Modal.Body>
+                                        I will not close if you click outside me. Do not even try to
+                                        press escape key.
+                                    </Modal.Body>
+                                    <Modal.Footer>
+                                        <Button variant="secondary" onClick={handleCloseSmall}>
+                                            Close
+                                        </Button>
+                                        <Button variant="primary">Understood</Button>
+                                    </Modal.Footer>
+                                </Modal>
+
+                                {/* Medium */}
+                                <Button variant="secondary" onClick={handleShowMedium}>
+                                    Medium
+                                </Button>
+
+                                <Modal
+                                    show={showMedium}
+                                    onHide={handleCloseMedium}
+                                    backdrop="static"
+                                    keyboard={false}
+                                    size="md">
+                                    <Modal.Header closeButton>
+                                        <Modal.Title>Modal title</Modal.Title>
+                                    </Modal.Header>
+                                    <Modal.Body>
+                                        I will not close if you click outside me. Do not even try to
+                                        press escape key.
+                                    </Modal.Body>
+                                    <Modal.Footer>
+                                        <Button variant="secondary" onClick={handleCloseMedium}>
+                                            Close
+                                        </Button>
+                                        <Button variant="primary">Understood</Button>
+                                    </Modal.Footer>
+                                </Modal>
+
+                                {/* Large */}
+                                <Button variant="secondary" onClick={handleShowLarge}>
+                                    Large
+                                </Button>
+
+                                <Modal
+                                    show={showLarge}
+                                    onHide={handleCloseLarge}
+                                    backdrop="static"
+                                    keyboard={false}
+                                    size="lg">
+                                    <Modal.Header closeButton>
+                                        <Modal.Title>Modal title</Modal.Title>
+                                    </Modal.Header>
+                                    <Modal.Body>
+                                        I will not close if you click outside me. Do not even try to
+                                        press escape key.
+                                    </Modal.Body>
+                                    <Modal.Footer>
+                                        <Button variant="secondary" onClick={handleCloseLarge}>
+                                            Close
+                                        </Button>
+                                        <Button variant="primary">Understood</Button>
+                                    </Modal.Footer>
+                                </Modal>
+
+                                {/* With out Animated */}
+                                <Button variant="secondary" onClick={handleShowAnimated}>
+                                    Without Animated
+                                </Button>
+
+                                <Modal
+                                    show={showAnimated}
+                                    onHide={handleCloseAnimated}
+                                    backdrop="static"
+                                    keyboard={false}
+                                    animation={false}>
+                                    <Modal.Header closeButton>
+                                        <Modal.Title>Modal title</Modal.Title>
+                                    </Modal.Header>
+                                    <Modal.Body>
+                                        I will not close if you click outside me. Do not even try to
+                                        press escape key.
+                                    </Modal.Body>
+                                    <Modal.Footer>
+                                        <Button variant="secondary" onClick={handleCloseAnimated}>
+                                            Close
+                                        </Button>
+                                        <Button variant="primary">Understood</Button>
+                                    </Modal.Footer>
+                                </Modal>
+                            </div>
+                        </CardBody>
+                    </Card>
+                </Col>
+            </Row>
+        </Container>
     );
 };
 

@@ -1,0 +1,12 @@
+.monthly_stats {
+    .card_body {
+        background-color: #5c6bc0;
+    }
+}
+body[data-theme="dark"] {
+    .monthly_stats {
+        .card_body {
+            background-color: var(--bg-content);
+        }
+    }
+}

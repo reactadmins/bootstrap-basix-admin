@@ -1,65 +1,28 @@
 @import "../scss/variable.scss";
-.card {
+.user_menu {
+    padding: 8px;
     position: relative;
     background-color: var(--bg-content);
-    .card_header {
-        padding: 12px 18px;
-        background-color: #5c6bc0;
-        .card_setting {
-            position: absolute;
-            top: 40px;
-            right: 10px;
-            padding: 8px 10px;
-            width: 100px;
-            z-index: 999;
-            border-radius: 6px;
-            border: 1px solid var(--border-color);
-            background-color: var(--bg-content);
-            button {
-                display: flex;
-                align-items: center;
-                column-gap: 8px;
-                font-size: 14px;
-                color: var(--hedging-text-color);
-                font-weight: 400;
-                line-height: 16px;
-                padding: 5px 0;
-            }
+    .menu {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--hedging-text-color) !important;
+        .count {
+            border-radius: 30px;
+            width: 20px;
+            height: 20px;
+            font-size: 10px;
+            color: #fff;
+            line-height: 20px;
+            text-align: center;
         }
     }
-    .card_body {
-        background-color: $white;
-        .user_info {
-            background-color: #5c6bc0;
-            height: 100px;
-        }
-        .image_continer {
-            position: relative;
-            margin-top: -64px;
-            margin-bottom: 30px;
-            img {
-                width: 130px;
-            }
-        }
-    }
-    .card_footer {
-        background-color: var(--bg-content);
-        border-color: var(--border-color);
-        .stats {
-            width: 33%;
-            i {
-                font-size: 20px;
-                color: var(--content-text-color);
-            }
-            .stats_counter {
-                font-size: 13px;
-                color: var(--hedging-text-color);
-            }
-        }
-        hr {
-            width: 2px;
-            height: 32px;
-            background-color: #868e96;
-        }
+}
+body[data-theme="dark"] {
+    .user_menu {
+        border: 1px solid var(--border-color);
     }
 }

@@ -1,20 +1,35 @@
 @import "../scss/variable.scss";
 
 .table_wrapper {
-    input[placeholder="Search"] {
-        color: var(--hedging-text-color);
-        border-color: var(--border-color);
-        background-color: var(--bg-content);
-        &::placeholder {
+    overflow-x: scroll;
+    .search_wrapper {
+        input {
             color: var(--hedging-text-color);
-        }
-    }
-    .show_entries {
-        select {
-            option {
+            border-color: var(--border-color);
+            background-color: var(--bg-content);
+            border-radius: 4px 0 0 4px;
+            &:focus {
+                box-shadow: none;
+            }
+            &::placeholder {
                 color: var(--hedging-text-color);
-                border-bottom: 1px solid var(--border-color);
-                background-color: var(--bg-content);
+            }
+        }
+        button {
+            border: 1px solid #666666;
+            border-left: 0px;
+            background-color: #666666;
+            border-radius: 0 4px 4px 0;
+            color: #fff;
+        }
+        .show_entries {
+            select {
+                box-shadow: none !important;
+                option {
+                    color: var(--hedging-text-color);
+                    border-bottom: 1px solid var(--border-color);
+                    background-color: var(--bg-content);
+                }
             }
         }
     }
@@ -22,8 +37,13 @@
         .thead {
             tr {
                 td {
+                    font-size: 16px;
+                    font-weight: 600;
                     padding: 0.75rem;
                     border-bottom: 0px;
+                    &:last-child {
+                        text-align: center;
+                    }
                 }
             }
         }
@@ -34,6 +54,9 @@
                     padding: 0.75rem;
                     border-top: 1px solid #dee2e6;
                     border-bottom: 0px;
+                    &:last-child {
+                        text-align: center;
+                    }
                 }
                 &:nth-child(even) {
                     background-color: #fff;
@@ -44,23 +67,60 @@
             }
         }
     }
-    &[data="true"] {
-        .table {
-            .thead {
-                tr {
-                    td {
-                        color: var(--content-text-color);
-                        background-color: var(--bg-content);
+    
+}
+
+body {
+    &[data-theme="dark"] {
+        .table_wrapper {
+            .table {
+                .thead {
+                    tr {
+                        td {
+                            font-size: 16px;
+                            font-weight: 600;
+                            padding: 0.75rem;
+                            border-bottom: 0px;
+                            color: var(--content-text-color) !important;
+                            background-color: var(--bg-content) !important;
+                            &:last-child {
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+                .tbody {
+                    tr {
+                        td {
+                            color: var(--hedging-text-color) !important;
+                            padding: 0.75rem;
+                            border-top: 1px solid var(--border-color) !important;
+                            border-bottom: 0px;
+                            background-color: var(--bg-content) !important;
+                            &:last-child {
+                                text-align: center;
+                            }
+                        }
+                        &:nth-child(even) {
+                            background-color: #fff !important;
+                        }
+                        &:nth-child(odd) {
+                            background-color: #f2f2f2 !important;
+                        }
                     }
                 }
             }
-            .tbody {
-                tr {
-                    td {
-                        border-color: var(--border-color) !important;
-                        color: var(--hedging-text-color);
-                        background-color: var(--bg-content) !important;
-                    }
+        }
+    }
+    &[data-theme-direction="rtl"] {
+        .table_wrapper {
+            overflow-x: scroll;
+            .search_wrapper {
+                input {
+                    border-radius: 0 4px 4px 0 !important;
+                }
+                button {
+                    border-radius: 4px 0 0 4px !important;
                 }
             }
         }

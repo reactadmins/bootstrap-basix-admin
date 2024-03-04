@@ -1,15 +1,15 @@
 import { Fragment } from "react";
-import CardContent from "../components/Card/CardContent";
-import typographyStyle from "../assets/scss/Typography.module.scss";
-import { useDashboardDataContext } from "../context/dashboardDataContext";
+import Card from "@/components/Card/Card";
+import typographyStyle from "@/assets/scss/Typography.module.scss";
+import { useDashboardDataContext } from "@/context/dashboardDataContext";
+import { CardBody } from "react-bootstrap";
 
 const Typography = () => {
     const { isDark } = useDashboardDataContext();
     return (
         <Fragment>
-            <CardContent
-                title="Typography"
-                CardBody={
+            <Card title="Typography">
+                <CardBody>
                     <div className={typographyStyle.typography}>
                         <div className={typographyStyle.typo_headers}>
                             <h1 className="fw-bolder">
@@ -50,6 +50,7 @@ const Typography = () => {
                                 <mark className="mx-1">highlighted text</mark>
                                 zebra are endangered.
                             </p>
+                            <br/>
                             <blockquote className="text-end">
                                 <p>
                                     Blockquotes. However, various anthropogenic
@@ -61,6 +62,7 @@ const Typography = () => {
                                     Jefferey Lebowski
                                 </footer>
                             </blockquote>
+                            <br/>
                             <p>
                                 lthough zebra species may have overlapping
                                 ranges, they do not interbreed. In captivity,
@@ -228,8 +230,8 @@ const Typography = () => {
                             </div>
                         </div>
                     </div>
-                }
-            />
+                </CardBody>
+            </Card>
         </Fragment>
     );
 };

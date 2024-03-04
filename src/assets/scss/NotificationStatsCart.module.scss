@@ -1,0 +1,42 @@
+.notification_wrapper {
+    box-shadow: 0 0 0 1px var(--border-color);
+    .header {
+        padding: 17px 20px;
+        a {
+            img {
+                width: 85px;
+                height: 85px;
+            }
+        }
+        .media_body {
+            h3 {
+                font-size: 2rem;
+                color: #fff;
+                font-weight: 500;
+            }
+            p {
+                font-size: 1rem;
+                color: #878787;
+                font-weight: 400;
+            }
+        }
+    }
+    .notifications {
+        padding-top: 0;
+        background-color: var(--bg-content);
+        ul {
+            li {
+                a {
+                    border-top: 1px solid var(--border-color);
+                    background-color: var(--bg-content);
+                    color: var(--content-text-color);
+                }
+                &:first-child {
+                    a {
+                        border-top: 0;
+                    }
+                }
+            }
+        }
+    }
+}

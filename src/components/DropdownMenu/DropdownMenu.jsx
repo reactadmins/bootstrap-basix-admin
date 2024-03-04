@@ -1,4 +1,4 @@
-import { useDashboardDataContext } from "../../context/dashboardDataContext";
+import { useDashboardDataContext } from "@/context/dashboardDataContext";
 
 const DropdownMenu = ({ children, left = 0, right }) => {
     const { isThemeDirection } = useDashboardDataContext();

@@ -1,141 +1,136 @@
 @import "../scss/variable.scss";
 
-.container_fluid {
+.auth_wrapper {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
     padding: 0 !important;
     background-color: var(--body-bg);
-    .auth_wrapper {
-        display: flex;
-        height: 100vh;
-        justify-content: center;
-        align-items: center;
-        .from_container {
-            width: 50%;
-            background-color: transparent;
-            .card {
-                border-color: var(--border-color);
-                background-color: var(--bg-content);
-            }
-            .card_header {
-                color: var(--hedging-text-color);
-                padding: 12px 20px;
-                border-color: var(--border-color);
-                background-color: var(--bg-content);
-            }
-            .card_body {
-                padding: 40px;
-                form {
-                    .input_group_icon {
-                        color: var(--hedging-text-color);
-                        border-color: var(--border-color);
-                        background-color: var(--bg-content);
-                    }
-                    button[type="submit"] {
-                        padding: 6px 12px;
-                        font-size: 14px;
-                        font-weight: 400;
-                        background-color: #28a745;
-                    }
-                    a[type="action"] {
-                        padding: 6px 12px;
-                        font-size: 14px;
-                        font-weight: 400;
-                        background-color: #007bff;
-                    }
-                }
-            }
+    .from_container {
+        width: 50%;
+        background-color: transparent;
+        .card {
+            border-color: var(--border-color);
+            background-color: var(--bg-content);
         }
-        .logo_container {
-            position: relative;
-            width: 50%;
-            height: 100%;
-            background-color: #333;
-            overflow: hidden;
-            .oblique {
-                position: absolute;
-                background-color: #282828;
-                left: 38.5%;
-                transform: rotate(150deg);
-                width: 27%;
-                height: 110%;
-            }
-            .logo {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100%;
-                position: relative;
-            }
+        .card_header {
+            color: var(--hedging-text-color);
+            padding: 12px 20px;
+            border-color: var(--border-color);
+            background-color: var(--bg-content);
         }
-        .error_container {
-            width: 50%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: transparent;
-            .error_code {
-                font-family: inherit;
-                font-size: 4rem;
-                font-weight: 300;
-                margin-bottom: 0px;
-                color: var(--hedging-text-color);
-            }
-            .error_title {
-                font-family: inherit;
-                font-weight: 500;
-                font-size: 1em;
-                color: var(--content-text-color);
-            }
-            .error_description {
-                font-family: Open Sans, sans-serif;
-                font-weight: 400;
-                font-size: 14px;
-                color: var(--content-text-color);
-            }
-            .input_group {
-                margin-top: 20px;
-                .error_search_btn {
-                    padding: 8px 12px;
+        .card_body {
+            padding: 40px;
+            form {
+                .input_group_icon {
+                    color: var(--hedging-text-color);
+                    border-color: var(--border-color);
                     background-color: var(--bg-content);
-                    border-radius: 5px 0 0 5px;
-                    border: 1px solid var(--border-color);
-                    color: var(--content-text-color);
                 }
-                .error_submit_btn {
+                button[type="submit"] {
                     padding: 6px 12px;
-                    border: 1px solid #17a2b8;
-                    background-color: #17a2b8;
-                    color: #fff;
+                    font-size: 14px;
+                    font-weight: 400;
+                    background-color: #28a745;
+                }
+                a[type="action"] {
+                    padding: 6px 12px;
+                    font-size: 14px;
+                    font-weight: 400;
+                    background-color: #007bff;
                 }
             }
         }
     }
-    &[data="true"] {
-        direction: rtl;
+    .logo_container {
+        position: relative;
+        width: 50%;
+        height: 100%;
+        background-color: #333;
+        overflow: hidden;
+        .oblique {
+            position: absolute;
+            background-color: #282828;
+            left: 38.5%;
+            transform: rotate(150deg);
+            width: 27%;
+            height: 110%;
+        }
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            position: relative;
+        }
+    }
+    .error_container {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        .error_code {
+            font-family: inherit;
+            font-size: 4rem;
+            font-weight: 300;
+            margin-bottom: 0px;
+            color: var(--hedging-text-color);
+        }
+        .error_title {
+            font-family: inherit;
+            font-weight: 500;
+            font-size: 1em;
+            color: var(--content-text-color);
+        }
+        .error_description {
+            font-family: Open Sans, sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+            color: var(--content-text-color);
+        }
         .input_group {
-            .input_group_icon {
-                border-radius: 0 0.375rem 0.375rem 0 !important;
+            margin-top: 20px;
+            .error_search_btn {
+                padding: 8px 12px;
+                background-color: var(--bg-content);
+                border-radius: 5px 0 0 5px;
+                border: 1px solid var(--border-color);
+                color: var(--content-text-color);
             }
-            input {
-                border-radius: 0.375rem 0 0 0.375rem !important;
+            .error_submit_btn {
+                padding: 6px 12px;
+                border: 1px solid #17a2b8;
+                background-color: #17a2b8;
+                color: #fff;
             }
         }
-        .error_search_btn {
+    }
+}
+body[data-theme="true"] {
+    .input_group {
+        .input_group_icon {
             border-radius: 0 0.375rem 0.375rem 0 !important;
         }
+        input {
+            border-radius: 0.375rem 0 0 0.375rem !important;
+        }
+    }
+    .error_search_btn {
+        border-radius: 0 0.375rem 0.375rem 0 !important;
     }
 }
 
 /* responsive  */
 @media (max-width: 425px) {
-    .container_fluid {
-        .auth_wrapper {
-            .from_container {
-                width: 100%;
-            }
-            .logo_container {
-                display: none;
-            }
+    .auth_wrapper {
+        .from_container {
+            width: 100%;
+        }
+        .logo_container {
+            display: none;
         }
     }
 }

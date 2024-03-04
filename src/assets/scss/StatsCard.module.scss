@@ -1,88 +1,125 @@
-@import "../scss/variable.scss";
+@import "../../assets/scss/variable.scss";
+.stats_card_wrapper {
+    border: 1px solid transparent;
+    .title {
+        h2 {
+            font-size: 1.75rem;
+            color: $white;
+            line-height: 2.25rem;
+            font-weight: 400;
+        }
+        h4 {
+            font-size: 1rem;
+            line-height: 1.5rem;
+            color: var(--stats-card-text);
+            font-weight: 400;
+        }
+    }
+    .revenue_counter {
+        align-items: center;
+        justify-content: space-between;
 
-.stats_card {
-    .card_body {
-        .revenue_card {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            .counter {
-                gap: 4px;
-                font-size: 1.75rem;
-                font-weight: 400;
-                color: $white;
-            }
-            .title {
-                font-size: 16px;
-                font-family: Open Sans, sans-serif;
-                font-weight: 400;
-                line-height: 24px;
-                color: var(--stats-card-text);
-            }
-            .counter_icon {
-                i {
-                    color: $white;
-                    font-size: 3.68em;
-                }
-            }
-            .progress_bar_title {
-                font-size: 80%;
-                font-weight: 400;
-                color: $white;
+        .icon {
+            i {
+                font-size: 3.68em;
+                color: $white !important;
             }
         }
-        .user_info {
-            display: flex;
-            align-items: center;
-            gap: 1.875rem;
-            .counter_icon {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                i {
-                    color: var(--content-text-color);
-                    font-size: 1.875rem;
-                }
-            }
-            .title {
-                font-size: 1.25rem;
-                font-weight: 400;
-                line-height: 1.5;
-                color: var(--hedging-text-color);
-            }
-            .counter {
+        .progress {
+            height: 5px;
+            border-radius: 1rem;
+        }
+        p {
+            font-size: 80%;
+            font-weight: 500;
+            color: $white;
+        }
+    }
+    .user_info {
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: row-reverse;
+        gap: 1.875rem;
+        .title {
+            h2 {
                 font-size: 1rem;
                 font-weight: 400;
                 line-height: 1.5;
                 color: var(--hedging-text-color);
             }
-        }
-        .earning_card {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            .counter_icon {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                i {
-                    font-size: 1.125rem;
-                    font-weight: 900;
-                    color: $white;
-                }
+            h4 {
+                font-size: 1.25rem;
+                font-weight: 400;
+                line-height: 1.5;
+                color: var(--hedging-text-color);
             }
-            .counter {
+        }
+        .icon {
+            i {
+                font-size: 1.875rem;
+                font-weight: 900;
+            }
+        }
+    }
+    .revenue_progressBar {
+        flex-direction: column;
+        .progress {
+            height: 5px;
+            border-radius: 0.25rem;
+        }
+        .description {
+            font-size: 80%;
+            font-weight: 400;
+            color: $white;
+        }
+    }
+    .revenue_earning {
+        gap: 15px;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: row-reverse;
+        height: max-content !important;
+        .icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            i {
+                font-size: 1.125rem;
+                font-weight: 900;
+                color: $white !important;
+            }
+        }
+        .title {
+            h2 {
                 font-size: 1.25rem;
                 color: var(--hedging-text-color);
                 font-weight: 500;
                 line-height: 1.2;
             }
-            .title {
+            h4 {
                 font-size: 14px;
                 font-weight: 700;
                 color: var(--content-text-color);
                 text-transform: uppercase;
             }
         }
+    }
+    .view_more {
+        hr {
+            margin: 20px 0 16px;
+            border-top: 1px solid #868e96 !important;
+        }
+        a {
+            font-size: 5px;
+            font-weight: 700;
+            color: #868e96;
+        }
+    }
+}
+
+body[data-theme="dark"] {
+    .stats_card_wrapper {
+        border-color: var(--border-color) !important;
+        background-color: var(--body-content) !important;
     }
 }

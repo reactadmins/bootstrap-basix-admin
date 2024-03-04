@@ -3,10 +3,6 @@ export const navItems = [
         name: "Dashboard",
         path: "/dashboard",
         icon: "fa fa-dashboard",
-        badge: {
-            variant: "success",
-            text: "NEW",
-        },
     },
     {
         title: true,
@@ -22,10 +18,6 @@ export const navItems = [
                 name: "Buttons",
                 path: "/components/buttons",
                 icon: "fa fa-puzzle-piece",
-                badge: {
-                    variant: "danger",
-                    text: "NEW",
-                },
             },
             {
                 name: "Badges",
@@ -33,18 +25,9 @@ export const navItems = [
                 icon: "fa fa-id-badge",
             },
             {
-                name: "Tabs",
-                path: "/components/tabs",
-                icon: "menu-icon fa fa-bars",
-            },
-            {
                 name: "Social Buttons",
                 path: "/components/socials",
                 icon: "fa fa-share-square",
-                badge: {
-                    variant: "success",
-                    text: "NEW",
-                },
             },
             {
                 name: "Cards",
@@ -92,24 +75,11 @@ export const navItems = [
                 name: "Basic Form",
                 path: "/components/basic-form",
                 icon: "fa fa-pencil-square",
-                badge: {
-                    variant: "warning",
-                    text: "NEW",
-                },
             },
             {
                 name: "Advanced Form",
                 path: "/components/advanced-form",
                 icon: "fa fa-pencil-square",
-            },
-            {
-                name: "Form Wizard",
-                path: "/components/wizard-form",
-                icon: "fa fa-pencil-square",
-                badge: {
-                    variant: "danger",
-                    text: "NEW",
-                },
             },
         ],
     },
@@ -122,10 +92,6 @@ export const navItems = [
         name: "Widgets",
         path: "/components/widgets",
         icon: "fa fa-calculator",
-        badge: {
-            variant: "info",
-            text: "60+",
-        },
     },
     {
         name: "Charts",
@@ -135,11 +101,6 @@ export const navItems = [
             {
                 name: "Chart JS",
                 path: "/components/chartjs",
-                icon: "fa fa-line-chart",
-            },
-            {
-                name: "Apex Charts",
-                path: "/components/apex-charts",
                 icon: "fa fa-line-chart",
             },
             {
@@ -200,12 +161,12 @@ export const navItems = [
     },
     {
         name: "Docs",
-        url: "https://docs.vuejsadmin.com/docs/basix-admin-free-vuejs-admin-template/",
+        url: "https://demo.reactadmin.com/bootstrap/basix-admin/docs/",
         icon: "fa-solid fa-file-lines",
     },
     {
         name: "Purchase",
-        url: "https://vuejsadmin.com",
+        url:"https://reactadmin.com/basix-admin",
         icon: "fa fa-shopping-cart",
     },
 ];
@@ -215,10 +176,6 @@ export const miniNav = [
         name: "Dashboard",
         path: "/dashboard",
         icon: "fa fa-dashboard",
-        badge: {
-            variant: "success",
-            text: "NEW",
-        },
     },
     {
         name: "Components",
@@ -229,10 +186,6 @@ export const miniNav = [
                 name: "Buttons",
                 path: "/components/buttons",
                 icon: "fa fa-puzzle-piece",
-                badge: {
-                    variant: "danger",
-                    text: "NEW",
-                },
             },
             {
                 name: "Badges",
@@ -240,18 +193,9 @@ export const miniNav = [
                 icon: "fa fa-id-badge",
             },
             {
-                name: "Tabs",
-                path: "/components/tabs",
-                icon: "menu-icon fa fa-bars",
-            },
-            {
                 name: "Social Buttons",
                 path: "/components/socials",
                 icon: "fa fa-share-square",
-                badge: {
-                    variant: "success",
-                    text: "NEW",
-                },
             },
             {
                 name: "Cards",
@@ -294,24 +238,11 @@ export const miniNav = [
                 name: "Basic Form",
                 path: "/components/basic-form",
                 icon: "fa fa-pencil-square",
-                badge: {
-                    variant: "warning",
-                    text: "NEW",
-                },
             },
             {
                 name: "Advanced Form",
                 path: "/components/advanced-form",
                 icon: "fa fa-pencil-square",
-            },
-            {
-                name: "Form Wizard",
-                path: "/components/wizard-form",
-                icon: "fa fa-pencil-square",
-                badge: {
-                    variant: "danger",
-                    text: "NEW",
-                },
             },
         ],
     },
@@ -319,10 +250,6 @@ export const miniNav = [
         name: "Widgets",
         path: "/components/widgets",
         icon: "fa fa-calculator",
-        badge: {
-            variant: "info",
-            text: "60+",
-        },
     },
     {
         name: "Charts",
@@ -335,11 +262,6 @@ export const miniNav = [
                 icon: "fa fa-line-chart",
             },
             {
-                name: "Apex Charts",
-                path: "/components/apex-charts",
-                icon: "fa fa-line-chart",
-            },
-            {
                 name: "Recharts",
                 path: "/components/recharts",
                 icon: "fa fa-line-chart",
@@ -348,12 +270,12 @@ export const miniNav = [
     },
     {
         name: "Docs",
-        url: "https://docs.vuejsadmin.com/docs/basix-admin-free-vuejs-admin-template/",
+        url: "https://demo.reactadmin.com/bootstrap/basix-admin/docs/",
         icon: "fa-solid fa-file-lines",
     },
     {
         name: "Purchase",
-        url: "https://vuejsadmin.com",
+        url: "https://reactadmin.com/basix-admin",
         icon: "fa fa-shopping-cart",
     },
 ];

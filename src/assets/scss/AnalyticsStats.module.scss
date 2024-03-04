@@ -1,0 +1,23 @@
+
+    .analytics_wrapper {
+        .counter_up {
+            i {
+                color: #4dbd74;
+                font-size: 14px;
+            }
+            .count {
+                font-size: 14px;
+                color: var(--hedging-text-color);
+            }
+        }
+        h4 {
+            color: var(--content-text-color);
+            font-size: 14px;
+            margin-top: 8px;
+        }
+    }
+    .card_footer {
+        padding: 30px 20px !important;
+        border-color: var(--border-color) !important;
+        background-color: var(--bg-content) !important;
+    }

@@ -1,8 +1,8 @@
-import gridsStyle from "../assets/scss/Grids.module.scss";
+import gridsStyle from "@/assets/scss/Grids.module.scss";
 const Grids = () => {
     return (
         <div className={gridsStyle.grids_contener}>
-            <h5 className="heading-title mb-2">Fixed Grid</h5>
+            <h5 className="heading-title mb-3">Fixed Grid</h5>
             <div className="row gy-4 gx-4 mb-4">
                 <div className="col">
                     <section className={`${gridsStyle.card} card border-0`}>
@@ -70,7 +70,6 @@ const Grids = () => {
                     </section>
                 </div>
             </div>
-
             <div className="row gy-4 gx-4 mb-4">
                 <div className="col">
                     <section className={`${gridsStyle.card} card border-0`}>
@@ -157,8 +156,7 @@ const Grids = () => {
                     </section>
                 </div>
             </div>
-
-            <h5 className="heading-title mb-2 mt-4">Desktop Grid</h5>
+            <h5 className="heading-title mb-3 mt-5">Desktop Grid</h5>
             <div className="row gy-4 gx-4 mb-4">
                 <div className="col col-lg-12">
                     <section className={`${gridsStyle.card} card border-0`}>
@@ -168,7 +166,6 @@ const Grids = () => {
                     </section>
                 </div>
             </div>
-
             <div className="row gy-4 gx-4 mb-4">
                 <div className="col-lg-6">
                     <section className={`${gridsStyle.card} card border-0`}>
@@ -185,7 +182,6 @@ const Grids = () => {
                     </section>
                 </div>
             </div>
-
             <div className="row gy-4 gx-4 mb-4">
                 <div className="col-lg-4">
                     <section className={`${gridsStyle.card} card border-0`}>
@@ -209,7 +205,6 @@ const Grids = () => {
                     </section>
                 </div>
             </div>
-
             <div className="row gy-4 gx-4 mb-4">
                 <div className="col-lg-3">
                     <section className={`${gridsStyle.card} card border-0`}>
@@ -240,7 +235,6 @@ const Grids = () => {
                     </section>
                 </div>
             </div>
-
             <div className="row gy-4 gx-4 mb-4">
                 <div className="col-lg-2">
                     <section className={`${gridsStyle.card} card border-0`}>
@@ -285,11 +279,9 @@ const Grids = () => {
                     </section>
                 </div>
             </div>
-
-            <h4 className="heading-title mt-5 mb-3">
+            <h5 className="heading-title mt-5 mb-3">
                 Mobile, Tablet, and Desktop
-            </h4>
-
+            </h5>
             <div className="row gy-4 gx-4 mb-4">
                 <div className="col-2">
                     <section className={`${gridsStyle.card} card border-0`}>
@@ -313,7 +305,6 @@ const Grids = () => {
                     </section>
                 </div>
             </div>
-
             <div className="row gy-4 gx-4 mb-4">
                 <div className="col-sm-3">
                     <section className={`${gridsStyle.card} card border-0`}>
@@ -337,7 +328,6 @@ const Grids = () => {
                     </section>
                 </div>
             </div>
-
             <div className="row gy-4 gx-4 mb-4">
                 <div className="col-md-4">
                     <section className={`${gridsStyle.card} card border-0`}>
@@ -361,7 +351,6 @@ const Grids = () => {
                     </section>
                 </div>
             </div>
-
             <div className="row gy-4 gx-4 mb-4">
                 <div className="col-sm-6">
                     <section className={`${gridsStyle.card} card border-0`}>
@@ -378,9 +367,7 @@ const Grids = () => {
                     </section>
                 </div>
             </div>
-
-            <h5 className="heading-title mb-2 mt-4">Offset Grid</h5>
-
+            <h5 className="heading-title mb-3 mt-5">Offset Grid</h5>
             <div className="row gy-4 gx-4 mb-4">
                 <div className="col-md-6 col-sm-6 ms-auto">
                     <section className={`${gridsStyle.card} card border-0`}>
@@ -390,7 +377,6 @@ const Grids = () => {
                     </section>
                 </div>
             </div>
-
             <div className="row gy-4 gx-4 mb-4">
                 <div className="col-md-6 mx-auto">
                     <section className={`${gridsStyle.card} card border-0`}>

@@ -1,193 +1,94 @@
 import { Fragment } from "react";
-import { Col, Row } from "react-bootstrap";
-import CardContent from "../components/Card/CardContent";
-import ProgressBar from "../components/ProgressBar/ProgressBar";
+import { CardBody, Col, Row } from "react-bootstrap";
+import Card from "@/components/Card/Card";
+import ProgressBar from "react-bootstrap/ProgressBar";
 
 const progressBars = () => {
     return (
         <Fragment>
             <Row className="gy-4 gx-4">
                 <Col md={6}>
-                    <CardContent
-                        title="Background"
-                        CardBody={
+                    <Card title="Background">
+                        <CardBody>
                             <div className="d-flex flex-column gap-2">
-                                <ProgressBar
-                                    strokeColor="#28a745"
-                                    percent="25"
-                                />
-                                <ProgressBar
-                                    strokeColor="#17a2b8"
-                                    percent="50"
-                                />
-                                <ProgressBar
-                                    strokeColor="#ffc107"
-                                    percent="75"
-                                />
-                                <ProgressBar
-                                    strokeColor="#dc3545"
-                                    percent="100"
-                                />
+                                <ProgressBar variant="success" now={25} />
+                                <ProgressBar variant="primary" now={50} />
+                                <ProgressBar variant="warning" now={75} />
+                                <ProgressBar variant="danger" now={100} />
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
                 <Col md={6}>
-                    <CardContent
-                        title="Animated Background"
-                        CardBody={
+                    <Card title="With Labels">
+                        <CardBody>
                             <div className="d-flex flex-column gap-2">
-                                <ProgressBar
-                                    isProgress={true}
-                                    strokeColor="#28a745"
-                                    percent="25"
-                                />
-                                <ProgressBar
-                                    isProgress={true}
-                                    strokeColor="#17a2b8"
-                                    percent="50"
-                                />
-                                <ProgressBar
-                                    isProgress={true}
-                                    strokeColor="#ffc107"
-                                    percent="75"
-                                />
-                                <ProgressBar
-                                    isProgress={true}
-                                    strokeColor="#dc3545"
-                                    percent="100"
-                                />
+                                <ProgressBar variant="success" now={25} label="25" />
+                                <ProgressBar variant="primary" now={50} label="50" />
+                                <ProgressBar variant="warning" now={75} label="75" />
+                                <ProgressBar variant="danger" now={100} label="100" />
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
                 <Col md={6}>
-                    <CardContent
-                        title="Labels"
-                        CardBody={
+                    <Card title="Striped">
+                        <CardBody>
                             <div className="d-flex flex-column gap-2">
-                                <ProgressBar
-                                    strokeColor="#28a745"
-                                    percent="25"
-                                    labels="25"
-                                />
-                                <ProgressBar
-                                    strokeColor="#17a2b8"
-                                    percent="50"
-                                    labels="50"
-                                />
-                                <ProgressBar
-                                    strokeColor="#ffc107"
-                                    percent="75"
-                                    labels="75"
-                                />
-                                <ProgressBar
-                                    strokeColor="#dc3545"
-                                    percent="100"
-                                    labels="100"
-                                />
+                                <ProgressBar striped variant="success" now={25} />
+                                <ProgressBar striped variant="primary" now={50} />
+                                <ProgressBar striped variant="warning" now={75} />
+                                <ProgressBar striped variant="danger" now={100} />
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
                 <Col md={6}>
-                    <CardContent
-                        title="Animated Labels"
-                        CardBody={
+                    <Card title="Animated">
+                        <CardBody>
                             <div className="d-flex flex-column gap-2">
                                 <ProgressBar
-                                    isProgress={true}
-                                    strokeColor="#28a745"
-                                    percent="25"
-                                    labels="25"
+                                    animated
+                                    striped
+                                    variant="success"
+                                    now={25}
+                                    label="25"
                                 />
                                 <ProgressBar
-                                    isProgress={true}
-                                    strokeColor="#17a2b8"
-                                    percent="50"
-                                    labels="50"
+                                    animated
+                                    striped
+                                    variant="primary"
+                                    now={50}
+                                    label="50"
                                 />
                                 <ProgressBar
-                                    isProgress={true}
-                                    strokeColor="#ffc107"
-                                    percent="75"
-                                    labels="75"
+                                    animated
+                                    striped
+                                    variant="warning"
+                                    now={75}
+                                    label="75"
                                 />
                                 <ProgressBar
-                                    isProgress={true}
-                                    strokeColor="#dc3545"
-                                    percent="100"
-                                    labels="100"
+                                    animated
+                                    striped
+                                    variant="danger"
+                                    now={100}
+                                    label="100"
                                 />
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
                 <Col md={6}>
-                    <CardContent
-                        title="Progress Striped"
-                        CardBody={
-                            <div className="d-flex flex-column gap-2">
-                                <ProgressBar
-                                    isStriped={true}
-                                    strokeColor="#28a745"
-                                    percent="25"
-                                />
-                                <ProgressBar
-                                    isStriped={true}
-                                    strokeColor="#17a2b8"
-                                    percent="50"
-                                />
-                                <ProgressBar
-                                    isStriped={true}
-                                    strokeColor="#ffc107"
-                                    percent="75"
-                                />
-                                <ProgressBar
-                                    isStriped={true}
-                                    strokeColor="#dc3545"
-                                    percent="100"
-                                />
-                            </div>
-                        }
-                    />
-                </Col>
-                <Col md={6}>
-                    <CardContent
-                        title="Animated Progress Striped"
-                        CardBody={
-                            <div className="d-flex flex-column gap-2">
-                                <ProgressBar
-                                    isProgress={true}
-                                    isStriped={true}
-                                    strokeColor="#28a745"
-                                    percent="25"
-                                    labels="25"
-                                />
-                                <ProgressBar
-                                    isProgress={true}
-                                    isStriped={true}
-                                    strokeColor="#17a2b8"
-                                    percent="50"
-                                    labels="50"
-                                />
-                                <ProgressBar
-                                    isProgress={true}
-                                    isStriped={true}
-                                    strokeColor="#ffc107"
-                                    percent="75"
-                                    labels="75"
-                                />
-                                <ProgressBar
-                                    isProgress={true}
-                                    isStriped={true}
-                                    strokeColor="#dc3545"
-                                    percent="100"
-                                    labels="100"
-                                />
-                            </div>
-                        }
-                    />
+                    <Card title="Stacked">
+                        <CardBody>
+                            <ProgressBar>
+                                <ProgressBar striped variant="success" now={30} key={1} />
+                                <ProgressBar variant="warning" now={16} key={2} />
+                                <ProgressBar striped variant="danger" now={22} key={3} />
+                            </ProgressBar>
+                        </CardBody>
+                    </Card>
                 </Col>
             </Row>
         </Fragment>

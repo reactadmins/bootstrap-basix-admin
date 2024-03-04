@@ -1,5 +1,5 @@
-import darkModeSwitchStyle from "../../assets/scss/DarkModeSwitch.module.scss";
-import { useDashboardDataContext } from "../../context/dashboardDataContext";
+import darkModeSwitchStyle from "@/assets/scss/DarkModeSwitch.module.scss";
+import { useDashboardDataContext } from "@/context/dashboardDataContext";
 
 const DarkModeSwitch = () => {
     const { isDark, setIsDark } = useDashboardDataContext();

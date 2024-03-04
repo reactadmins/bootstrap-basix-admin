@@ -3,39 +3,40 @@ import { createContext, useContext, useEffect, useState } from "react";
 export const DashboardDataCreateContext = createContext();
 
 export const DashboardDataProvider = ({ children }) => {
+    const [sidebarMini, setSidebarMini] = useState(false);
     const [navbarFixed, setNavbarFixed] = useState(false);
     const [isDark, setIsDark] = useState(false);
     const [isThemeDirection, setIsThemeDirection] = useState(false);
-    const [topNavbarBgColor, setTopNavbarBgColor] = useState("bg_white");
-    const [sidebarBgColor, setSidebarBgColor] = useState("bg_black");
-    const [sidebarBgImg, setSidebarBgImg] = useState();
+    const [topNavbarBgColor, setTopNavbarBgColor] = useState("white");
+    const [sidebarBgColor, setSidebarBgColor] = useState("black");
+    const [sidebarBgImg, setSidebarBgImg] = useState(null);
     const [activeVariation, setActiveVariation] = useState("vertical");
 
     useEffect(() => {
-        let element = document.body;
-        if (!isThemeDirection) {
-            element.classList.add("direction_ltr");
-            element.classList.remove("direction_rtl");
-        } else if (isThemeDirection) {
-            element.classList.add("direction_rtl");
-            element.classList.remove("direction_ltr");
+        if (isThemeDirection) {
+            document
+                .querySelector("body")
+                .setAttribute("data-theme-direction", "rtl");
+        } else {
+            document
+                .querySelector("body")
+                .setAttribute("data-theme-direction", "ltr");
         }
     }, [isThemeDirection]);
 
     useEffect(() => {
-        let element = document.body;
-        if (!isDark) {
-            element.classList.add("light");
-            element.classList.remove("dark");
-        } else if (isDark) {
-            element.classList.add("dark");
-            element.classList.remove("light");
+        if (isDark) {
+            document.querySelector("body").setAttribute("data-theme", "dark");
+        } else {
+            document.querySelector("body").setAttribute("data-theme", "light");
         }
     }, [isDark]);
 
     return (
         <DashboardDataCreateContext.Provider
             value={{
+                sidebarMini,
+                setSidebarMini,
                 sidebarBgColor,
                 setSidebarBgColor,
                 topNavbarBgColor,

@@ -10,7 +10,7 @@
     --card-icon-color: #868e96;
 }
 
-.dark {
+body[data-theme="dark"] {
     // dark mode colors
     --bg-content: #0a0a0a;
     --body-bg: #000;

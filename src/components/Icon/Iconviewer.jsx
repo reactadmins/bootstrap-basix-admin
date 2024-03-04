@@ -1,10 +1,10 @@
 import { Icon } from "@iconify/react";
 import { Link } from "react-router-dom";
-import iconStyle from "../../assets/scss/IconStyle.module.scss";
+import styles from "@/assets/scss/IconStyle.module.scss";
 
 const Iconviewer = ({ iconList, pathName, prefix }) => {
     return (
-        <div className={`${iconStyle.icon_viewer_wrapper} position-relative`}>
+        <div className={`${styles.icon_viewer_wrapper} position-relative`}>
             <div className="row gy-5">
                 {iconList?.slice(0, 18).map((icon, index) => (
                     <div className="col-2 p-0" key={index}>

@@ -1,6 +1,6 @@
 import { Fragment } from "react";
-import CardContent from "../components/Card/CardContent";
-import { Col, Row } from "react-bootstrap";
+import { Button, CardBody, Col, Row } from "react-bootstrap";
+import Card from "@/components/Card/Card";
 
 const Buttons = () => {
     return (
@@ -8,144 +8,72 @@ const Buttons = () => {
             {/* start badges & outline buttons section*/}
             <Row className="gy-4 gx-4 mb-4">
                 <Col md={6}>
-                    <CardContent
+                    <Card
                         title="Badges"
-                        titleCode={
-                            <Fragment>
-                                <small
-                                    className="mx-2"
-                                    style={{
-                                        fontSize: "80%",
-                                        fontWeight: "400",
-                                    }}
-                                >
-                                    Use this class <code>{`<a>`}</code>,{" "}
-                                    <code>{`<button>`} </code>
-                                    or
-                                    <code> {`<input>`}</code>
-                                </small>
-                            </Fragment>
+                        subscript={
+                            <small
+                                className="mx-2"
+                                style={{
+                                    fontSize: "80%",
+                                    fontWeight: "400",
+                                }}
+                            >
+                                Use this class <code>{`<a>`}</code>,{" "}
+                                <code>{`<button>`} </code>
+                                or
+                                <code> {`<input>`}</code>
+                            </small>
                         }
-                        CardBody={
+                    >
+                        <CardBody>
                             <div className="d-flex flex-wrap gap-2">
-                                <button
-                                    type="button"
-                                    className="btn btn-primary"
-                                >
-                                    Primary
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-secondary"
-                                >
-                                    Secondary
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-success"
-                                >
-                                    Success
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-danger"
-                                >
-                                    Danger
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-warning"
-                                >
-                                    Warning
-                                </button>
-                                <button type="button" className="btn btn-info">
-                                    Info
-                                </button>
-                                <button type="button" className="btn btn-light">
-                                    Light
-                                </button>
-                                <button type="button" className="btn btn-dark">
-                                    Dark
-                                </button>
-                                <button type="button" className="btn btn-link">
-                                    Link
-                                </button>
+                                <Button variant="primary">Primary</Button>
+                                <Button variant="secondary">Secondary</Button>
+                                <Button variant="success">Success</Button>
+                                <Button variant="danger">Danger</Button>
+                                <Button variant="warning">Warning</Button>
+                                <Button variant="dark">Dark</Button>
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
                 <Col md={6}>
-                    <CardContent
+                    <Card
                         title="Outline Buttons"
-                        titleCode={
-                            <Fragment>
-                                <small
-                                    className="mx-2"
-                                    style={{
-                                        fontSize: "80%",
-                                        fontWeight: "400",
-                                    }}
-                                >
-                                    Use this class <code>{`<a>`}</code>,{" "}
-                                    <code>{`<button>`} </code>
-                                    or
-                                    <code> {`<input>`}</code>
-                                </small>
-                            </Fragment>
+                        subscript={
+                            <small
+                                className="mx-2"
+                                style={{
+                                    fontSize: "80%",
+                                    fontWeight: "400",
+                                }}
+                            >
+                                Use this class <code>{`<a>`}</code>,{" "}
+                                <code>{`<button>`} </code>
+                                or
+                                <code> {`<input>`}</code>
+                            </small>
                         }
-                        CardBody={
+                    >
+                        <CardBody>
                             <div className="d-flex flex-wrap gap-2">
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-primary"
-                                >
+                                <Button variant="outline-primary">
                                     Primary
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-secondary"
-                                >
+                                </Button>
+                                <Button variant="outline-secondary">
                                     Secondary
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-success"
-                                >
+                                </Button>
+                                <Button variant="outline-success">
                                     Success
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-danger"
-                                >
-                                    Danger
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-warning"
-                                >
+                                </Button>
+                                <Button variant="outline-danger">Danger</Button>
+                                <Button variant="outline-warning">
                                     Warning
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-info"
-                                >
-                                    Info
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-light text-dark"
-                                >
-                                    Light
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-dark"
-                                >
-                                    Dark
-                                </button>
+                                </Button>
+                                <Button variant="outline-dark">Dark</Button>
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
             </Row>
             {/* end badges & outline buttons section*/}
@@ -153,110 +81,84 @@ const Buttons = () => {
             {/* start button tags section*/}
             <Row className="gy-4 gx-4 mb-4">
                 <Col md={6}>
-                    <CardContent
+                    <Card
                         title="Button tags"
-                        titleCode={
-                            <Fragment>
-                                <small
-                                    className="mx-2"
-                                    style={{
-                                        fontSize: "80%",
-                                        fontWeight: "400",
-                                    }}
-                                >
-                                    Use this class <code>.btn </code> or
-                                    <code> {`<button>`}</code>
-                                </small>
-                            </Fragment>
+                        subscript={
+                            <small
+                                className="mx-2"
+                                style={{
+                                    fontSize: "80%",
+                                    fontWeight: "400",
+                                }}
+                            >
+                                Use this class <code>.btn </code> or
+                                <code> {`<button>`}</code>
+                            </small>
                         }
-                        CardBody={
+                    >
+                        <CardBody>
                             <div className="d-flex flex-wrap gap-2">
-                                <a
-                                    href="#"
-                                    role="button"
-                                    type="button"
-                                    className="btn btn-primary"
-                                >
+                                <Button href="#" variant="primary">
                                     Link
-                                </a>
-                                <button
-                                    type="submit"
-                                    className="btn btn-danger"
-                                >
+                                </Button>
+                                <Button type="submit" variant="danger">
                                     Button
-                                </button>
-                                <input
+                                </Button>
+                                <Button
+                                    as="input"
                                     type="button"
                                     value="Input"
-                                    className="btn btn-info"
                                 />
-                                <input
+                                <Button
+                                    as="input"
                                     type="submit"
                                     value="Submit"
-                                    className="btn btn-success"
                                 />
-                                <input
-                                    type="reset"
-                                    value="Reset"
-                                    className="btn btn-warning"
-                                />
+                                <Button as="input" type="reset" value="Reset" />
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
                 <Col md={6}>
-                    <CardContent
+                    <Card
                         title="Button tags"
-                        titleCode={
-                            <Fragment>
-                                <small
-                                    className="mx-2"
-                                    style={{
-                                        fontSize: "80%",
-                                        fontWeight: "400",
-                                    }}
-                                >
-                                    Use this class <code>{`<a>`}</code>,{" "}
-                                    <code>{`<button>`} </code>
-                                    or
-                                    <code> {`<input>`}</code>
-                                </small>
-                            </Fragment>
+                        subscript={
+                            <small
+                                className="mx-2"
+                                style={{
+                                    fontSize: "80%",
+                                    fontWeight: "400",
+                                }}
+                            >
+                                Use this class <code>{`<a>`}</code>,{" "}
+                                <code>{`<button>`} </code>
+                                or
+                                <code> {`<input>`}</code>
+                            </small>
                         }
-                        CardBody={
+                    >
+                        <CardBody>
                             <div className="d-flex flex-wrap gap-2">
-                                <a
-                                    href="#"
-                                    role="button"
-                                    type="button"
-                                    className="btn btn-outline-primary"
-                                >
+                                <Button href="#" variant="outline-primary">
                                     Link
-                                </a>
-                                <button
-                                    type="submit"
-                                    className="btn btn-outline-danger"
-                                >
+                                </Button>
+                                <Button type="submit" variant="outline-danger">
                                     Button
-                                </button>
-                                <input
+                                </Button>
+                                <Button
+                                    as="input"
                                     type="button"
                                     value="Input"
-                                    className="btn btn-outline-info"
                                 />
-                                <input
+                                <Button
+                                    as="input"
                                     type="submit"
                                     value="Submit"
-                                    className="btn btn-outline-success"
                                 />
-                                <input
-                                    type="reset"
-                                    value="Reset"
-                                    className="btn btn-outline-warning"
-                                />
+                                <Button as="input" type="reset" value="Reset" />
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
             </Row>
             {/* end button tagss section*/}
@@ -264,178 +166,86 @@ const Buttons = () => {
             {/* start disabled state button section*/}
             <Row className="gy-4 gx-4 mb-4">
                 <Col md={6}>
-                    <CardContent
+                    <Card
                         title="Disabled state"
-                        titleCode={
-                            <Fragment>
-                                <small
-                                    className="mx-2"
-                                    style={{
-                                        fontSize: "80%",
-                                        fontWeight: "400",
-                                    }}
-                                >
-                                    Use this class{" "}
-                                    <code>disabled={"disabled"}</code>
-                                </small>
-                            </Fragment>
+                        subscript={
+                            <small
+                                className="mx-2"
+                                style={{
+                                    fontSize: "80%",
+                                    fontWeight: "400",
+                                }}
+                            >
+                                Use this class{" "}
+                                <code>disabled={"disabled"}</code>
+                            </small>
                         }
-                        CardBody={
+                    >
+                        <CardBody>
                             <div className="d-flex flex-wrap gap-2">
-                                <button
-                                    type="button"
-                                    disabled="disabled"
-                                    className="btn btn-primary"
-                                >
+                                <Button variant="primary" disabled>
                                     Primary
-                                </button>
-                                <button
-                                    type="button"
-                                    disabled="disabled"
-                                    className="btn btn-secondary"
-                                >
+                                </Button>
+                                <Button variant="secondary" disabled>
                                     Secondary
-                                </button>
-                                <button
-                                    type="button"
-                                    disabled="disabled"
-                                    className="btn btn-success"
-                                >
+                                </Button>
+                                <Button variant="success" disabled>
                                     Success
-                                </button>
-                                <button
-                                    type="button"
-                                    disabled="disabled"
-                                    className="btn btn-danger"
-                                >
+                                </Button>
+                                <Button variant="danger" disabled>
                                     Danger
-                                </button>
-                                <button
-                                    type="button"
-                                    disabled="disabled"
-                                    className="btn btn-warning"
-                                >
+                                </Button>
+                                <Button variant="warning" disabled>
                                     Warning
-                                </button>
-                                <button
-                                    type="button"
-                                    disabled="disabled"
-                                    className="btn btn-info"
-                                >
-                                    Info
-                                </button>
-                                <button
-                                    type="button"
-                                    disabled="disabled"
-                                    className="btn btn-light"
-                                >
-                                    Light
-                                </button>
-                                <button
-                                    type="button"
-                                    disabled="disabled"
-                                    className="btn btn-dark"
-                                >
+                                </Button>
+                                <Button variant="dark" disabled>
                                     Dark
-                                </button>
-                                <button
-                                    type="button"
-                                    disabled="disabled"
-                                    className="btn btn-link"
-                                >
-                                    Link
-                                </button>
+                                </Button>
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
                 <Col md={6}>
-                    <CardContent
+                    <Card
                         title="Disabled state"
-                        titleCode={
-                            <Fragment>
-                                <small
-                                    className="mx-2"
-                                    style={{
-                                        fontSize: "80%",
-                                        fontWeight: "400",
-                                    }}
-                                >
-                                    Use this class <code>{`<a>`}</code>,{" "}
-                                    <code>{`<button>`} </code>
-                                    or
-                                    <code> {`<input>`}</code>
-                                </small>
-                            </Fragment>
+                        subscript={
+                            <small
+                                className="mx-2"
+                                style={{
+                                    fontSize: "80%",
+                                    fontWeight: "400",
+                                }}
+                            >
+                                Use this class <code>{`<a>`}</code>,{" "}
+                                <code>{`<button>`} </code>
+                                or
+                                <code> {`<input>`}</code>
+                            </small>
                         }
-                        CardBody={
+                    >
+                        <CardBody>
                             <div className="d-flex flex-wrap gap-2">
-                                <button
-                                    type="button"
-                                    disabled="disabled"
-                                    className="btn btn-outline-primary"
-                                >
+                                <Button variant="outline-primary" disabled>
                                     Primary
-                                </button>
-                                <button
-                                    type="button"
-                                    disabled="disabled"
-                                    className="btn btn-outline-secondary"
-                                >
+                                </Button>
+                                <Button variant="outline-secondary" disabled>
                                     Secondary
-                                </button>
-                                <button
-                                    type="button"
-                                    disabled="disabled"
-                                    className="btn btn-outline-success"
-                                >
+                                </Button>
+                                <Button variant="outline-success" disabled>
                                     Success
-                                </button>
-                                <button
-                                    type="button"
-                                    disabled="disabled"
-                                    className="btn btn-outline-danger"
-                                >
+                                </Button>
+                                <Button variant="outline-danger" disabled>
                                     Danger
-                                </button>
-                                <button
-                                    type="button"
-                                    disabled="disabled"
-                                    className="btn btn-outline-warning"
-                                >
+                                </Button>
+                                <Button variant="outline-warning" disabled>
                                     Warning
-                                </button>
-                                <button
-                                    type="button"
-                                    disabled="disabled"
-                                    className="btn btn-outline-info"
-                                >
-                                    Info
-                                </button>
-                                <button
-                                    type="button"
-                                    disabled="disabled"
-                                    className="btn btn-outline-light text-dark"
-                                >
-                                    Light
-                                </button>
-                                <button
-                                    type="button"
-                                    disabled="disabled"
-                                    className="btn btn-outline-dark"
-                                >
+                                </Button>
+                                <Button variant="outline-dark" disabled>
                                     Dark
-                                </button>
-                                <button
-                                    type="button"
-                                    disabled="disabled"
-                                    className="btn btn-outline-link"
-                                >
-                                    Link
-                                </button>
+                                </Button>
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
             </Row>
             {/* end disabled state button  section*/}
@@ -443,121 +253,80 @@ const Buttons = () => {
             {/* start button with icons section*/}
             <Row className="gy-4 gx-4 mb-4">
                 <Col md={6}>
-                    <CardContent
+                    <Card
                         title="Button with Icons"
-                        titleCode={
-                            <Fragment>
-                                <small
-                                    className="mx-2"
-                                    style={{
-                                        fontSize: "80%",
-                                        fontWeight: "400",
-                                    }}
-                                >
-                                    Use <code>{`<i>`}</code>
-                                </small>
-                            </Fragment>
+                        subscript={
+                            <small
+                                className="mx-2"
+                                style={{
+                                    fontSize: "80%",
+                                    fontWeight: "400",
+                                }}
+                            >
+                                Use <code>{`<i>`}</code>
+                            </small>
                         }
-                        CardBody={
+                    >
+                        <CardBody>
                             <div className="d-flex flex-wrap gap-2">
-                                <button
-                                    type="button"
-                                    className="btn btn-primary"
-                                >
+                                <Button variant="primary">
                                     <i className="fa fa-star"></i> Primary
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-secondary"
-                                >
+                                </Button>
+                                <Button variant="secondary">
                                     <i className="fa fa-lightbulb"></i>{" "}
                                     Secondary
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-success"
-                                >
+                                </Button>
+                                <Button variant="success">
                                     <i className="fa fa-magic"></i> Success
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-warning"
-                                >
+                                </Button>
+                                <Button variant="warning">
                                     <i className="fa-solid fa-triangle-exclamation"></i>{" "}
                                     Warning
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-danger"
-                                >
+                                </Button>
+                                <Button variant="danger">
                                     <i className="fa fa-rss"></i> Danger
-                                </button>
-                                <button type="button" className="btn btn-link">
-                                    <i className="fa fa-link"></i> Link
-                                </button>
+                                </Button>
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
                 <Col md={6}>
-                    <CardContent
+                    <Card
                         title="Button with Icons"
-                        titleCode={
-                            <Fragment>
-                                <small
-                                    className="mx-2"
-                                    style={{
-                                        fontSize: "80%",
-                                        fontWeight: "400",
-                                    }}
-                                >
-                                    Use <code>{`<i>`}</code>
-                                </small>
-                            </Fragment>
+                        subscript={
+                            <small
+                                className="mx-2"
+                                style={{
+                                    fontSize: "80%",
+                                    fontWeight: "400",
+                                }}
+                            >
+                                Use <code>{`<i>`}</code>
+                            </small>
                         }
-                        CardBody={
+                    >
+                        <CardBody>
                             <div className="d-flex flex-wrap gap-2">
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-primary"
-                                >
+                                <Button variant="outline-primary">
                                     <i className="fa fa-star"></i> Primary
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-secondary"
-                                >
+                                </Button>
+                                <Button variant="outline-secondary">
                                     <i className="fa fa-lightbulb"></i>{" "}
                                     Secondary
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-success"
-                                >
+                                </Button>
+                                <Button variant="outline-success">
                                     <i className="fa fa-magic"></i> Success
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-warning"
-                                >
-                                    <i className="fa-solid fa-triangle-exclamation"></i>
+                                </Button>
+                                <Button variant="outline-warning">
+                                    <i className="fa-solid fa-triangle-exclamation"></i>{" "}
                                     Warning
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-danger"
-                                >
+                                </Button>
+                                <Button variant="outline-danger">
                                     <i className="fa fa-rss"></i> Danger
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-link"
-                                >
-                                    <i className="fa fa-link"></i> Link
-                                </button>
+                                </Button>
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
             </Row>
             {/* end button with icons section*/}
@@ -565,120 +334,82 @@ const Buttons = () => {
             {/* start small button section*/}
             <Row className="gy-4 gx-4 mb-4">
                 <Col md={6}>
-                    <CardContent
+                    <Card
                         title="Small Button"
-                        titleCode={
-                            <Fragment>
-                                <small
-                                    className="mx-2"
-                                    style={{
-                                        fontSize: "80%",
-                                        fontWeight: "400",
-                                    }}
-                                >
-                                    Use this class <code>.btn-sm</code>
-                                </small>
-                            </Fragment>
+                        subscript={
+                            <small
+                                className="mx-2"
+                                style={{
+                                    fontSize: "80%",
+                                    fontWeight: "400",
+                                }}
+                            >
+                                Use this class <code>.btn-sm</code>
+                            </small>
                         }
-                        CardBody={
+                    >
+                        <CardBody>
                             <div className="d-flex flex-wrap gap-2">
-                                <button
-                                    type="button"
-                                    className="btn btn-primary btn-sm"
-                                >
+                                <Button variant="primary" size="sm">
                                     Primary
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-secondary btn-sm"
-                                >
+                                </Button>
+                                <Button variant="secondary" size="sm">
                                     Secondary
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-success btn-sm"
-                                >
+                                </Button>
+                                <Button variant="success" size="sm">
                                     Success
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-warning btn-sm"
-                                >
+                                </Button>
+                                <Button variant="warning" size="sm">
                                     Warning
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-danger btn-sm"
-                                >
+                                </Button>
+                                <Button variant="danger" size="sm">
                                     Danger
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-link btn-sm"
-                                >
+                                </Button>
+                                <Button variant="link" size="sm">
                                     Link
-                                </button>
+                                </Button>
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
                 <Col md={6}>
-                    <CardContent
+                    <Card
                         title="Small Button"
-                        titleCode={
-                            <Fragment>
-                                <small
-                                    className="mx-2"
-                                    style={{
-                                        fontSize: "80%",
-                                        fontWeight: "400",
-                                    }}
-                                >
-                                    Use this class <code>.btn-sm</code>
-                                </small>
-                            </Fragment>
+                        subscript={
+                            <small
+                                className="mx-2"
+                                style={{
+                                    fontSize: "80%",
+                                    fontWeight: "400",
+                                }}
+                            >
+                                Use this class <code>.btn-sm</code>
+                            </small>
                         }
-                        CardBody={
+                    >
+                        <CardBody>
                             <div className="d-flex flex-wrap gap-2">
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-primary btn-sm"
-                                >
+                                <Button variant="outline-primary" size="sm">
                                     Primary
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-secondary btn-sm"
-                                >
+                                </Button>
+                                <Button variant="outline-secondary" size="sm">
                                     Secondary
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-success btn-sm"
-                                >
+                                </Button>
+                                <Button variant="outline-success" size="sm">
                                     Success
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-warning btn-sm"
-                                >
+                                </Button>
+                                <Button variant="outline-warning" size="sm">
                                     Warning
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-danger btn-sm"
-                                >
+                                </Button>
+                                <Button variant="outline-danger" size="sm">
                                     Danger
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-link btn-sm"
-                                >
+                                </Button>
+                                <Button variant="outline-link" size="sm">
                                     Link
-                                </button>
+                                </Button>
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
             </Row>
             {/* end small button section*/}
@@ -686,124 +417,87 @@ const Buttons = () => {
             {/* start small button with icons section*/}
             <Row className="gy-4 gx-4 mb-4">
                 <Col md={6}>
-                    <CardContent
+                    <Card
                         title="Small Button with Icons"
-                        titleCode={
-                            <Fragment>
-                                <small
-                                    className="mx-2"
-                                    style={{
-                                        fontSize: "80%",
-                                        fontWeight: "400",
-                                    }}
-                                >
-                                    Use this class <code>.btn-sm</code>
-                                </small>
-                            </Fragment>
+                        subscript={
+                            <small
+                                className="mx-2"
+                                style={{
+                                    fontSize: "80%",
+                                    fontWeight: "400",
+                                }}
+                            >
+                                Use this class <code>.btn-sm</code>
+                            </small>
                         }
-                        CardBody={
+                    >
+                        <CardBody>
                             <div className="d-flex flex-wrap gap-2">
-                                <button
-                                    type="button"
-                                    className="btn btn-primary btn-sm"
-                                >
+                                <Button variant="primary" size="sm">
                                     <i className="fa fa-star"></i> Primary
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-secondary btn-sm"
-                                >
+                                </Button>
+                                <Button variant="secondary" size="sm">
                                     <i className="fa fa-lightbulb"></i>{" "}
                                     Secondary
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-success btn-sm"
-                                >
+                                </Button>
+                                <Button variant="success" size="sm">
                                     <i className="fa fa-magic"></i> Success
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-warning btn-sm"
-                                >
-                                    <i className="fa-solid fa-triangle-exclamation"></i>
+                                </Button>
+                                <Button variant="warning" size="sm">
+                                    <i className="fa-solid fa-triangle-exclamation"></i>{" "}
                                     Warning
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-danger btn-sm"
-                                >
+                                </Button>
+                                <Button variant="danger" size="sm">
                                     <i className="fa fa-rss"></i> Danger
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-link btn-sm"
-                                >
+                                </Button>
+                                <Button variant="link" size="sm">
                                     <i className="fa fa-link"></i> Link
-                                </button>
+                                </Button>
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
                 <Col md={6}>
-                    <CardContent
+                    <Card
                         title="Small Button with Icons"
-                        titleCode={
-                            <Fragment>
-                                <small
-                                    className="mx-2"
-                                    style={{
-                                        fontSize: "80%",
-                                        fontWeight: "400",
-                                    }}
-                                >
-                                    Use this class <code>.btn-sm</code>
-                                </small>
-                            </Fragment>
+                        subscript={
+                            <small
+                                className="mx-2"
+                                style={{
+                                    fontSize: "80%",
+                                    fontWeight: "400",
+                                }}
+                            >
+                                Use this class <code>.btn-sm</code>
+                            </small>
                         }
-                        CardBody={
+                    >
+                        <CardBody>
                             <div className="d-flex flex-wrap gap-2">
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-primary btn-sm"
-                                >
+                                <Button variant="outline-primary" size="sm">
                                     <i className="fa fa-star"></i> Primary
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-secondary btn-sm"
-                                >
+                                </Button>
+                                <Button variant="outline-secondary" size="sm">
                                     <i className="fa fa-lightbulb"></i>{" "}
                                     Secondary
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-success btn-sm"
-                                >
+                                </Button>
+                                <Button variant="outline-success" size="sm">
                                     <i className="fa fa-magic"></i> Success
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-warning btn-sm"
-                                >
-                                    <i className="fa-solid fa-triangle-exclamation"></i>
+                                </Button>
+                                <Button variant="outline-warning" size="sm">
+                                    <i className="fa-solid fa-triangle-exclamation"></i>{" "}
                                     Warning
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-danger btn-sm"
-                                >
+                                </Button>
+                                <Button variant="outline-danger" size="sm">
                                     <i className="fa fa-rss"></i> Danger
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-link btn-sm"
-                                >
+                                </Button>
+
+                                <Button variant="link" size="sm">
                                     <i className="fa fa-link"></i> Link
-                                </button>
+                                </Button>
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
             </Row>
             {/* end small button with icons section*/}
@@ -811,120 +505,70 @@ const Buttons = () => {
             {/* start large button section*/}
             <Row className="gy-4 gx-4 mb-4">
                 <Col md={6}>
-                    <CardContent
+                    <Card
                         title="Large Button"
-                        titleCode={
-                            <Fragment>
-                                <small
-                                    className="mx-2"
-                                    style={{
-                                        fontSize: "80%",
-                                        fontWeight: "400",
-                                    }}
-                                >
-                                    Use this class <code>.btn-lg</code>
-                                </small>
-                            </Fragment>
+                        subscript={
+                            <small
+                                className="mx-2"
+                                style={{
+                                    fontSize: "80%",
+                                    fontWeight: "400",
+                                }}
+                            >
+                                Use this class <code>.btn-lg</code>
+                            </small>
                         }
-                        CardBody={
+                    >
+                        <CardBody>
                             <div className="d-flex flex-wrap gap-2">
-                                <button
-                                    type="button"
-                                    className="btn btn-primary btn-lg"
-                                >
+                                <Button variant="primary" size="lg">
                                     Primary
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-secondary btn-lg"
-                                >
+                                </Button>
+                                <Button variant="secondary" size="lg">
                                     Secondary
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-success btn-lg"
-                                >
+                                </Button>
+                                <Button variant="success" size="lg">
                                     Success
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-warning btn-lg"
-                                >
+                                </Button>
+                                <Button variant="warning" size="lg">
                                     Warning
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-danger btn-lg"
-                                >
-                                    Danger
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-link btn-lg"
-                                >
-                                    Link
-                                </button>
+                                </Button>
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
                 <Col md={6}>
-                    <CardContent
+                    <Card
                         title="Large Button"
-                        titleCode={
-                            <Fragment>
-                                <small
-                                    className="mx-2"
-                                    style={{
-                                        fontSize: "80%",
-                                        fontWeight: "400",
-                                    }}
-                                >
-                                    Use this class <code>.btn-lg</code>
-                                </small>
-                            </Fragment>
+                        subscript={
+                            <small
+                                className="mx-2"
+                                style={{
+                                    fontSize: "80%",
+                                    fontWeight: "400",
+                                }}
+                            >
+                                Use this class <code>.btn-lg</code>
+                            </small>
                         }
-                        CardBody={
+                    >
+                        <CardBody>
                             <div className="d-flex flex-wrap gap-2">
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-primary btn-lg"
-                                >
+                                <Button variant="outline-primary" size="lg">
                                     Primary
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-secondary btn-lg"
-                                >
+                                </Button>
+                                <Button variant="outline-secondary" size="lg">
                                     Secondary
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-success btn-lg"
-                                >
+                                </Button>
+                                <Button variant="outline-success" size="lg">
                                     Success
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-warning btn-lg"
-                                >
+                                </Button>
+                                <Button variant="outline-warning" size="lg">
                                     Warning
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-danger btn-lg"
-                                >
-                                    Danger
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-link btn-lg"
-                                >
-                                    Link
-                                </button>
+                                </Button>
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
             </Row>
             {/* end large button section*/}
@@ -932,120 +576,86 @@ const Buttons = () => {
             {/* start large active & disabled button section*/}
             <Row className="gy-4 gx-4 mb-4">
                 <Col md={6}>
-                    <CardContent
+                    <Card
                         title="Large Active Button"
-                        titleCode={
-                            <Fragment>
-                                <small
-                                    className="mx-2"
-                                    style={{
-                                        fontSize: "80%",
-                                        fontWeight: "400",
-                                    }}
-                                >
-                                    Use this class <code>.btn-lg .active</code>
-                                </small>
-                            </Fragment>
+                        subscript={
+                            <small
+                                className="mx-2"
+                                style={{
+                                    fontSize: "80%",
+                                    fontWeight: "400",
+                                }}
+                            >
+                                Use this class <code>.btn-lg .active</code>
+                            </small>
                         }
-                        CardBody={
+                    >
+                        <CardBody>
                             <div className="d-flex flex-wrap gap-2">
-                                <button
-                                    type="button"
-                                    className="btn btn-primary btn-lg active"
-                                >
+                                <Button variant="primary" size="lg" active>
                                     Primary
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-secondary btn-lg active"
-                                >
+                                </Button>
+                                <Button variant="secondary" size="lg" active>
                                     Secondary
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-success btn-lg active"
-                                >
+                                </Button>
+                                <Button variant="success" size="lg" active>
                                     Success
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-warning btn-lg active"
-                                >
+                                </Button>
+                                <Button variant="warning" size="lg" active>
                                     Warning
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-danger btn-lg active"
-                                >
-                                    Danger
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-link btn-lg active text-primary"
-                                >
-                                    Link
-                                </button>
+                                </Button>
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
                 <Col md={6}>
-                    <CardContent
+                    <Card
                         title="Large Disabled Button"
-                        titleCode={
-                            <Fragment>
-                                <small
-                                    className="mx-2"
-                                    style={{
-                                        fontSize: "80%",
-                                        fontWeight: "400",
-                                    }}
-                                >
-                                    Use this class <code>.btn-lg .active</code>
-                                </small>
-                            </Fragment>
+                        subscript={
+                            <small
+                                className="mx-2"
+                                style={{
+                                    fontSize: "80%",
+                                    fontWeight: "400",
+                                }}
+                            >
+                                Use this class <code>.btn-lg .active</code>
+                            </small>
                         }
-                        CardBody={
+                    >
+                        <CardBody>
                             <div className="d-flex flex-wrap gap-2">
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-primary btn-lg active"
+                                <Button
+                                    variant="outline-primary"
+                                    size="lg"
+                                    active
                                 >
                                     Primary
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-secondary btn-lg active"
+                                </Button>
+                                <Button
+                                    variant="outline-secondary"
+                                    size="lg"
+                                    active
                                 >
                                     Secondary
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-success btn-lg active"
+                                </Button>
+                                <Button
+                                    variant="outline-success"
+                                    size="lg"
+                                    active
                                 >
                                     Success
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-warning btn-lg active"
+                                </Button>
+                                <Button
+                                    variant="outline-warning"
+                                    size="lg"
+                                    active
                                 >
                                     Warning
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-danger btn-lg active"
-                                >
-                                    Danger
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-link btn-lg active text-primary"
-                                >
-                                    Link
-                                </button>
+                                </Button>
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
             </Row>
             {/* end large active & disabled button section*/}
@@ -1053,120 +663,82 @@ const Buttons = () => {
             {/* start block level buttons section*/}
             <Row className="gy-4 gx-4">
                 <Col md={6}>
-                    <CardContent
+                    <Card
                         title="Block Level Buttons"
-                        titleCode={
-                            <Fragment>
-                                <small
-                                    className="mx-2"
-                                    style={{
-                                        fontSize: "80%",
-                                        fontWeight: "400",
-                                    }}
-                                >
-                                    Use this class <code>.btn-block</code>
-                                </small>
-                            </Fragment>
+                        subscript={
+                            <small
+                                className="mx-2"
+                                style={{
+                                    fontSize: "80%",
+                                    fontWeight: "400",
+                                }}
+                            >
+                                Use this class <code>.btn-block</code>
+                            </small>
                         }
-                        CardBody={
-                            <div className="d-flex flex-column gap-2">
-                                <button
-                                    type="button"
-                                    className="btn btn-primary btn-lg btn-block"
-                                >
+                    >
+                        <CardBody>
+                            <div className="d-grid gap-2">
+                                <Button variant="primary" size="lg">
                                     Primary
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-secondary btn-lg btn-block"
-                                >
+                                </Button>
+                                <Button variant="secondary" size="lg">
                                     Secondary
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-success btn-lg btn-block"
-                                >
+                                </Button>
+                                <Button variant="success" size="lg">
                                     Success
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-warning btn-lg btn-block"
-                                >
+                                </Button>
+                                <Button variant="warning" size="lg">
                                     Warning
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-danger btn-lg btn-block"
-                                >
+                                </Button>
+                                <Button variant="danger" size="lg">
                                     Danger
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-link btn-lg btn-block text-primary"
-                                >
+                                </Button>
+                                <Button variant="link" size="lg">
                                     Link
-                                </button>
+                                </Button>
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
                 <Col md={6}>
-                    <CardContent
+                    <Card
                         title="Block Level Buttons"
-                        titleCode={
-                            <Fragment>
-                                <small
-                                    className="mx-2"
-                                    style={{
-                                        fontSize: "80%",
-                                        fontWeight: "400",
-                                    }}
-                                >
-                                    Use this class <code>.btn-block</code>
-                                </small>
-                            </Fragment>
+                        subscript={
+                            <small
+                                className="mx-2"
+                                style={{
+                                    fontSize: "80%",
+                                    fontWeight: "400",
+                                }}
+                            >
+                                Use this class <code>.btn-block</code>
+                            </small>
                         }
-                        CardBody={
-                            <div className="d-flex flex-column gap-2">
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-primary btn-lg btn-block"
-                                >
+                    >
+                        <CardBody>
+                            <div className="d-grid gap-2">
+                                <Button variant="outline-primary" size="lg">
                                     Primary
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-secondary btn-lg btn-block"
-                                >
+                                </Button>
+                                <Button variant="outline-secondary" size="lg">
                                     Secondary
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-success btn-lg btn-block"
-                                >
+                                </Button>
+                                <Button variant="outline-success" size="lg">
                                     Success
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-warning btn-lg btn-block"
-                                >
+                                </Button>
+                                <Button variant="outline-warning" size="lg">
                                     Warning
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-danger btn-lg btn-block"
-                                >
+                                </Button>
+                                <Button variant="outline-danger" size="lg">
                                     Danger
-                                </button>
-                                <button
-                                    type="button"
-                                    className="btn btn-outline-link btn-lg btn-block text-primary"
-                                >
+                                </Button>
+                                <Button variant="link" size="lg">
                                     Link
-                                </button>
+                                </Button>
                             </div>
-                        }
-                    />
+                        </CardBody>
+                    </Card>
                 </Col>
             </Row>
             {/* end block level buttons section*/}

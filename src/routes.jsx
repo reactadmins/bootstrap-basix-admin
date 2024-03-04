@@ -5,23 +5,20 @@ import Tables from "./views/Tables";
 import SocialButtons from "./views/SocialButtons";
 import Cards from "./views/Cards";
 import Alerts from "./views/Alerts";
-import progressBars from "./views/progressBars";
+import progressBars from "./views/ProgressBars";
 import Modals from "./views/Modals";
 import Grids from "./views/Grids";
 import Typography from "./views/Typography";
 import BasicForm from "./views/BasicForm";
 import AdvancedForm from "./views/AdvancedForm";
-import WizardForm from "./views/WizardForm";
 import Icons from "./views/Icons";
 import Widgets from "./views/Widgets";
 import Chartjs from "./views/Chartjs";
-import ApexCharts from "./views/ApexCharts";
 import Recharts from "./views/Recharts";
 import GoogleMaps from "./views/GoogleMaps";
 import LeafletMaps from "./views/LeafletMaps";
 import Login from "./views/Login";
 import Register from "./views/Register";
-import Tabs from "./views/Tabs";
 import Brandico from "./components/Icon/Brandico";
 import Entypo from "./components/Icon/Entypo";
 import FontAwesome from "./components/Icon/FontAwesome";
@@ -45,10 +42,6 @@ const routes = [
     {
         path: "/components/badges",
         component: Badges,
-    },
-    {
-        path: "/components/tabs",
-        component: Tabs,
     },
     {
         path: "/components/socials",
@@ -91,10 +84,6 @@ const routes = [
         component: AdvancedForm,
     },
     {
-        path: "/components/wizard-form",
-        component: WizardForm,
-    },
-    {
         path: "/components/icons",
         component: Icons,
     },
@@ -123,10 +112,6 @@ const routes = [
         component: Chartjs,
     },
     {
-        path: "/components/apex-charts",
-        component: ApexCharts,
-    },
-    {
         path: "/components/recharts",
         component: Recharts,
     },
@@ -148,6 +133,10 @@ const routes = [
     },
     {
         route: "/auth/page404",
+        component: Page404,
+    },
+    {
+        route: "*",
         component: Page404,
     },
     {

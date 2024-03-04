@@ -1,8 +1,8 @@
-import user1 from "../../../assets/image/avatar/user-1.jpg";
-import user2 from "../../../assets/image/avatar/user-2.jpg";
-import user3 from "../../../assets/image/avatar/user-3.jpg";
-import user4 from "../../../assets/image/avatar/user-4.jpg";
-import messageStyle from "../../../assets/scss/Message.module.scss";
+import user1 from "@/assets/image/avatar/user-1.jpg";
+import user2 from "@/assets/image/avatar/user-2.jpg";
+import user3 from "@/assets/image/avatar/user-3.jpg";
+import user4 from "@/assets/image/avatar/user-4.jpg";
+import messageStyle from "@/assets/scss/Message.module.scss";
 
 const Message = () => {
     const message_list = [

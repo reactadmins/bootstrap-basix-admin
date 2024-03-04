@@ -1,15 +1,14 @@
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 import { EntypoSprite } from "@entypo-icons/react";
 import { Routes, Route } from "react-router-dom";
-import routes from "./routes.jsx";
-import Layouts from "./layouts/Layouts.jsx";
-import { DashboardDataProvider } from "./context/dashboardDataContext.jsx";
+import routes from "@/routes.jsx";
+import Layouts from "@/layouts/Layouts.jsx";
+import { DashboardDataProvider } from "@/context/dashboardDataContext.jsx";
 
 
 function App() {
-    const [sidebarMini, setSidebarMini] = useState(false);
     return (
-        <div className="admin-container position-relative">
+        <div className="admin-container position-relative overflow-hidden">
             <DashboardDataProvider>
                 <EntypoSprite />
                 <Routes>
@@ -18,13 +17,9 @@ function App() {
                             <Fragment key={index}>
                                 {(item?.path && (
                                     <Route
-                                        exact
                                         path="/"
                                         element={
-                                            <Layouts
-                                                sidebarMini={sidebarMini}
-                                                setSidebarMini={setSidebarMini}
-                                            />
+                                            <Layouts />
                                         }
                                     >
                                         <Route
@@ -35,7 +30,6 @@ function App() {
                                 )) ||
                                     (item?.route && (
                                         <Route
-                                            exact
                                             path={item?.route}
                                             element={<item.component />}
                                         />

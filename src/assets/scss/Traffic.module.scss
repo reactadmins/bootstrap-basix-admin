@@ -7,7 +7,8 @@
         color: var(--content-text-color);
     }
     .counter {
-        font-size: 1.1rem;
+        font-size: 1rem;
+        padding: 8px 0;
         font-family: inherit;
         font-weight: 500;
         line-height: 1.2;
@@ -23,4 +24,7 @@
             background-color: $success;
         }
     }
+}
+.card_footer {
+    background-color: var(--bg-content) !important;
 }

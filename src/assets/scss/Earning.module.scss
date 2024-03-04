@@ -1,73 +1,33 @@
 @import "../scss/variable.scss";
 
 .earning_wrapper {
-    .card {
-        border: 1px solid $valentine-red;
-        background-color: $valentine-red;
-        .header {
-            background-color: transparent;
-            padding: 12px 16px;
-            .title {
-                color: $white;
-                font-size: 0.875em;
-                font-weight: 600;
-                text-transform: capitalize;
-            }
-            .content_settings {
-                color: $white;
-                font-size: 12px;
-                padding: 0 5px;
-            }
-            .card_setting {
-                position: absolute;
-                top: 36px;
-                right: 16px;
-                background: var(--bg-content);
-                border: 1px solid var(--border-color);
-                padding: 8px 10px;
-                width: 100px;
-                z-index: 999;
-                border-radius: 6px;
-                button {
-                    display: flex;
-                    align-items: center;
-                    column-gap: 8px;
-                    font-size: 14px;
-                    color: var(--hedging-text-color);
-                    font-weight: 400;
-                    line-height: 16px;
-                    padding: 5px 0;
-                    i {
-                        font-size: 12px;
-                    }
-                }
-            }
+    .card_body {
+        background-color: #ef5350;
+    }
+    .card_footer {
+        padding: 20px 16px;
+        background-color: #cc4744;
+        .title {
+            font-size: 0.875em;
+            font-weight: 600;
+            color: $white;
         }
-        .footer {
-            padding: 20px 16px;
-            background-color: $valentine-600;
-            .footer_title {
-                font-size: 0.875em;
-                font-weight: 600;
-                color: $white;
-            }
-            .earning_count {
-                font-size: 1rem;
-                font-weight: 400;
-                color: $white;
-            }
+        .counter {
+            font-size: 1rem;
+            font-weight: 400;
+            color: $white;
         }
     }
-    &[data="true"] {
-        .card {
-            border: 1px solid var(--border-color);
-            .header {
-                border-bottom: 1px solid var(--border-color) !important;
-            }
-            .footer {
-                background-color: var(--bg-content);
-                border-top: 1px solid var(--border-color) !important;
-            }
+}
+
+body[data-theme="dark"] {
+    .earning_wrapper {
+        .card_body,
+        .card_footer {
+            background-color: var(--bg-content) !important;
+        }
+        .card_footer {
+            border-top: 1px solid var(--border-color) !important;
         }
     }
 }

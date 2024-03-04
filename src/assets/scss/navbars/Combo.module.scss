@@ -1,0 +1,315 @@
+@import "../variable.scss";
+.combo_nav {
+    padding: 24px;
+    .mini_logo {
+        display: none;
+    }
+    .toggle_btn {
+        display: none;
+        width: 28px;
+        height: 30px;
+        span {
+            position: relative;
+            display: block;
+            width: 25px;
+            height: 3px;
+            transition: all 0.3s;
+
+            &::before {
+                position: absolute;
+                content: "";
+                top: -7px;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                transition: all 0.3s;
+            }
+            &::after {
+                position: absolute;
+                content: "";
+                top: 7px;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                transition: all 0.3s;
+            }
+        }
+        &.active {
+            span {
+                background-color: transparent !important;
+                &::before {
+                    transform: rotate(45deg) translate(5px, 5px);
+                }
+                &::after {
+                    top: 10px !important;
+                    transform: rotate(-45deg) translate(7px, -8px);
+                }
+            }
+        }
+    }
+    .nav {
+        a {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .nav_item {
+            position: relative;
+            padding: 8px 10px;
+            border-radius: 15px;
+            width: max-content;
+            ul {
+                display: none;
+                content: "";
+                top: 55px;
+                left: -5px;
+                padding: 10px;
+                min-width: 13rem;
+                padding-top: 0.65rem;
+                padding-bottom: 0.65rem;
+                border: 1px solid var(--border-color);
+                border-radius: 8px;
+                box-shadow: -8px 0px 16px -4px rgba(0, 0, 0, 0.1);
+                z-index: 999;
+                transition: all 0.9s;
+                background-color: var(--bg-content);
+                li {
+                    padding: 8px 10px;
+                    a {
+                        color: #3c4858 !important;
+                    }
+                }
+            }
+            &:hover {
+                background-color: #f1f2f7;
+                > a {
+                    color: #3c4858 !important;
+                }
+                ul {
+                    position: absolute;
+                    display: block;
+                    &::after {
+                        position: absolute;
+                        content: "";
+                        top: -10px;
+                        left: 1.5rem;
+                        height: 1.2rem;
+                        width: 1.2rem;
+                        border-top-left-radius: 0.25rem;
+                        border-width: 1px 0 0 1px;
+                        border-style: solid;
+                        border-color: var(--border-color);
+                        z-index: -1;
+                        background-color: var(--bg-content);
+                        transform: rotate(45deg);
+                    }
+                    &::before {
+                        position: absolute;
+                        content: "";
+                        width: 100%;
+                        height: 100%;
+                        top: -23px;
+                        left: 0;
+                    }
+                }
+            }
+            &:last-child {
+                background-color: #0d6efd !important;
+                a {
+                    color: #fff !important;
+                }
+            }
+        }
+    }
+    .social_item {
+        li {
+            padding: 0 12px;
+            button {
+                padding: 0;
+            }
+        }
+        .user_area {
+            a {
+                img {
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                }
+            }
+        }
+        .for_notification,
+        .for_message {
+            position: relative;
+            border: none;
+            background-color: transparent;
+            i {
+                font-size: 16px;
+            }
+            span {
+                display: block;
+                width: 15px;
+                height: 15px;
+                font-size: 11px;
+                color: white;
+                line-height: 15px;
+                border-radius: 50%;
+            }
+            .count {
+                position: absolute;
+                top: -8px;
+                right: -6px;
+            }
+        }
+    }
+    &[data-color="white"] {
+        .nav {
+            .nav_item {
+                a {
+                    color: #3c4858;
+                }
+            }
+        }
+        .social_item {
+            button {
+                color: #212121;
+            }
+        }
+        .toggle_btn {
+            span {
+                background-color: #000;
+                &::after {
+                    background-color: #000;
+                }
+                &::before {
+                    background-color: #000;
+                }
+            }
+        }
+    }
+    &[data-color="black"] {
+        .nav {
+            .nav_item {
+                a {
+                    color: #fff;
+                }
+            }
+        }
+        .social_item {
+            button {
+                color: #fff;
+            }
+        }
+        .toggle_btn {
+            span {
+                background-color: #fff;
+                &::after {
+                    background-color: #fff;
+                }
+                &::before {
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+    &[data-color="red"] {
+        .nav {
+            .nav_item {
+                a {
+                    color: #fff;
+                }
+            }
+        }
+        .social_item {
+            button {
+                color: #fff;
+            }
+        }
+        .toggle_btn {
+            span {
+                background-color: #fff;
+                &::after {
+                    background-color: #fff;
+                }
+                &::before {
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+}
+
+body[data-theme="dark"] {
+    .combo_nav {
+        .nav {
+            .nav_item {
+                > a {
+                    color: #fff !important;
+                }
+                ul {
+                    li {
+                        a {
+                            color: var(--hedging-text-color) !important;
+                        }
+                    }
+                }
+                &:hover {
+                    > a {
+                        color: #3c4858 !important;
+                    }
+                }
+                &:last-child:hover {
+                    > a {
+                        color: #fff !important;
+                    }
+                }
+            }
+        }
+        .social_item {
+            button {
+                color: #fff;
+            }
+        }
+        .toggle_btn {
+            span {
+                background-color: #fff;
+                &::after {
+                    background-color: #fff;
+                }
+                &::before {
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .combo_nav {
+        .mini_logo {
+            display: block !important;
+        }
+        .logo {
+            display: none;
+        }
+        .toggle_btn {
+            display: block !important;
+        }
+        .nav {
+            display: none !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .combo_nav {
+        padding: 16px;
+        .social_item {
+            li {
+                padding: 0 12px;
+            }
+        }
+    }
+}

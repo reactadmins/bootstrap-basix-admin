@@ -1,4 +1,6 @@
-.tablist_container {
+@import "./variable.scss";
+
+.tablist_wrapper {
     display: flex;
     border: 1px solid var(--border-color);
     background-color: var(--bg-content);
@@ -16,50 +18,45 @@
                 i {
                     font-size: 14px;
                 }
-            }
-            .active_tab {
-                line-height: 1.42857;
-                padding: 10px 20px;
-                color: #494949;
-                background-color: #ddd;
-                cursor: default;
-                span {
-                    font-size: 15px;
-                    font-weight: 300;
-                }
-                i {
-                    font-size: 14px;
+                &.active_tab {
+                    cursor: default !important;
                 }
             }
         }
     }
-}
-.top {
-    flex-direction: column;
-    .tab_title {
-        border-bottom: 1px solid var(--border-color);
-        .title_list {
-            display: flex;
+    &.top {
+        flex-direction: column;
+        .tab_title {
+            border-bottom: 1px solid var(--border-color);
+            .title_list {
+                display: flex;
+            }
         }
     }
-}
-.bottom {
-    flex-direction: column-reverse;
-    .tab_title {
-        border-top: 1px solid var(--border-color);
-        .title_list {
-            display: flex;
+    &.bottom {
+        flex-direction: column-reverse;
+        .tab_title {
+            border-top: 1px solid var(--border-color);
+            .title_list {
+                display: flex;
+            }
         }
     }
-}
-.left {
-    .tab_title {
-        border-right: 1px solid var(--border-color);
+    &.left {
+        .tab_title {
+            border-right: 1px solid var(--border-color);
+        }
+        li {
+            padding: 16px 20px !important;
+        }
     }
-}
-.right {
-    flex-direction: row-reverse;
-    .tab_title {
-        border-left: 1px solid var(--border-color);
+    &.right {
+        flex-direction: row-reverse;
+        .tab_title {
+            border-left: 1px solid var(--border-color);
+        }
+        li {
+            padding: 16px 20px !important;
+        }
     }
 }
