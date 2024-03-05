@@ -30,10 +30,7 @@ const routes = [
     {
         path: "/",
         component: Dashboard,
-    },
-    {
-        path: "/bootstrap/basix-admin",
-        component: Dashboard,
+        index: true,
     },
     {
         path: "/dashboard",

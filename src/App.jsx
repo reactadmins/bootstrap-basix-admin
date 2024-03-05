@@ -16,23 +16,15 @@ function App() {
                         return (
                             <Fragment key={index}>
                                 {(item?.path && (
-                                    <Route
-                                        path="/"
-                                        element={
-                                            <Layouts />
-                                        }
-                                    >
+                                    <Route path="/" element={<Layouts />}>
                                         <Route
-                                            path={item?.path}
+                                            {...(!!item?.index ? { index } : { path: item?.path })}
                                             element={<item.component />}
                                         />
                                     </Route>
                                 )) ||
                                     (item?.route && (
-                                        <Route
-                                            path={item?.route}
-                                            element={<item.component />}
-                                        />
+                                        <Route path={item?.route} element={<item.component />} />
                                     ))}
                             </Fragment>
                         );
