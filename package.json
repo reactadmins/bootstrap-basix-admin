@@ -1,7 +1,7 @@
 {
     "name": "basix-admin",
     "private": true,
-    "homepage": "/bootstrap/basix-admin",
+    "homepage": "/bootstrap/basix-admin/",
     "version": "1.0.0",
     "type": "module",
     "build": "babel src -d lib",
