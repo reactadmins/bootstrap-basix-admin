@@ -6,17 +6,12 @@ import Layouts from "@/layouts/Layouts.jsx";
 import { DashboardDataProvider } from "@/context/dashboardDataContext.jsx";
 
 
-import Dashboard from "./views/Dashboard";
-
 function App() {
     return (
         <div className="admin-container position-relative overflow-hidden">
             <DashboardDataProvider>
                 <EntypoSprite />
                 <Routes>
-                    <Route path="/" element={<Layouts />}>
-                        <Route index element={<Dashboard />} />
-                    </Route>
                     {routes?.map((item, index) => {
                         return (
                             <Fragment key={index}>

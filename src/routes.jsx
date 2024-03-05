@@ -27,11 +27,14 @@ import Page404 from "./views/Error404";
 import Page500 from "./views/Error500";
 
 const routes = [
-    // {
-    //     path: "/",
-    //     component: Dashboard,
-    //     index: true,
-    // },
+    {
+        path: "/",
+        component: Dashboard,
+    },
+    {
+        path: ".",
+        component: Dashboard,
+    },
     {
         path: "/dashboard",
         component: Dashboard,
