@@ -8,7 +8,7 @@ import { BrowserRouter } from "react-router-dom";
 const container = document.getElementById("root");
 const root = createRoot(container);
 root.render(
-    <BrowserRouter basename="/bootstrap/basix-admin">
+    <BrowserRouter>
         <App />
     </BrowserRouter>
 );
